@@ -1,0 +1,12 @@
+# dependencies
+front-end-section/node_modules
+
+# testing
+front-end-section/src/.jshintrc
+
+
+# production
+
+# misc
+.DS_Store
+npm-debug.log*
