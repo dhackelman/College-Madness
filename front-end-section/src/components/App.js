@@ -1,5 +1,6 @@
 import React from 'react';
-import axios from 'axios';
+// import axios from 'axios';
+import {Link} from 'react-router';
 
 class App extends React.Component {
     constructor() {
@@ -14,23 +15,19 @@ class App extends React.Component {
         }
     }
 
-    componentDidMount() {
-        axios.get(`https://api.data.gov/ed/collegescorecard/v1/schools?api_key=5AUZ58bvM6D6xLNAwhGWhO2eW2du22mS5uK28YR9`).then(results => {
-            console.log('results', results);
-
-            this.setState({results});
-        });
-    }
+    //     componentDidMount() {
+    //         axios.get(`https://api.data.gov/ed/collegescorecard/v1/schools?api_key=5AUZ58bvM6D6xLNAwhGWhO2eW2du22mS5uK28YR9`).then(results => {
+    //             console.log('results', results);
+    //
+    //             this.setState({results});
+    //         });
+    // } End componentDidMount
 
     render() {
         return (
             <div>
                 <h1>Welcome to KIPP Madness</h1>
-                <button onClick={this.loadAPI}>
-                    Test API
-                </button>
-                <h2>App Component</h2>
-
+                <Link to='bracket'>Go To Bracket</Link>
             </div>
         );
     }
