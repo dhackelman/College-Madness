@@ -6,8 +6,11 @@ class RegionB2 extends React.Component {
         return (
             <div className="region__B">
 
-                <h1>Region B2</h1>
-
+                <h1>Region B2 / South</h1>
+                <Link to='east'>Go To East Bracket</Link>
+                <Link to='west'>Go To West Bracket</Link>
+                <Link to='midwest'>Go To MidWest Bracket</Link>
+                <Link to='south'>Go To South Bracket</Link>
             </div>
         );
     }

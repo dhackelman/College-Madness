@@ -7,7 +7,6 @@ class Matchup extends React.Component {
             <div className="matchup__container">
 
                 <h1>This is a matchup container</h1>
-
             </div>
         );
     }
