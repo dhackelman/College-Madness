@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class RoundWin extends React.Component {
 
@@ -7,7 +8,7 @@ class RoundWin extends React.Component {
             <div className="round_1__container">
 
                 <h1>Championship Game</h1>
-                  🐑🐑🐑🐑🐑🐑🐑 You Win! 🐑🐑🐑🐑🐑🐑🐑🐑
+                🐑🐑🐑🐑🐑🐑🐑 You Win! 🐑🐑🐑🐑🐑🐑🐑🐑
             </div>
         );
     }
