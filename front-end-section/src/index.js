@@ -12,6 +12,20 @@ const Root = () => {
             <div>
                 <Match exactly pattern='/' component={App}/>
                 <Match pattern='/bracket' component={MainBracket}/>
+                <Match pattern='/east' component={RegionA1}/>
+                <Match pattern='/west' component={RegionA2}/>
+                <Match pattern='/midwest' component={RegionB1}/>
+                <Match pattern='/south' component={RegionB2}/>
+                <Match pattern='/round64' component={Round64}/>
+                <Match pattern='/round32' component={Round32}/>
+                <Match pattern='/round16' component={Round16}/>
+                <Match pattern='/round8' component={Round8}/>
+                <Match pattern='/round4' component={Round4}/>
+                <Match pattern='/round2' component={Round2}/>
+                <Match pattern='/roundWin' component={RoundWin}/>
+                <Match pattern='/matchup' component={MatchUp}/>
+                <Match pattern='/team/:teamId' component={Team}/>
+
                 <Miss component={NotFound}/>
             </div>
         </BrowserRouter>
