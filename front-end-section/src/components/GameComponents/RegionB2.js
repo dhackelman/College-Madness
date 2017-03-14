@@ -1,17 +1,17 @@
 import React from 'react';
-import {Link} from 'react-router';
-
+import Round64 from './Round64';
+import Round32 from './Round32';
+import Round16 from './Round16';
+import Round8 from './Round8';
 class RegionB2 extends React.Component {
 
     render() {
         return (
             <div className="region__B">
-
-                <h1>Region B2 / South</h1>
-                <Link to='east'>Go To East Bracket</Link>
-                <Link to='west'>Go To West Bracket</Link>
-                <Link to='midwest'>Go To MidWest Bracket</Link>
-                <Link to='south'>Go To South Bracket</Link>
+              <Round64/>
+              <Round32/>
+              <Round16/>
+              <Round8/>
             </div>
         );
     }

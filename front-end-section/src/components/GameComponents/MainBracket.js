@@ -22,6 +22,9 @@ class MainBracket extends React.Component {
             <Container>
                 <div className="main__bracket"></div>
                 <RegionA1/>
+                <RegionA2/>
+                <RegionB1/>
+                <RegionB2/>
 
             </Container>
         );
