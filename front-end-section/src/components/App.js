@@ -21,7 +21,6 @@ class App extends React.Component {
         return (
             <div>
                 <Header/>
-                <button onClick={getData}>data</button>
                   {childWithProp}
             </div>
         );
