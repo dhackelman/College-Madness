@@ -1,31 +1,36 @@
 
+// .bracket__connector {
+//   height: 80px;
+//   width: 50px;
+//   margin: 10px 0px;
+//     margin-top: 50px;
+//   border-top: 4px solid black;
+//   border-bottom: 4px solid black;
+//   border-right: 4px solid black;
+// }
+// .bracket__connect64-32 {
+//   display: flex;
+//   flex-flow: column nowrap;
+//
+// }
+
 .round_64__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 210px;
-}
-
-.bracket__connect64-32 {
-  width: 50px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black;
 }
 
 .round_32__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px;
 }
 .round_16__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px;
 
 }
@@ -33,7 +38,6 @@
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px;
 
 }

@@ -6,8 +6,6 @@ class Round8 extends React.Component {
     render() {
         return (
             <div className="round_8__container">
-
-                <h1>Elite 8</h1>
                 <Matchup/>
                 <Matchup/>
             </div>

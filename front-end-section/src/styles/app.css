@@ -158,8 +158,7 @@ img {
   margin-right: 5%; }
 
 .main__bracket {
-  background-color: #bbd72e;
-  border: 5px solid #f7941d; }
+  background-color: #bbd72e; }
 
 .region__A {
   background-color: #e47323;
@@ -206,34 +205,24 @@ img {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 210px; }
-
-.bracket__connect64-32 {
-  width: 50px;
-  border-top: 2px solid black;
-  border-bottom: 2px solid black;
-  border-right: 2px solid black; }
 
 .round_32__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px; }
 
 .round_16__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px; }
 
 .round_8__container {
   display: flex;
   flex-flow: column nowrap;
   margin: 10px;
-  border: 1px solid pink;
   width: 200px; }
 
 p {
