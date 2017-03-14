@@ -6,7 +6,6 @@ class Container extends React.Component {
     render() {
         return (
             <div className="component__container">
-
                 {this.props.children}
             </div>
         );

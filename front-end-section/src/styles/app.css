@@ -169,8 +169,40 @@ img {
   background-color: #ffda03;
   border: 5px solid #16345c; }
 
-.team__container :active {
-  background-color: #ffda03; }
+.matchup__container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 100%; }
+
+.team__container {
+  height: 50px;
+  background-color: red;
+  width: 100%; }
+  .team__container :active {
+    background-color: #ffda03; }
+
+.round_64__container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 200px; }
+
+.round_32__container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 200px; }
+
+.round_16__container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 200px; }
 
 p {
   color: #2d2d2d;

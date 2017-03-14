@@ -20,17 +20,7 @@ class MainBracket extends React.Component {
     render() {
         return (
             <Container>
-                <div className="main__bracket">
-                    <h1>Welcome to Bracket</h1>
-                    <RegionA1/>
-
-                    <RegionB1/>
-
-                    <RegionA2/>
-
-                    <RegionB2/>
-
-                </div>
+                <div className="main__bracket"></div>
             </Container>
         );
     }

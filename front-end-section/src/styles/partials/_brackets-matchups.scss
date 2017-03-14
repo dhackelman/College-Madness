@@ -1,14 +1,21 @@
 
 
 .connector__container {
-  
+
 }
 
 .matchup__container {
-
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 100%;
 }
 
 .team__container {
+  height: 50px;
+background-color: red;
+    width: 100%;
   .team__logo {
 
   }
