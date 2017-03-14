@@ -10,7 +10,16 @@ class RegionA1 extends React.Component {
         return (
             <div className="region__A">
                 <Round64/>
-                <div className="bracket__connect64-32"></div>
+                <div className="bracket__connect64-32">
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                    <div className="bracket__connector"></div>
+                </div>
                 <Round32/>
                 <div className="bracket__connect32-16"></div>
                 <Round16/>
