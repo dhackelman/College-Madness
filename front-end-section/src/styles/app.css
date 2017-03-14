@@ -131,21 +131,24 @@ img {
   background: #2c3e50; }
 
 .kippBtn {
-  border: 2px solid #235695;
-  background-color: #cdcdc0;
+  background-color: #235695;
   border-radius: 5px;
-  font-weight: bold;
+  color: #f2f2f2;
   font-size: 20px;
+  font-weight: bold;
   padding: 15px 35px; }
 
 .header__container {
-  width: 100%;
+  background-color: #f2f2f2;
   border-bottom: 5px solid #235695;
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  width: 100%; }
 
 .header__logo {
-  margin-left: 5%; }
+  height: 87px;
+  margin: 1% 5%;
+  width: 300px; }
 
 .header__logout {
   margin: 2% 0;

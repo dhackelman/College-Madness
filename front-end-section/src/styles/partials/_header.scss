@@ -1,19 +1,22 @@
 .header__container {
- width: 100%;
- border-bottom: 5px solid $royal;
- display: flex;
- justify-content: space-between;
+  background-color: $almost;
+  border-bottom: 5px solid $royal;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header__logo {
-margin-left: 5%;
+  height: 87px;
+  margin: 1% 5%;
+  width: 300px;
 }
 
 .header__homerooom {
-
+  
 }
 
 .header__logout {
   margin: 2% 0;
-margin-right: 5%;
+  margin-right: 5%;
 }
