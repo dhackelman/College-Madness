@@ -5,9 +5,9 @@
 }
 
 .matchup__container {
-  border: 1px solid pink;
   display: flex;
   flex-flow: column nowrap;
+  margin: 4px 0;
   width: 100%;
 }
 
@@ -16,13 +16,15 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  height: 50px;
+  // height: 50px;
   width: 100%;
 
   .team__info {
     color: $tangerine;
     max-height: 25px;
     max-width: 25px;
+    padding: 1px;
+    margin: 3px 3px 0 3px;
     }
 
   .team__logo {
@@ -31,12 +33,12 @@
     }
 
   .team__seed {
-
+    margin: 5px 3px;
     }
 
   .team__name {
-
-    font-size: 16px;
+    margin: 5px 3px;
+    font-size: 14px;
     font-weight: 600;
   }
   :active {

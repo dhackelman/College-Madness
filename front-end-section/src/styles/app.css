@@ -170,9 +170,9 @@ img {
   border: 5px solid #16345c; }
 
 .matchup__container {
-  border: 1px solid pink;
   display: flex;
   flex-flow: column nowrap;
+  margin: 4px 0;
   width: 100%; }
 
 .team__container {
@@ -180,17 +180,21 @@ img {
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  height: 50px;
   width: 100%; }
   .team__container .team__info {
     color: #ffbb13;
     max-height: 25px;
-    max-width: 25px; }
+    max-width: 25px;
+    padding: 1px;
+    margin: 3px 3px 0 3px; }
   .team__container .team__logo {
     max-height: 32px;
     max-width: 32px; }
+  .team__container .team__seed {
+    margin: 5px 3px; }
   .team__container .team__name {
-    font-size: 16px;
+    margin: 5px 3px;
+    font-size: 14px;
     font-weight: 600; }
   .team__container :active {
     background-color: #ffda03; }
@@ -200,7 +204,7 @@ img {
   flex-flow: column nowrap;
   margin: 10px;
   border: 1px solid pink;
-  width: 200px; }
+  width: 210px; }
 
 .round_32__container {
   display: flex;
