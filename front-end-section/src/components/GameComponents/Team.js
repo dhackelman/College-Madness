@@ -6,8 +6,9 @@ class Team extends React.Component {
         return (
 
             <div className="team__container">
-                <img src={TeamLogo}></img>
-                Team #3
+                <img className="team__logo" src={TeamLogo}></img>
+                <span className="team__seed">#1</span>
+                <span className="team__name">UNC</span>
             </div>
 
         );
