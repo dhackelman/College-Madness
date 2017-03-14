@@ -1,14 +1,23 @@
 import React from 'react';
-import {Link} from 'react-router';
+import Matchup from './Matchup';
 
 class Round64 extends React.Component {
 
     render() {
         return (
             <div className="round_64__container">
-
                 <h1>Round of 64</h1>
-                <Link to='round32'>Go To Round of 32</Link>
+                  <div className="round_64__container">
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  <Matchup></Matchup>
+                  </div>
             </div>
         );
     }

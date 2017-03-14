@@ -1,4 +1,5 @@
 import React from 'react';
+import Team from './Team';
 
 class Matchup extends React.Component {
 
@@ -6,7 +7,9 @@ class Matchup extends React.Component {
         return (
             <div className="matchup__container">
 
-                <h1>This is a matchup container</h1>
+              <div className="matchup__container">
+                  <Team></Team>
+              </div>
             </div>
         );
     }
