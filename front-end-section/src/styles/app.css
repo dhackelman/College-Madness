@@ -170,25 +170,22 @@ img {
   border: 5px solid #16345c; }
 
 .matchup__container {
+  border: 1px solid pink;
   display: flex;
   flex-flow: column nowrap;
-  border: 1px solid pink;
   width: 100%; }
 
 .team__container {
+  background-color: #f2f2f2;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 50px;
-  background-color: red;
   width: 100%; }
   .team__container .team__logo {
-    max-width: 32px;
-    max-height: 32px; }
-  .team__container .team__seed {
-    content: ' 33'; }
+    max-height: 32px;
+    max-width: 32px; }
   .team__container .team__name {
-    padding: 5px 10px;
     font-size: 16px;
     font-weight: 600; }
   .team__container :active {
