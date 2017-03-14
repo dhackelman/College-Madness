@@ -1,5 +1,4 @@
 import React from 'react';
-// import axios from 'axios';
 // import {Link} from 'react-router';
 // import Container from './Container';
 import Header from './Header';
@@ -14,13 +13,16 @@ class App extends React.Component {
         };
     }
 
+
     render() {
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {bracket: this.state.results});
         });
         return (
             <div>
-                <Header/> {childWithProp}
+                <Header/>
+                <button onClick={getData}>data</button>
+                  {childWithProp}
             </div>
         );
     }
