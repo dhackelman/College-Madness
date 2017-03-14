@@ -3,8 +3,8 @@ front-end-section/node_modules
 
 # testing
 front-end-section/src/.jshintrc
-/src/styles/app.css.map
-/src/styles/.sass-cache
+front-end-section/src/styles/app.css.map
+front-end-section/src/styles/.sass-cache
 
 # production
 
