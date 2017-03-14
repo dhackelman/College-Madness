@@ -130,6 +130,27 @@ img {
   color: #fff;
   background: #2c3e50; }
 
+.kippBtn {
+  border: 2px solid #235695;
+  background-color: #cdcdc0;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
+  padding: 15px 35px; }
+
+.header__container {
+  width: 100%;
+  border-bottom: 5px solid #235695;
+  display: flex;
+  justify-content: space-between; }
+
+.header__logo {
+  margin-left: 5%; }
+
+.header__logout {
+  margin: 2% 0;
+  margin-right: 5%; }
+
 .main__bracket {
   background-color: #bbd72e;
   border: 5px solid #f7941d; }
@@ -144,5 +165,51 @@ img {
 
 .team__container :active {
   background-color: #ffda03; }
+
+p {
+  color: #2d2d2d;
+  margin: 1rem 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2d2d2d; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 1em;
+  text-transform: uppercase; }
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  margin: 0.9em;
+  text-transform: uppercase; }
+
+h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0.8em;
+  text-transform: uppercase; }
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 0.7em;
+  text-transform: uppercase; }
+
+h5 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  line-height: 1.6;
+  margin: 0.4em;
+  text-transform: uppercase; }
+
+h6 {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  margin: 0.4em;
+  text-transform: uppercase; }
 
 /*# sourceMappingURL=app.css.map */

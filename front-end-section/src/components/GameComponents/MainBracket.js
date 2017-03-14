@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+// import {Link} from 'react-router';
 
 import RegionA1 from './RegionA1';
 import RegionA2 from './RegionA2';

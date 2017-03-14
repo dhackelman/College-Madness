@@ -6,7 +6,7 @@ class Team extends React.Component {
         return (
             <div className="team__container">
 
-                <h1>This is a Team Contaier</h1>
+                <h1>This is a Team Container</h1>
 
             </div>
         );

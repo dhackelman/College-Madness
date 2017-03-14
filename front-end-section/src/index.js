@@ -3,6 +3,7 @@ import {render} from 'react-dom';
 import {BrowserRouter, Match, Miss} from 'react-router';
 import './styles/app.css';
 import App from './components/App';
+// import Header from './components/Header';
 import MainBracket from './components/GameComponents/MainBracket';
 import RegionA1 from './components/GameComponents/RegionA1';
 import RegionA2 from './components/GameComponents/RegionA2';

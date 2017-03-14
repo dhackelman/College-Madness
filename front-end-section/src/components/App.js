@@ -1,6 +1,7 @@
 import React from 'react';
 // import axios from 'axios';
 import {Link} from 'react-router';
+import Header from './Header';
 
 class App extends React.Component {
     constructor() {
@@ -26,7 +27,14 @@ class App extends React.Component {
     render() {
         return (
             <div>
+                <Header/>
                 <h1>Welcome to KIPP Madness</h1>
+                <h1>header one</h1>
+                <h2>header two</h2>
+                <h3>header three</h3>
+                <h4>header four</h4>
+                <h5>header five</h5>
+                <h6>header six</h6>
                 <Link to='bracket'>Go To Bracket</Link>
             </div>
         );
