@@ -6,6 +6,7 @@ import Round8 from './Round8';
 
 class RegionB1 extends React.Component {
 
+
     render() {
         return (
             <div className="region__B">
