@@ -10,10 +10,10 @@ class RegionB1 extends React.Component {
     render() {
         return (
             <div className="region__B">
-              <Round64/>
-              <Round32/>
-              <Round16/>
-              <Round8/>
+                <Round8/>
+                <Round16/>
+                <Round32/>
+                <Round64/>
             </div>
         );
     }

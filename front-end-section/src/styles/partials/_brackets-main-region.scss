@@ -13,4 +13,7 @@
 .region__B {
   background-color: $lemon;
   border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
 }
