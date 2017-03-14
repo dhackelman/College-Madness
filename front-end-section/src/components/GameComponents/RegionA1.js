@@ -7,11 +7,40 @@ class RegionA1 extends React.Component {
         return (
             <div className="region__A">
                 <h1>Region A1 / East</h1>
-                <Link to='east'>Go To East Bracket</Link>
-                <Link to='west'>Go To West Bracket</Link>
-                <Link to='midwest'>Go To MidWest Bracket</Link>
-                <Link to='south'>Go To South Bracket</Link>
-
+              <div className="round_64__container">
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+                <div className="matchup__container">
+                    <div className="team__container">Team #1</div>
+                    <div className="team__container">Team #3</div>
+                </div>
+              </div>
             </div>
         );
     }
