@@ -13,19 +13,26 @@
 }
 
 .team__container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
   height: 50px;
-background-color: red;
-    width: 100%;
-  .team__logo {
+  background-color: red;
+  width: 100%;
 
+  .team__logo {
+    max-width: 32px;
+    max-height: 32px;
   }
 
   .team__seed {
-
+    content: ' 33';
   }
 
   .team__name {
-
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: 600;
   }
   :active {
     background-color: $lemon;
