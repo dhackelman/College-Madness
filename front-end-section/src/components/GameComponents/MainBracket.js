@@ -1,6 +1,6 @@
 import React from 'react';
 // import {Link} from 'react-router';
-
+import Container from '../Container';
 import RegionA1 from './RegionA1';
 import RegionA2 from './RegionA2';
 import RegionB1 from './RegionB1';
@@ -19,17 +19,19 @@ class MainBracket extends React.Component {
 
     render() {
         return (
-            <div className="main__bracket">
-                <h1>Welcome to Bracket</h1>
-                <RegionA1/>
+            <Container>
+                <div className="main__bracket">
+                    <h1>Welcome to Bracket</h1>
+                    <RegionA1/>
 
-                <RegionB1/>
+                    <RegionB1/>
 
-                <RegionA2/>
+                    <RegionA2/>
 
-                <RegionB2/>
+                    <RegionB2/>
 
-            </div>
+                </div>
+            </Container>
         );
     }
 }
