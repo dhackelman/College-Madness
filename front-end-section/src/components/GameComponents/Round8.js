@@ -8,10 +8,8 @@ class Round8 extends React.Component {
             <div className="round_8__container">
 
                 <h1>Elite 8</h1>
-                  <div className="connector__container">
-                    <Matchup/>
-                    <Matchup/>
-                  </div>
+                <Matchup/>
+                <Matchup/>
             </div>
         );
     }
