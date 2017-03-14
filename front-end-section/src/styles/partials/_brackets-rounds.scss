@@ -24,7 +24,11 @@
 
 }
 .round_8__container {
-
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 200px;
 
 }
 .round_4__container {

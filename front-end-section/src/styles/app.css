@@ -220,6 +220,13 @@ img {
   border: 1px solid pink;
   width: 200px; }
 
+.round_8__container {
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 10px;
+  border: 1px solid pink;
+  width: 200px; }
+
 p {
   color: #2d2d2d;
   margin: 1rem 0; }

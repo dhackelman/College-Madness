@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+import Matchup from './Matchup';
 
 class Round16 extends React.Component {
 
@@ -8,7 +8,14 @@ class Round16 extends React.Component {
             <div className="round_16__container">
 
                 <h1>Sweet 16</h1>
-                <Link to='round8'>Go To Elite 8</Link>
+                  <div className="connector__container">
+                    <Matchup/>
+                    <Matchup/>
+                  </div>
+                  <div className="connector__container">
+                    <Matchup/>
+                    <Matchup/>
+                  </div>
             </div>
         );
     }
