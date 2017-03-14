@@ -5,12 +5,12 @@ class Matchup extends React.Component {
 
     render() {
         return (
-            <div className="matchup__container">
 
-              <div className="matchup__container">
-                  <Team></Team>
-              </div>
+            <div className="matchup__container">
+                <Team/>
+                <Team/>
             </div>
+
         );
     }
 }
