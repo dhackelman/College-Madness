@@ -19,14 +19,20 @@
   height: 50px;
   width: 100%;
 
+  .team__info {
+    color: $tangerine;
+    max-height: 25px;
+    max-width: 25px;
+    }
+
   .team__logo {
     max-height: 32px;
     max-width: 32px;
-  }
+    }
 
   .team__seed {
 
-  }
+    }
 
   .team__name {
 
