@@ -17,6 +17,7 @@
 .round_64__container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: center;
   margin: 10px;
   width: 210px;
 }
@@ -24,12 +25,14 @@
 .round_32__container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-around;
   margin: 10px;
   width: 200px;
 }
 .round_16__container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-around;
   margin: 10px;
   width: 200px;
 
@@ -37,6 +40,7 @@
 .round_8__container {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-around;
   margin: 10px;
   width: 200px;
 
