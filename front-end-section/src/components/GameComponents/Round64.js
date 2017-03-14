@@ -8,15 +8,23 @@ class Round64 extends React.Component {
             <div className="round_64__container">
                 <h1>Round of 64</h1>
                   <div className="round_64__container">
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
-                  <Matchup></Matchup>
+                  <div className="matchup__container">
+                    <Matchup></Matchup>
+                    <Matchup></Matchup>
+                  </div>
+
+                  <div className="matchup__container">
+                    <Matchup></Matchup>
+                    <Matchup></Matchup>
+                  </div>
+                  <div className="matchup__container">
+                    <Matchup></Matchup>
+                    <Matchup></Matchup>
+                  </div>
+                  <div className="matchup__container">
+                    <Matchup></Matchup>
+                    <Matchup></Matchup>
+                  </div>
                   </div>
             </div>
         );
