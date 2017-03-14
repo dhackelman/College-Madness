@@ -1,4 +1,4 @@
-{
+const Data = {
     "teams": [
             {  "id": 0,"region":     "East", "name": "Blue Devils", "abbrev": "DUKE", "pop": 320, "city": "Durham ", "state": "NC", "latitude": 35.988, "longitude": -78.907, "selected":false, "seed":1, "img": "../styles/images/teamLogo.png" },
             {  "id": 1,"region":     "East", "name": "Badgers", "abbrev": "WISC", "pop": 319, "city": "Madison", "state": "WI", "latitude": 43.066, "longitude": -89.4, "selected":false, "seed":2, "img": "../styles/images/teamLogo.png" },
@@ -66,4 +66,6 @@
             {  "id": 63, "region": "South", "name": "Spiders", "abbrev": "RICH", "pop": 257, "city": "Richmond", "state": "VA", "latitude": 37.533 , "longitude": -77.466, "selected":false, "seed":16, "img": "../styles/images/teamLogo.png" },
           ]
 
-  }
+  };
+
+  export default Data;
