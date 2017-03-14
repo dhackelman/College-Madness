@@ -7,8 +7,9 @@ class RegionA1 extends React.Component {
     render() {
         return (
             <div className="region__A">
-                <h1>Region A1 / East</h1>
-                <Round64></Round64>
+
+                <Round64/>
+                <div className="bracket__connect64-32"></div>
             </div>
         );
     }

@@ -6,6 +6,9 @@
 .region__A {
   background-color: $burnt;
   border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
 }
 
 .region__B {

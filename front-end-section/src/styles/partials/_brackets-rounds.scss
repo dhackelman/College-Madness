@@ -5,8 +5,15 @@
   margin: 10px;
   border: 1px solid pink;
   width: 210px;
-
 }
+
+.bracket__connect64-32 {
+  width: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+}
+
 .round_32__container {
   display: flex;
   flex-flow: column nowrap;

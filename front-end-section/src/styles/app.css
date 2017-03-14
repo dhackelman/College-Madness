@@ -163,7 +163,10 @@ img {
 
 .region__A {
   background-color: #e47323;
-  border: 5px solid #16345c; }
+  border: 5px solid #16345c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start; }
 
 .region__B {
   background-color: #ffda03;
@@ -205,6 +208,12 @@ img {
   margin: 10px;
   border: 1px solid pink;
   width: 210px; }
+
+.bracket__connect64-32 {
+  width: 50px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black; }
 
 .round_32__container {
   display: flex;
