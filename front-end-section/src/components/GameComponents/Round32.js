@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router';
 import Matchup from './Matchup';
 
 class Round32 extends React.Component {
