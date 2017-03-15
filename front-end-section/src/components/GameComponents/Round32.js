@@ -5,20 +5,7 @@ class Round32 extends React.Component {
 
     render() {
         return (
-            <div className="round_32__container">
-                <Matchup/>
-                <Matchup/>
-
-                <Matchup/>
-                <Matchup/>
-
-                <Matchup/>
-                <Matchup/>
-
-                <Matchup/>
-                <Matchup/>
-
-            </div>
+            <div className="round_32__container"></div>
         );
     }
 }

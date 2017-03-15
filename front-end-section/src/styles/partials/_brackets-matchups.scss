@@ -11,6 +11,10 @@
   width: 100%;
 }
 
+.team__selected { // team selected 
+  background-color: $avocado;
+}
+
 .team__container {
   background-color: $almost;
   display: flex;
