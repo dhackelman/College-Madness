@@ -21,8 +21,11 @@ class MainBracket extends React.Component {
     render() {
         return (
             <Container>
-                <div className="main__bracket"></div>
+
                 <RegionA1/>
+                <RegionB1/>
+                <RegionA2/>
+                <RegionB2/>
 
             </Container>
         );

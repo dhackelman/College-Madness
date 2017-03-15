@@ -1,6 +1,4 @@
-.main__bracket {
-  background-color: $avocado;
-}
+
 
 .region__A {
   // background-color: $burnt;
@@ -8,6 +6,7 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  width: 50%;
 }
 
 .region__B {
@@ -16,4 +15,5 @@
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  width: 50%;
 }

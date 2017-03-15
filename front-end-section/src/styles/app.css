@@ -139,7 +139,10 @@ img {
   padding: 15px 35px; }
 
 .component__container {
-  margin: 10px; }
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  width: 100%; }
 
 .header__container {
   background-color: #f2f2f2;
@@ -157,20 +160,19 @@ img {
   margin: 2% 0;
   margin-right: 5%; }
 
-.main__bracket {
-  background-color: #bbd72e; }
-
 .region__A {
   border: 5px solid #16345c;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  width: 50%; }
 
 .region__B {
   border: 5px solid #16345c;
   display: flex;
   flex-flow: row nowrap;
-  justify-content: flex-end; }
+  justify-content: flex-end;
+  width: 50%; }
 
 .matchup__container {
   display: flex;

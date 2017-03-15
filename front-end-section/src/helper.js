@@ -25,24 +25,17 @@ export function reverseChildNodes(node) {
 // 	);
 // }
 
-export function searchTeams(arg, obj) {
-	for (let i = 0; i < obj.length; i++) {
-		if (obj[i].region === arg) {
-			console.log('in searchTeams');
-		}
-	}
-}
+// export function searchTeams(arg, obj) {
+// 	for (let i = 0; i < obj.length; i++) {
+// 		if (obj[i].region === arg) {
+// 			console.log('in searchTeams');
+// 		}
+// 	}
+// }
 
 export function filterByRegion(region, data) {
 	const teams = data.filter((val) => {
 		return val.region === region;
-	});
-	return teams;
-}
-
-export function onlyOdd(data) {
-	const teams = data.filter((val) => {
-		return val.id % 2 !== 0;
 	});
 	return teams;
 }
