@@ -2,42 +2,30 @@ import React from 'react';
 // import {Link} from 'react-router';
 // import Container from './Container';
 import Header from './Header';
-import axios from 'axios';
-import Data from '../Data/data.js';
-
+// import axios from 'axios';
+import bracketData from '../Data/data.js';
 
 class App extends React.Component {
     constructor() {
         super();
 
         this.state = {
-            data: []
+            bracketData: bracketData
         };
     }
     componentWillMount() {
-      // let http = new XMLHttpRequest();
-      // http.onreadystatechange = function() {
-      //     if (http.readyState === 4 && http.status === 200) {
-      //         console.log(http.response);
-      //         // this.setState({data});
-      //       }
-      //     }
-      // http.open('GET', `../Data/data.json`, true);
-      // http.send();
-      console.log(Data);
+
+        console.log(bracketData);
+        this.setState({bracketData});
     }
-
-
-
 
     render() {
         const childWithProp = React.Children.map(this.props.children, (child) => {
-            return React.cloneElement(child, {bracket: this.state.results});
+            return React.cloneElement(child, {bracketData: this.state.bracketData});
         });
         return (
             <div>
-                <Header/>
-                  {childWithProp}
+                <Header/> {childWithProp}
             </div>
         );
     }

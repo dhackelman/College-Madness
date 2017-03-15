@@ -17,14 +17,16 @@ import RegionB2 from './RegionB2';
 
 class MainBracket extends React.Component {
 
+    // {Object.entries(this.props.bracketData.teams).forEach(([key, value]) => console.log(key, value))};
+
     render() {
         return (
             <Container>
                 <div className="main__bracket"></div>
                 <RegionA1/>
                 <RegionA2/>
-                <RegionB1/>
-                <RegionB2/>
+                <RegionB1 bracketData={this.props.bracketData}/>
+                <RegionB2></RegionB2>
 
             </Container>
         );

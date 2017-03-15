@@ -9,7 +9,7 @@ class Team extends React.Component {
 
             <div className="team__container">
                 <FaInfoCircle className="team__info" size={30}/>
-                <img className="team__logo" src={TeamLogo}></img>
+                <img className="team__logo" src={TeamLogo} alt="Team Logo"></img>
                 <span className="team__seed">#1</span>
                 <span className="team__name">Jacksonville St.</span>
             </div>
