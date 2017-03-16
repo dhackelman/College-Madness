@@ -5,10 +5,7 @@
   width: 100%;
 }
 
-.team__selected { // team selected
-  background-color: $avocado;
-  font-size: 33px;
-}
+
 
 .team__container {
   background-color: $almost;
@@ -43,4 +40,12 @@
   :active {
     background-color: $lemon;
   }
+}
+
+
+.team__selected { // team selected
+  background-color: $avocado;
+}
+.team__not__selected { // team selected
+  background-color: $burnt;
 }

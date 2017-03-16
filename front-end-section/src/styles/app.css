@@ -180,10 +180,6 @@ img {
   margin: 4px 0;
   width: 100%; }
 
-.team__selected {
-  background-color: #bbd72e;
-  font-size: 33px; }
-
 .team__container {
   background-color: #f2f2f2;
   display: flex;
@@ -207,6 +203,12 @@ img {
     font-weight: 600; }
   .team__container :active {
     background-color: #ffda03; }
+
+.team__selected {
+  background-color: #bbd72e; }
+
+.team__not__selected {
+  background-color: #e47323; }
 
 .round_64__container {
   display: flex;

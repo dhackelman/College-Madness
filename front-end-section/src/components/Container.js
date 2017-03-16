@@ -21,7 +21,8 @@ class Container extends React.Component {
         }
 
         let selectedTeam = this.state.TeamData.teams[key];
-        selectedTeam.round_64 = true;
+
+        selectedTeam.wins++;
         this.setState({TeamData});
         this.updateSelectedTeamStyle();
     }
@@ -29,10 +30,10 @@ class Container extends React.Component {
     updateSelectedTeamStyle() {
         const ourTeam = this.state.TeamData;
         ourTeam.teams.map((team) => {
-            if (team.round_64 === true) {
-                console.log('team.round_64', team);
-            } else {
-                console.log('theyre good dogs bront');
+            if (team.wins === 0) {
+                // console.log('team.round_64', team.wins);
+            } else if (team.wins > 0 && team.wins <= 6) {
+                // console.log(team.abbrev);
             }
         });
     }
