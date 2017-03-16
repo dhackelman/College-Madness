@@ -12,7 +12,8 @@ class RegionA1 extends React.Component {
 
         return (
             <div className="region__A">
-                <Round64 TeamData={teams}></Round64>
+
+                <Round64 update={this.props.updateSelectedTeam} TeamData={teams}></Round64>
 
             </div>
         );

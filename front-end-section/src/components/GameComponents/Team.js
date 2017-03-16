@@ -3,18 +3,21 @@ import TeamLogo from '../../styles/images/teamLogo.png';
 import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 
 class Team extends React.Component {
-    selectTeam(e, source) {
+    selectTeam(e, key) {
         e.preventDefault();
-        console.log(this.activeTeam);
-        this.activeTeam.classList.toggle('team__selected');
+        console.log('event key ', e, key);
+        // this.activeTeam.classList.toggle('team__selected');
+        // this.props.team.round_64 = true;
 
+        this.props.update(key);
     }
 
     render() {
-
+        const ourKey = this.props.team.id;
+        console.log('check duke ', this.props.team.round_64);
         return (
 
-            <div ref={(team) => this.activeTeam = team} className="team__container" onClick={(e) => this.selectTeam(e, this)}>
+            <div ref={(team) => this.activeTeam = team} onClick={(e) => this.selectTeam(e, ourKey)} className="team__container">
                 <FaInfoCircle className="team__info" size={30}/>
                 <img className="team__logo" src={TeamLogo} alt="Team Logo"></img>
                 <span className="team__seed">{this.props.team.seed}</span>

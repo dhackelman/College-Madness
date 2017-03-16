@@ -16,8 +16,7 @@ class Round64 extends React.Component {
                     const team_1 = team;
                     const team_2 = teams.pop();
                     // i++;
-
-                    return <Matchup key={team_1.id} team1={team_1} team2={team_2}></Matchup>;
+                    return <Matchup key={team_1.id} team1={team_1} team2={team_2} update={this.props.update}></Matchup>;
                 })}
 
             </div>

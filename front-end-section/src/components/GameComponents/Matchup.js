@@ -7,8 +7,8 @@ class Matchup extends React.Component {
         return (
 
             <div className="matchup__container">
-                <Team team={this.props.team1}/>
-                <Team team={this.props.team2}/>
+                <Team update={this.props.update} team={this.props.team1}/>
+                <Team update={this.props.update} team={this.props.team2}/>
             </div>
 
         );
