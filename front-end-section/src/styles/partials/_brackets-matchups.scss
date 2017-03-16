@@ -1,9 +1,3 @@
-
-
-// .connector__container {
-//
-// }
-
 .matchup__container {
   display: flex;
   flex-flow: column nowrap;
@@ -11,8 +5,9 @@
   width: 100%;
 }
 
-.team__selected { // team selected 
+.team__selected { // team selected
   background-color: $avocado;
+  font-size: 33px;
 }
 
 .team__container {

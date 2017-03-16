@@ -1,8 +1,8 @@
 import React from 'react';
 import Round64 from './Round64';
-import Round32 from './Round32';
-import Round16 from './Round16';
-import Round8 from './Round8';
+// import Round32 from './Round32';
+// import Round16 from './Round16';
+// import Round8 from './Round8';
 import {filterByRegion} from '../../helper.js';
 
 class RegionA2 extends React.Component {
