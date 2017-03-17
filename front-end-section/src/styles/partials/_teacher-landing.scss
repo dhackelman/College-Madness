@@ -1,0 +1,93 @@
+.teacher__nav {
+  background: $royal;
+  margin: 0 auto;
+  width: 100%;
+
+  ul {
+    display: flex;
+    height: 70px;
+    justify-content: center;
+    margin: 0 auto;
+
+    .teacher__nav__item {
+      border-radius: 5px;
+      color: $almost;
+      font-weight: 700;
+      margin: 1% 2%;
+      padding-top: 1%;
+      padding-bottom: 3%;
+      text-align: center;
+      width: 20%;
+    }
+    .teacher__nav__item:hover {
+      background: $lemon;
+      color: $royal;
+    }
+  }
+
+}
+
+.welcome__message {
+  text-align: center;
+}
+
+.teacher__things__container {
+  display: flex;
+  width: 100%;
+
+  .teacher__roster {
+    display: flex;
+    flex-direction: column;
+    line-height: 2.5;
+    text-align: center;
+    width: 30%;
+    margin: 2%;
+
+    .roster__header {
+      background: $royal;
+      color: $almost;
+      font-weight: 700;
+      height: 50px;
+      margin: 0 auto;
+      padding: 2%;
+      text-align: center;
+      width: 100%;
+    }
+
+    .roster__student:hover {
+      border-left: 25px solid $royal;
+      width: calc(100% - 25px);
+    }
+  }
+
+  .teacher__inbox {
+    background: $almost;
+    border: 2px solid $royal;
+
+    width: 50%;
+    margin: 2%;
+
+    .inbox__header {
+      background: $royal;
+      color: $almost;
+      font-weight: 700;
+      height: 50px;
+      margin: 0 auto;
+      padding: 2%;
+      text-align: center;
+      width: 100%;
+    }
+    .inbox__messages {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2% 2%;
+      .inbox__single {
+        background: #fff;
+        margin: 1%;
+        padding: 1% 2%;
+        width: 30%;
+      }
+    }
+  }
+
+}
