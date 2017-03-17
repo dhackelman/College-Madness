@@ -7,6 +7,10 @@ class Container extends React.Component {
         this.setState({TeamData: TeamData});
 
     }
+    componentWillUpdate() {
+        // this.setState({TeamData: TeamData});
+    }
+
     constructor() {
         super();
         this.updateSelectedTeam = this.updateSelectedTeam.bind(this);
@@ -17,13 +21,14 @@ class Container extends React.Component {
         };
     }
     searchWins() {
-      const TeamData = {
-        ...this.state.TeamData};
+        const TeamData = {
+            ...this.state.TeamData
+        };
         //use filter to find teams that have more than 1 win
-        let TeamDataFilter = TeamData.teams.filter((team) => {
+        let teamDataFilter = TeamData.teams.filter((team) => {
             return team.wins !== 0;
         });
-        
+        console.log('filtered --> ', teamDataFilter);
     }
 
     updateSelectedTeam(key) {
@@ -36,9 +41,8 @@ class Container extends React.Component {
         selectedTeam.wins++;
         this.setState({TeamData});
         this.searchWins();
+        console.log('props in cont -', this.props);
     }
-
-
 
     render() {
 
