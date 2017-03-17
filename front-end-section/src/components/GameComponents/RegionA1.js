@@ -13,8 +13,8 @@ class RegionA1 extends React.Component {
         return (
             <div className="region__A">
 
-                <Round64 props={this.props} update={this.props.updateSelectedTeam} TeamData={teams}></Round64>
-                <Round32 props={this.props} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins} TeamData={teams}></Round32>
+                <Round64 update={this.props.updateSelectedTeam} TeamData={teams}></Round64>
+                <Round32 update={this.props.updateSelectedTeam} searchWins={this.props.searchWins} TeamData={teams}></Round32>
 
             </div>
         );
