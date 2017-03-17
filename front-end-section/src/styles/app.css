@@ -204,6 +204,9 @@ img {
   .team__container :active {
     background-color: #ffda03; }
 
+.team__pick {
+  background-color: blue; }
+
 .team__selected {
   background-color: #bbd72e; }
 

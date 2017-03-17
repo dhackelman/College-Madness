@@ -4,6 +4,7 @@ import Team from './Team';
 class Matchup extends React.Component {
 
     render() {
+        // console.log('matchup comp props id: ', this.props.id);  the team abbrev
         return (
 
             <div className="matchup__container">
