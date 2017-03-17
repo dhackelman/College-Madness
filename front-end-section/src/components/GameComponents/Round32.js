@@ -3,7 +3,7 @@ import Matchup from './Matchup';
 
 class Round32 extends React.Component {
     componentWillReceiveProps(props) {
-        // console.log('props --> ', props.TeamData);
+        console.log('props --> ', props);
         // const team32 = props.searchWins();
         // let teamDataFilter = props.TeamData.filter((team) => {
         //     return team.wins !== 0;

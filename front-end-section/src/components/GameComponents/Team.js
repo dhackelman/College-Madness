@@ -18,7 +18,7 @@ class Team extends React.Component {
             if (!found) {
                 if (this.activeTeam === team && !team.classList.contains('team__selected')) {
                     tempActive = document.querySelector(`.${matchup}.team__selected`);
-                    console.log('activeTeam --> ', this.activeTeam);
+                    // console.log('activeTeam --> ', this.activeTeam);
                     if (tempActive) {
                         tempActive.classList.remove('team__selected');
                     }
@@ -50,6 +50,7 @@ class Team extends React.Component {
                 <img className="team__logo" src={TeamLogo} alt="Team Logo"></img>
                 <span className="team__seed">{this.props.team.seed}</span>
                 <span className="team__name">{this.props.team.abbrev}</span>
+                <span className="team__wins">{this.props.team.wins}</span>
             </div>
 
         );
