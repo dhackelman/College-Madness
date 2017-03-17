@@ -20,10 +20,11 @@ class Container extends React.Component {
             TeamData: TeamData
         };
     }
-    searchWins(arg) {
+
+    searchWins(teamData) {
         //use filter to find teams that have more than 1 win
-        let teams = arg;
-        let teamDataFilter = teams.filter((team) => {
+        let teamDataFilter = teamData.teams.filter((team) => {
+
             return team.wins !== 0;
         });
     }
@@ -37,7 +38,7 @@ class Container extends React.Component {
 
         selectedTeam.wins++;
         this.setState({TeamData});
-        this.searchWins();
+        this.searchWins(TeamData);
         console.log('props in cont -', this.props);
     }
 
