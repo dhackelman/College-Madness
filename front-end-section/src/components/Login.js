@@ -7,9 +7,16 @@ class Login extends React.Component {
     super();
     this.loginWithGoogle = this.loginWithGoogle.bind(this);
   }
+  componentDidMount() {
+
+  }
 
   loginWithGoogle() {
     console.log('Method: GET URL: /auth/google_oauth2');
+    axios.get(`https://kipp-madness-api.herokuapp.com/auth/google_oauth2`)
+      .then(res => {
+      console.log(res);
+      });
   }
 
     render() {
