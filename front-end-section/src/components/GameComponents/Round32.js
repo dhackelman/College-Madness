@@ -7,16 +7,18 @@ class Round32 extends React.Component {
         // const team32 = props.searchWins();
         // let teamDataFilter = props.TeamData.filter((team) => {
         //     return team.wins !== 0;
+        let newTeams = props.searchWins(props.TeamData);
+        console.log('teamData', props.TeamData.team);
+        console.log("here", newTeams);
     }
 
-    // }
-    // componentWillUpdate(props, state) {
-    //     console.log('state ', state);
-    // }
+
     render() {
 
         return (
-            <div className="round_32__container"></div>
+            <div className="round_32__container">
+
+            </div>
         );
     }
 }

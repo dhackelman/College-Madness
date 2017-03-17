@@ -1,0 +1,17 @@
+.login__container {
+  margin: 0 auto;
+  width: 90%;
+
+  .login__button {
+    background: $royal;
+    border: none;
+    border-radius: 5px;
+    color: $almost;
+    font-weight: 700;
+    margin: 1% 2%;
+    padding-top: 1%;
+    padding-bottom: 3%;
+    text-align: center;
+    width: 20%;
+  }
+}

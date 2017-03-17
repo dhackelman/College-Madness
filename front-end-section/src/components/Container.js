@@ -20,12 +20,13 @@ class Container extends React.Component {
             TeamData: TeamData
         };
     }
+
     searchWins(teamData) {
         //use filter to find teams that have more than 1 win
         let teamDataFilter = teamData.teams.filter((team) => {
+
             return team.wins !== 0;
         });
-        console.log('filtered --> ', teamDataFilter);
     }
 
     updateSelectedTeam(key) {
