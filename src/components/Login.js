@@ -13,9 +13,20 @@ class Login extends React.Component {
 
   loginWithGoogle() {
     console.log('Method: GET URL: /auth/google_oauth2');
-    axios.get(`https://kipp-madness-api.herokuapp.com/auth/google_oauth2`)
-      .then(res => {
-      console.log(res);
+    const config = {
+       headers: {
+             'Content-Type': 'application/x-www-form-urlencoded'
+       },
+       params: {
+             email_address: emailAddress
+       }
+      };
+      axios.get( `https://kipp-madness-api.herokuapp.com/auth/google_oauth2`, {}, config)
+      .then(function (response) {
+             console.log(response);
+      })
+      .catch(function (response) {
+             console.log(response);
       });
   }
 
