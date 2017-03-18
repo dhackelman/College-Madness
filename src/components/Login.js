@@ -15,7 +15,7 @@ class Login extends React.Component {
       }).catch(function(error) {
           console.log(error);
         });
-      axios.get("http://kipp-madness-api.herokuapp.com/teams.json")
+      axios.get("https://kipp-madness-api.herokuapp.com/teams.json")
       .then(function(data) {
         console.log(data);
       }).catch(function(error) {
