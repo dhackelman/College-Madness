@@ -16,7 +16,11 @@ class Login extends React.Component {
       axios.get("https://kipp-madness-api.herokuapp.com/auth/google_oauth2")
       .then(function(data) {
         console.log(data);
-      });
+      }, (error) => {
+          const newAction = options.onError({ action, next, error, getState, dispatch }, options);
+          options.onComplete({ action: newAction, next, getState, dispatch }, options);
+          return Promise.reject(newAction);
+        });;
     }
 
     render() {
