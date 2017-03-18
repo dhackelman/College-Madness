@@ -12,21 +12,12 @@ class Login extends React.Component {
   }
 
   loginWithGoogle() {
-    console.log('Method: GET URL: /auth/google_oauth2');
-    const config = {
-       headers: {
-         'Accept': 'application/json',
-         'Content-Type': 'application/json',
-       }
-      };
-      axios.get( `https://kipp-madness-api.herokuapp.com/auth/google_oauth2`, {}, config)
-      .then(function (response) {
-             console.log(response);
-      })
-      .catch(function (response) {
-             console.log(response);
+    // console.log('Method: GET URL: /auth/google_oauth2');
+      axios.get("https://kipp-madness-api.herokuapp.com/teams")
+      .then(function(data) {
+        console.log(data);
       });
-  }
+    }
 
     render() {
         return (
