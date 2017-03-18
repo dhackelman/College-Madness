@@ -10,7 +10,6 @@ class Round64 extends React.Component {
             teamsCopy.push(team);
         })
 
-        console.log('teamscopy yo ', teamsCopy);
         // let i = 0;
         // console.log('prps TeamData --> ', teams);
         return (
