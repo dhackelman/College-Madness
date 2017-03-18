@@ -15,7 +15,8 @@ class Login extends React.Component {
     console.log('Method: GET URL: /auth/google_oauth2');
     const config = {
        headers: {
-             'Content-Type': 'application/x-www-form-urlencoded'
+         'Accept': 'application/json',
+         'Content-Type': 'application/json',
        }
       };
       axios.get( `https://kipp-madness-api.herokuapp.com/auth/google_oauth2`, {}, config)
