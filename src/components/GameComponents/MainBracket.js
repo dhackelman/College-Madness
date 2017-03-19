@@ -1,5 +1,5 @@
 import React from 'react';
-import Container from '../Container';
+// import Container from '../Container';
 import RegionA1 from './RegionA1';
 import RegionA2 from './RegionA2';
 import RegionB1 from './RegionB1';
@@ -9,14 +9,14 @@ class MainBracket extends React.Component {
 
     render() {
         return (
-            <Container>
+            <div className="component__container">
 
-                <RegionA1/>
-                <RegionB1/>
-                <RegionA2/>
-                <RegionB2/>
+                <RegionA1 Round32={this.props.Round32} TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
+                <RegionB1 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
+                <RegionA2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
+                <RegionB2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
 
-            </Container>
+            </div>
         );
     }
 }

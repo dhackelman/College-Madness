@@ -23,6 +23,7 @@ class Round64 extends React.Component {
 
                     // console.log('in map', teams);
                     // i++;
+                    // NOTE: send team details in its own prop
                     return <Matchup key={team_1.id} id={team_1.abbrev} team1={team_1} team2={team_2} update={this.props.update}></Matchup>;
                 })}
 

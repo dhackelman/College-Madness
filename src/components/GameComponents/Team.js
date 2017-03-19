@@ -42,7 +42,7 @@ class Team extends React.Component {
     render() {
         const ourKey = this.props.team.id;
         // console.log('props ', this.props);
-
+        // NOTE: update using details from
         return (
 
             <div data-matchup={this.props.team.seed} ref={(team) => this.activeTeam = team} onClick={(e) => this.selectTeam(e, ourKey)} className={`team__container ${this.props.id}`}>

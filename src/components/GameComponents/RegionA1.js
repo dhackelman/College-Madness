@@ -8,6 +8,8 @@ import {filterByRegion} from '../../helper.js';
 class RegionA1 extends React.Component {
 
     render() {
+        // <Round32 round32Teams={this.props.round32Teams} update={this.props.update} searchWins={this.props.searchWins} TeamData={teams}></Round32>
+
         const teams = filterByRegion("East", this.props.TeamData.teams);
         // const teams = filterByRegion("West", this.props.TeamData.teams);
         // const teams = filterByRegion("MidWest", this.props.TeamData.teams);
@@ -15,13 +17,14 @@ class RegionA1 extends React.Component {
         teams.forEach((team) => {
             // console.log('team in for', team.abbrev);
         });
-        console.log('region a teams', teams);
+
+        // console.log('region a teams', teams);
 
         return (
             <div className="region__A">
 
-                <Round64 update={this.props.updateSelectedTeam} TeamData={teams}></Round64>
-                <Round32 update={this.props.updateSelectedTeam} searchWins={this.props.searchWins} TeamData={teams}></Round32>
+                <Round64 update={this.props.update} TeamData={teams}></Round64>
+                <Round32 round32Teams={this.props.round32Teams} update={this.props.update} searchWins={this.props.searchWins} TeamData={teams}></Round32>
 
             </div>
         );
