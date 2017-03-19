@@ -28,13 +28,8 @@ class Round32 extends React.Component {
         console.log('teamsCopy ', teamsCopy);
         return (
             <div className="round_32__container">
-                {teamsCopy.map((team) => {
-
-                    const team_1 = team;
-                    const team_2 = teamsCopy.pop();
-
-                    return <Matchup key={team_1.id} id={team_1.abbrev} team1={team_1} team2={team_2} update={this.props.update}></Matchup>;
-                })}</div>
+            { /*<Matchup key={team_1.id} id={team_1.abbrev} team1={team_1} team2={team_2} update={this.props.update}></Matchup> */}
+            </div>
         );
     }
 }
