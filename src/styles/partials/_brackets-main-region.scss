@@ -1,19 +1,118 @@
 
 
-.region__A {
+.region__A1 {
   // background-color: $burnt;
   border: 5px solid $navy;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  position: relative;
   width: 50%;
+  .sign__east {
+    border: 5px solid $navy;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+
+    .sign__span-east {
+      font-size: 30px;
+      font-weight: 600;
+      color: $smoothGray;
+      padding: 15px 35px;
+    }
+  }
+  .round_4__container {
+    position: absolute;
+    bottom: 100px;
+    right: -100px;
+    margin: 10px;
+    width: 200px;
+    .bracket__final-four {
+      text-align: center;
+    }
+  }
 }
 
-.region__B {
+.region__A2 {
+  // background-color: $burnt;
+  border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 50%;
+  .sign__west {
+    border: 5px solid $navy;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    position: absolute;
+
+    .sign__span-west {
+      font-size: 30px;
+      font-weight: 600;
+      color: $smoothGray;
+      padding: 15px 35px;
+    }
+  }
+}
+
+.region__B1 {
   // background-color: $lemon;
   border: 5px solid $navy;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  position: relative;
   width: 50%;
+  .sign__midwest {
+    border: 5px solid $navy;
+    left: 0;
+    height: 50px;
+    position: absolute;
+    top: 0;
+
+    .sign__span-midwest {
+      color: $smoothGray;
+      font-size: 30px;
+      font-weight: 600;
+      padding: 15px 35px;
+    }
+  }
+
+}
+
+.region__B2 {
+  // background-color: $lemon;
+  border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  position: relative;
+  width: 50%;
+  .sign__south {
+    border: 5px solid $navy;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute;
+
+    .sign__span-south {
+      font-size: 30px;
+      font-weight: 600;
+      color: $smoothGray;
+      padding: 15px 35px;
+    }
+  }
+  .round_4__container {
+    left: -100px;
+    margin: 10px;
+    position: absolute;
+    top: 100px;
+    width: 200px;
+    .bracket__final-four {
+      text-align: center;
+    }
+  }
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router';
+// import Matchup from './Matchup';
 
 class Round2 extends React.Component {
 
@@ -8,7 +8,7 @@ class Round2 extends React.Component {
             <div className="round_2__container">
 
                 <h1>Championship Game</h1>
-                <Link to='roundWin'>Go To National Champion!</Link>
+
             </div>
         );
     }

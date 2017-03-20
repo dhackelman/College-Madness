@@ -1,6 +1,4 @@
 import React from 'react';
-// import {Link} from 'react-router';
-// import Container from './Container';
 import Header from './Header';
 import TeamData from '../Data/data.js';
 
@@ -10,17 +8,33 @@ class App extends React.Component {
         this.updateSelectedTeam = this.updateSelectedTeam.bind(this);
         this.searchWins = this.searchWins.bind(this);
 
-        // this.updateSelectedTeamStyle = this.updateSelectedTeamStyle.bind(this);
         this.state = {
-            TeamData: TeamData,
-            Round32: TeamData
+            TeamData: TeamData
         };
     }
 
-    searchWins(teamData) {
+    searchWins(teamData, wins) {
         //use filter to find teams that have more than 1 win
+
         let teamDataFilter = teamData.filter((team) => {
-            return team.wins !== 0;
+            if (wins === 1) {
+                return team.wins >= 1;
+            }
+            if (wins === 2) {
+                return team.wins >= 2;
+            }
+            if (wins === 3) {
+                return team.wins >= 3;
+            }
+            if (wins === 4) {
+                return team.wins >= 4;
+            }
+            if (wins === 5) {
+                return team.wins >= 5;
+            }
+            if (wins === 6) { // Winner of Bracket
+                return team.wins >= 6;
+            }
         });;
         return teamDataFilter;
     }
@@ -33,18 +47,15 @@ class App extends React.Component {
 
         selectedTeam.wins++;
         this.setState({TeamData});
-        this.searchWins(TeamData.teams);
+        // this.searchWins(TeamData.teams);
 
         // console.log('props in cont -', this.props);
     }
-
-    updateRound32() {}
 
     render() {
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
                 TeamData: this.state.TeamData,
-                Round32: this.state.Round32,
                 updateSelectedTeam: this.updateSelectedTeam,
                 searchWins: this.searchWins
             });

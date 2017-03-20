@@ -160,19 +160,97 @@ img {
   margin: 2% 0;
   margin-right: 5%; }
 
-.region__A {
+.region__A1 {
   border: 5px solid #16345c;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
+  position: relative;
   width: 50%; }
+  .region__A1 .sign__east {
+    border: 5px solid #16345c;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0; }
+    .region__A1 .sign__east .sign__span-east {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2d2d2d;
+      padding: 15px 35px; }
+  .region__A1 .round_4__container {
+    position: absolute;
+    bottom: 100px;
+    right: -100px;
+    margin: 10px;
+    width: 200px; }
+    .region__A1 .round_4__container .bracket__final-four {
+      text-align: center; }
 
-.region__B {
+.region__A2 {
+  border: 5px solid #16345c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 50%; }
+  .region__A2 .sign__west {
+    border: 5px solid #16345c;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    position: absolute; }
+    .region__A2 .sign__west .sign__span-west {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2d2d2d;
+      padding: 15px 35px; }
+
+.region__B1 {
   border: 5px solid #16345c;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-end;
+  position: relative;
   width: 50%; }
+  .region__B1 .sign__midwest {
+    border: 5px solid #16345c;
+    left: 0;
+    height: 50px;
+    position: absolute;
+    top: 0; }
+    .region__B1 .sign__midwest .sign__span-midwest {
+      color: #2d2d2d;
+      font-size: 30px;
+      font-weight: 600;
+      padding: 15px 35px; }
+
+.region__B2 {
+  border: 5px solid #16345c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+  position: relative;
+  width: 50%; }
+  .region__B2 .sign__south {
+    border: 5px solid #16345c;
+    bottom: 0;
+    height: 50px;
+    left: 0;
+    position: absolute; }
+    .region__B2 .sign__south .sign__span-south {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2d2d2d;
+      padding: 15px 35px; }
+  .region__B2 .round_4__container {
+    left: -100px;
+    margin: 10px;
+    position: absolute;
+    top: 100px;
+    width: 200px; }
+    .region__B2 .round_4__container .bracket__final-four {
+      text-align: center; }
 
 .matchup__container {
   display: flex;

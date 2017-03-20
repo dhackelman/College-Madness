@@ -11,7 +11,7 @@ class MainBracket extends React.Component {
         return (
             <div className="component__container">
 
-                <RegionA1 Round32={this.props.Round32} TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
+                <RegionA1 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
                 <RegionB1 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
                 <RegionA2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
                 <RegionB2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
