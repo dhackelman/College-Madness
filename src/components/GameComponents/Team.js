@@ -50,7 +50,7 @@ class Team extends React.Component {
             <div>
                 <div ref={(team) => this.activeTeam = team} onClick={(e) => this.selectTeam(e, ourKey)} className={`team__container ${this.props.id}`}>
                     <Link to="/research"><FaInfoCircle className="team__info" size={30}/></Link>
-                    <Link to="/research"><img className="team__logo" src={TeamLogo} alt="Team Logo"></img></Link>
+                  <img className="team__logo" src={TeamLogo} alt="Team Logo"></img>
                     <span className="team__seed">{this.props.team.seed}</span>
                     <span className="team__name">{this.props.team.abbrev}</span>
                     <span className="team__wins">{this.props.team.wins}</span>

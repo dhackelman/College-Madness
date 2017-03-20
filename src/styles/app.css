@@ -130,6 +130,12 @@ img {
   color: #fff;
   background: #2c3e50; }
 
+.is-hidden {
+  display: none; }
+
+.is-visible {
+  display: inline-block; }
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0); }
