@@ -20,7 +20,6 @@ class TeacherLogin extends React.Component {
             <nav className="teacher__nav">
               <ul>
                 <li className="teacher__nav__item">Inbox</li>
-                <li className="teacher__nav__item">Leaderboard</li>
                 <li className="teacher__nav__item">Homeroom</li>
                 <li className="teacher__nav__item"><Link to="/bracket">My Bracket</Link></li>
               </ul>
