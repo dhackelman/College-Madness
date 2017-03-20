@@ -1,5 +1,5 @@
 import React from 'react';
-// import Matchup from './Matchup';
+import Matchup from './Matchup';
 
 class RoundWin extends React.Component {
 
@@ -7,7 +7,6 @@ class RoundWin extends React.Component {
         return (
             <div className="round_1__container">
 
-                <h1>Championship Game</h1>
                 🐑🐑🐑🐑🐑🐑🐑 You Win! 🐑🐑🐑🐑🐑🐑🐑🐑
             </div>
         );

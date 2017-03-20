@@ -54,14 +54,26 @@
   width: 200px;
 
 }
-// .round_4__container {
-// Resides in Region__A1 
-// }
+.round_4__container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 10px;
+  width: 200px;
+}
 .round_2__container {
-
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 10px;
+  width: 200px;
 
 }
 .round_1__container {
-
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  margin: 10px;
+  width: 200px;
 
 }

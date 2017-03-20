@@ -1,18 +1,32 @@
+// container for bracket in App ***
+.component__container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 10px;
+  width: 100%;
+}
 
-
-.region__A1 {
-  // background-color: $burnt;
+.region__common {
   border: 5px solid $navy;
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
   position: relative;
-  width: 50%;
+  width: 100%;
+  }
+
+.region__A1 {
+  border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
   .sign__east {
     border: 5px solid $navy;
     height: 50px;
     position: absolute;
-    right: 0;
+    left: 50%;
     top: 0;
 
     .sign__span-east {
@@ -20,16 +34,6 @@
       font-weight: 600;
       color: $smoothGray;
       padding: 15px 35px;
-    }
-  }
-  .round_4__container {
-    position: absolute;
-    bottom: 100px;
-    right: -100px;
-    margin: 10px;
-    width: 200px;
-    .bracket__final-four {
-      text-align: center;
     }
   }
 }
@@ -41,11 +45,11 @@
   flex-flow: row nowrap;
   justify-content: flex-start;
   position: relative;
-  width: 50%;
+  width: 100%;
   .sign__west {
     border: 5px solid $navy;
-    bottom: 0;
-    right: 0;
+    top: 0;
+    left: 50%;
     height: 50px;
     position: absolute;
 
@@ -65,10 +69,10 @@
   flex-flow: row nowrap;
   justify-content: flex-end;
   position: relative;
-  width: 50%;
+  width: 100%;
   .sign__midwest {
     border: 5px solid $navy;
-    left: 0;
+    left: 50%;
     height: 50px;
     position: absolute;
     top: 0;
@@ -90,12 +94,12 @@
   flex-flow: row nowrap;
   justify-content: flex-end;
   position: relative;
-  width: 50%;
+  width: 100%;
   .sign__south {
     border: 5px solid $navy;
-    bottom: 0;
+    top: 0;
     height: 50px;
-    left: 0;
+    left: 50%;
     position: absolute;
 
     .sign__span-south {
@@ -103,16 +107,6 @@
       font-weight: 600;
       color: $smoothGray;
       padding: 15px 35px;
-    }
-  }
-  .round_4__container {
-    left: -100px;
-    margin: 10px;
-    position: absolute;
-    top: 100px;
-    width: 200px;
-    .bracket__final-four {
-      text-align: center;
     }
   }
 }

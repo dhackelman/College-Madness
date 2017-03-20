@@ -8,6 +8,8 @@ class Round4 extends React.Component {
 
         let teamEast = null;
         let teamMidwest = null;
+        let teamWest = null;
+        let teamSouth = null;
 
         teams.forEach((team) => {
             if (team.region === "East") {
@@ -15,14 +17,22 @@ class Round4 extends React.Component {
             }
             if (team.region === "Midwest") {
                 teamMidwest = team;
+            }
+            if (team.region === "West") {
+                teamWest = team;
+            }
+            if (team.region === "South") {
+                teamSouth = team;
             } else {
-                console.log('Error in Round4 A1 ForEach loop');
+                console.log('Error in Round 4 ForEach loop');
             }
         })
+        // <h2 className="bracket__final-four">Final Four</h2>
         return (
             <div className="round_4__container">
-                <h2 className="bracket__final-four">Final Four</h2>
+
                 <Matchup team1={teamEast} team2={teamMidwest} update={this.props.update}></Matchup>
+                <Matchup team1={teamWest} team2={teamSouth} update={this.props.update}></Matchup>
 
             </div>
         );
