@@ -11,7 +11,7 @@ class TeacherLogin extends React.Component {
       this.state = {Users: null};
     }
 
-    componentDidMount() {
+    componentWillMount() {
       axios.get("https://kipp-madness-api.herokuapp.com/users.json")
       .then((resp)=>{
         this.setState({

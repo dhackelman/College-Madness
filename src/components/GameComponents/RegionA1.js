@@ -13,8 +13,6 @@ import {filterByRegion} from '../../helper.js';
 class RegionA1 extends React.Component {
 
     render() {
-        // <Round8 update={this.props.update} searchWins={this.props.searchWins} TeamData={teams}></Round8>
-        // <Round4 update={this.props.update} searchWins={this.props.searchWins} TeamData={finalFour}></Round4>
 
         const teams = filterByRegion("East", this.props.TeamData.teams);
         const finalFour = this.props.TeamData.teams;
