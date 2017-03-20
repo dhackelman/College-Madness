@@ -26,9 +26,7 @@ class Login extends React.Component {
             <div>
                 <h1>Welcome to the Login Screen</h1>
                 <div className="login__container">
-                  <button className="login__button" onClick={this.loginWithGoogle}>
-                    Login with Google
-                  </button>
+                  <a href="https://kipp-madness-api.herokuapp.com/auth/google_oauth2"><button className="login__button">Login with Google</button></a>
                 </div>
             </div>
         );
