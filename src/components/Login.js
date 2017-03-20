@@ -10,16 +10,10 @@ class Login extends React.Component {
 
   loginWithGoogle() {
     const config = {
-      headers:{'Content-Type': 'application/jsonp'},
+      headers:{'Content-Type': 'application/json'},
       data: {}
     };
-      axios.get("https://kipp-madness-api.herokuapp.com/auth/google_oauth2", config)
-      .then(function(data) {
-        console.log(data);
-      }).catch(function(error) {
-          console.log(error);
-        });
-      axios.get("https://kipp-madness-api.herokuapp.com/teams.json")
+      axios.post("https://kipp-madness-api.herokuapp.com/auth/google_oauth2")
       .then(function(data) {
         console.log(data);
       }).catch(function(error) {
