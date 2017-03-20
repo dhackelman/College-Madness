@@ -4,7 +4,6 @@ import Matchup from './Matchup';
 class Round32 extends React.Component {
 
     render() {
-<<<<<<< HEAD
         let teams = this.props.searchWins(this.props.TeamData, 1);
 
         let team116 = null;
@@ -44,21 +43,6 @@ class Round32 extends React.Component {
                 <Matchup team1={team512} team2={team413} update={this.props.update}></Matchup>
                 <Matchup team1={team611} team2={team314} update={this.props.update}></Matchup>
                 <Matchup team1={team710} team2={team215} update={this.props.update}></Matchup>
-=======
-        console.log('what the state ', this.state);
-        let teams = this.state.Round32;
-        console.log('teams in render ', teams);
-        let teamsCopy = [];
-        if (Object.keys(teams).length !== 0) {
-            teams.forEach((team) => {
-                teamsCopy.push(team);
-            })
-        }
-        console.log('teamsCopy ', teamsCopy);
-        return (
-            <div className="round_32__container">
-            { /*<Matchup key={team_1.id} id={team_1.abbrev} team1={team_1} team2={team_2} update={this.props.update}></Matchup> */}
->>>>>>> 5d7f5e0d8a8ccee16d51330e63b34cd08b429d40
             </div>
         );
     }
