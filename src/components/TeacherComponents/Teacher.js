@@ -1,18 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router'
 import axios from 'axios';
 import Roster from './Roster.js';
 import Inbox from './Inbox.js';
 
 class TeacherLogin extends React.Component {
-  constructor() {
-    super();
-    this.getUserData = this.getUserData.bind(this);
-  }
-  getUserData() {
+
+  componentWillMount() {
    axios.get("https://kipp-madness-api.herokuapp.com/users.json")
    .then(function(data) {
      const users = data.data.users;
-     return users;
+     console.log(users);
     });
    }
 
@@ -24,6 +22,7 @@ class TeacherLogin extends React.Component {
                 <li className="teacher__nav__item">Inbox</li>
                 <li className="teacher__nav__item">Leaderboard</li>
                 <li className="teacher__nav__item">Homeroom</li>
+                <li className="teacher__nav__item"><Link to="/bracket">My Bracket</Link></li>
               </ul>
             </nav>
             <h1 className="welcome__message">Welcome Teacher!</h1>
