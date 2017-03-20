@@ -4,11 +4,12 @@ import React from 'react';
 class Roster extends React.Component {
 
     render() {
-
-        return (
+      if (this.props.users === null) {
+        return null;
+      }
+      return (
           <div className="teacher__roster">
             <span className="roster__header">Student Scholar</span>
-            <span className="roster__student">/</span>
           </div>
         );
     }

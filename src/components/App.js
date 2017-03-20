@@ -39,6 +39,8 @@ class App extends React.Component {
         return teamDataFilter;
     }
 
+
+
     updateSelectedTeam(key) {
         const TeamData = {
             ...this.state.TeamData
