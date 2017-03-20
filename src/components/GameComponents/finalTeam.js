@@ -5,22 +5,17 @@ class FinalTeam extends React.Component {
 
     render() {
 
-        console.log('props ', this.props);
         let teams = this.props.searchWins(this.props.TeamData, 6);
         let teamFinal = null;
-        console.log('teams ', teams);
         teams.forEach((team) => {
             if (team.wins === 6) {
                 teamFinal = team;
             } else {
                 console.log('Error in Final Round ForEach loop');
             }
-            console.log('final Team ', teamFinal);
         })
-        console.log('final Team out ', teamFinal);
 
         if (teamFinal === null) {
-            console.log('null ? ', teamFinal);
             return null;
         }
 
