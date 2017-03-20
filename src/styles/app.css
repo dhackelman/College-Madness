@@ -182,9 +182,15 @@ img {
 .region__common {
   border: 5px solid #16345c;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   justify-content: flex-start;
   position: relative;
+  width: 100%; }
+
+.region__finals-titles {
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-around;
   width: 100%; }
 
 .region__A1 {
@@ -305,6 +311,10 @@ img {
 .team__not__selected {
   background-color: #e47323; }
 
+.team__logo-final {
+  width: 150px;
+  height: 150px; }
+
 .round_64__container {
   display: flex;
   flex-flow: column nowrap;
@@ -366,7 +376,7 @@ img {
 .round_1__container {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  align-items: center;
   margin: 10px;
   width: 200px; }
 

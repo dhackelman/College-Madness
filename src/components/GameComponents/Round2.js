@@ -19,10 +19,7 @@ class Round2 extends React.Component {
         })
         return (
             <div className="round_2__container">
-
-                <h1>Championship Game</h1>
                 <Matchup team1={teamFinalsOne} team2={teamFinalsTwo} update={this.props.update}></Matchup>
-
             </div>
         );
     }

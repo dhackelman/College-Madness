@@ -33,7 +33,7 @@ class App extends React.Component {
                 return team.wins >= 5;
             }
             if (wins === 6) { // Winner of Bracket
-                return team.wins >= 6;
+                return team.wins === 6;
             }
         });;
         return teamDataFilter;
