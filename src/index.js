@@ -6,9 +6,10 @@ import {browserHistory, Router, Route, IndexRoute} from 'react-router';
 import './styles/app.css';
 import App from './components/App';
 import Login from './components/Login';
-import TeacherLogin from './components/Teacher';
+import TeacherLogin from './components/TeacherComponents/Teacher';
 import StudentLogin from './components/Student';
 import MainBracket from './components/GameComponents/MainBracket';
+import ResearchContainer from './components/ResearchComponents/ResearchContainer';
 
 import NotFound from './components/NotFound';
 
@@ -19,6 +20,7 @@ ReactDOM.render((
             <Route path='bracket' component={MainBracket}/>
             <Route path='teacher' component={TeacherLogin}/>
             <Route path='student' component={StudentLogin}/>
+            <Route path='research' component={ResearchContainer}/>
             <Route path="*" component={NotFound}/>
         </Route>
     </Router>

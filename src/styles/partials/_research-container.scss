@@ -1,35 +1,26 @@
-.teacher__nav {
-  background: $royal;
-  margin: 0 auto;
-  width: 100%;
-
+.research__nav {
   ul {
     display: flex;
     height: 70px;
     justify-content: center;
     margin: 0 auto;
-    
-    .teacher__nav__item {
+    width: 70%;
+
+    .research__nav__item {
+      border: 2px solid $royal;
       border-radius: 5px;
-      color: $almost;
+      color: $royal;
       font-weight: 700;
-      margin: 1% 2%;
+      margin: 1%;
       padding-top: 1%;
       padding-bottom: 3%;
       text-align: center;
       width: 20%;
     }
-    .teacher__nav__item:hover {
+    .research__nav__item:hover {
       animation: shake .75s cubic-bezier(.16,.07,.19,.9) both;
       background-color: $lemon;
       color: $royal;
     }
   }
-}
-.welcome__message {
-  text-align: center;
-}
-.teacher__things__container {
-  display: flex;
-  width: 100%;
 }

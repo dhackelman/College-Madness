@@ -13,10 +13,15 @@
 }
 
 .header__homerooom {
-  
+
 }
 
 .header__logout {
   margin: 2% 0;
+  max-height: 50px;
   margin-right: 5%;
+}
+.header__logout:hover {
+  background-color: $lemon;
+  color: $royal;
 }

@@ -1,0 +1,45 @@
+.teacher__inbox {
+    background: $almost;
+    border: 2px solid $royal;
+
+    width: 60%;
+    margin: 2%;
+
+    .inbox__header {
+      background: $royal;
+      color: $almost;
+      font-weight: 700;
+      height: 50px;
+      margin: 0 auto;
+      padding: 2%;
+      text-align: center;
+      width: 100%;
+    }
+    .inbox__messages {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 2% 2%;
+
+      .inbox__single {
+        background: #fff;
+        margin: 1%;
+        padding: 1% 2%;
+        width: 30%;
+
+        .inbox__pass, .inbox__fail {
+          background-color: $avocado;
+          border: none;
+          border-radius: 5px;
+          margin: 5% 5%;
+          width: 40%;
+        }
+        .inbox__fail {
+          background-color: $burnt;
+        }
+
+        .inbox__pass:hover, .inbox__fail:hover {
+          animation: scale .5s both;
+        }
+      }
+    }
+  }
