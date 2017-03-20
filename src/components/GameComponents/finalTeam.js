@@ -1,27 +1,38 @@
 import React from 'react';
 import TeamLogo from '../../styles/images/teamLogo.png';
-import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 
-class Team extends React.Component {
+class FinalTeam extends React.Component {
 
     render() {
-        if (this.props.team === null) {
+
+        console.log('props ', this.props);
+        let teams = this.props.searchWins(this.props.TeamData, 6);
+        let teamFinal = null;
+        console.log('teams ', teams);
+        teams.forEach((team) => {
+            if (team.wins === 6) {
+                teamFinal = team;
+            } else {
+                console.log('Error in Final Round ForEach loop');
+            }
+            console.log('final Team ', teamFinal);
+        })
+        console.log('final Team out ', teamFinal);
+
+        if (teamFinal === null) {
+            console.log('null ? ', teamFinal);
             return null;
         }
-        let ourKey = this.props.team.id;
 
         return (
             <div>
-                <div ref={(team) => this.activeTeam = team} onClick={(e) => this.selectTeam(e, ourKey)} className={`team__container ${this.props.id}`}>
-                    <FaInfoCircle className="team__info" size={30}/>
-                    <img className="team__logo" src={TeamLogo} alt="Team Logo"></img>
-                    <span className="team__seed">{this.props.team.seed}</span>
-                    <span className="team__name">{this.props.team.abbrev}</span>
-                    <span className="team__wins">{this.props.team.wins}</span>
+                <div className="round_1__container">
+                    <img className="team__logo-final" src={TeamLogo} alt="Team Logo"></img>
+                    <h1 key={teamFinal.id} className="team__name">{teamFinal.name}</h1>
                 </div>
             </div>
         );
     }
 }
 
-export default Team;
+export default FinalTeam;

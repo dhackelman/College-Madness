@@ -1,13 +1,12 @@
 import React from 'react';
-import Matchup from './Matchup';
+import FinalTeam from './FinalTeam';
 
 class RoundWin extends React.Component {
 
     render() {
         return (
             <div className="round_1__container">
-
-                🐑🐑🐑🐑🐑🐑🐑 You Win! 🐑🐑🐑🐑🐑🐑🐑🐑
+                <FinalTeam TeamData={this.props.TeamData} searchWins={this.props.searchWins}/>
             </div>
         );
     }
