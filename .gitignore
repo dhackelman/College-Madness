@@ -3,8 +3,8 @@ node_modules
 
 # testing
 src/.jshintrc
-src/styles/app.css.map
-src/styles/.sass-cache
+app.css.map
+.sass-cache*
 
 # production
 
