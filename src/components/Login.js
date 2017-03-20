@@ -9,7 +9,11 @@ class Login extends React.Component {
   }
 
   loginWithGoogle() {
-      axios.get("https://kipp-madness-api.herokuapp.com/auth/google_oauth2")
+    const config = {
+      headers:{'Content-Type': 'application/jsonp'},
+      data: {}
+    };
+      axios.get("https://kipp-madness-api.herokuapp.com/auth/google_oauth2", config)
       .then(function(data) {
         console.log(data);
       }).catch(function(error) {
