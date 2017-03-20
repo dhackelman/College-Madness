@@ -1,4 +1,12 @@
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
 .login__container {
+  display: flex;
+  justify-content: center;
   margin: 0 auto;
   width: 90%;
 
@@ -7,11 +15,11 @@
     border: none;
     border-radius: 5px;
     color: $almost;
+    font-size: 1.5rem;
     font-weight: 700;
-    margin: 1% 2%;
+    margin: 3% auto;
     padding-top: 1%;
     padding-bottom: 3%;
-    text-align: center;
-    width: 20%;
+    width: 100%;
   }
 }
