@@ -1,0 +1,36 @@
+.research__start {
+  display: flex;
+}
+
+.college__visuals, .college__basics {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  padding: 0 2%;
+  width: 40%;
+
+  img {
+
+  }
+}
+
+.college__basics {
+  border: 2px solid $royal;
+  padding: 1%;
+  width: 55%;
+
+  h2 {
+    text-align: center;
+    width: 75%;
+  }
+  p {
+    font-weight: 700;
+    text-align: left;
+    width: 90%;
+  }
+  span {
+    font-weight: 400;
+  }
+
+}

@@ -8,11 +8,10 @@
 
 
 .team__container {
-  background-color: $almost;
+  background: rgba($almost, 0.5);
   display: flex;
   flex-flow: row nowrap;
   justify-content: flex-start;
-  // height: 50px;
   width: 100%;
 
   .team__info {
@@ -40,6 +39,10 @@
   :active {
     background-color: $lemon;
   }
+}
+
+.team__container:hover {
+  background: rgba($almost, 1);
 }
 .team__pick {
   background-color: blue;

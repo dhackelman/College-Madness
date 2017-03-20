@@ -1,8 +1,9 @@
 // ------ Global Imports ------ //
 @import 'partials/globals/variables';
 @import 'partials/globals/reset';
-@import 'partials/globals/mixins';
 
+// ------- Animations --------- //
+@import 'partials/globals/animation';
 // ------- Site Imports ------- //
 @import 'partials/common';
 @import 'partials/header';
@@ -13,6 +14,11 @@
 @import 'partials/login-page';
 
 @import 'partials/teacher-landing';
+@import 'partials/teacher-inbox';
+@import 'partials/teacher-roster';
+
+@import'partials/research-container';
+@import'partials/research-start';
 
 // ------ Site Modifiers ------ //
 @import "partials/typography";
