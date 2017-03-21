@@ -11,7 +11,20 @@ class App extends React.Component {
 
         this.state = {
             TeamData: TeamData,
+            TeamData666: {}
         };
+    }
+
+    componentWillMount() {
+        axios.get("https://kipp-madness-api.herokuapp.com/users/4.json").then((response) => {
+            let TeamData666 = {
+                ...this.state.TeamData666
+            }
+            console.log(response);
+            TeamData666 = response.data.user_predictions;
+            this.setState({TeamData666});
+            console.log('in componentDidMount ', response.data.user_predictions);
+        });
     }
 
 
@@ -35,13 +48,11 @@ class App extends React.Component {
                 return team.wins >= 5;
             }
             if (wins === 6) { // Winner of Bracket
-                return team.wins === 6;
+                return team.wins >= 6;
             }
         });
         return teamDataFilter;
     }
-
-
 
     updateSelectedTeam(key) {
         const TeamData = {
@@ -63,6 +74,7 @@ class App extends React.Component {
                 Users: this.state.Users,
                 updateSelectedTeam: this.updateSelectedTeam,
                 searchWins: this.searchWins,
+                TeamData666: this.state.TeamData666
             });
         });
 
