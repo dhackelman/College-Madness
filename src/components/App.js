@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import axios from 'axios';
 import TeamData from '../Data/data.js';
 
 class App extends React.Component {
@@ -9,8 +10,21 @@ class App extends React.Component {
         this.searchWins = this.searchWins.bind(this);
 
         this.state = {
-            TeamData: TeamData
+            TeamData: TeamData,
+            TeamData666: {}
         };
+    }
+
+    componentWillMount() {
+        axios.get("https://kipp-madness-api.herokuapp.com/users/4.json").then((response) => {
+            let TeamData666 = {
+                ...this.state.TeamData666
+            }
+            console.log(response);
+            TeamData666 = response.data.user_predictions;
+            this.setState({TeamData666});
+            console.log('in componentDidMount ', response.data.user_predictions);
+        });
     }
 
     searchWins(teamData, wins) {
@@ -33,13 +47,11 @@ class App extends React.Component {
                 return team.wins >= 5;
             }
             if (wins === 6) { // Winner of Bracket
-                return team.wins === 6;
+                return team.wins >= 6;
             }
-        });;
+        });
         return teamDataFilter;
     }
-
-
 
     updateSelectedTeam(key) {
         const TeamData = {
@@ -59,7 +71,8 @@ class App extends React.Component {
             return React.cloneElement(child, {
                 TeamData: this.state.TeamData,
                 updateSelectedTeam: this.updateSelectedTeam,
-                searchWins: this.searchWins
+                searchWins: this.searchWins,
+                TeamData666: this.state.TeamData666
             });
         });
 

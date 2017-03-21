@@ -17,7 +17,6 @@ class RegionB2 extends React.Component {
 
     render() {
         const teams = filterByRegion("South", this.props.TeamData.teams);
-        const finalFour = this.props.TeamData.teams;
 
         return (
             <div className="region__B2">

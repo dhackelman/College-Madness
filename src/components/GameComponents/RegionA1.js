@@ -13,11 +13,14 @@ import {filterByRegion} from '../../helper.js';
 class RegionA1 extends React.Component {
 
     render() {
-        // <Round8 update={this.props.update} searchWins={this.props.searchWins} TeamData={teams}></Round8>
-        // <Round4 update={this.props.update} searchWins={this.props.searchWins} TeamData={finalFour}></Round4>
-
+        // if (this.props.TeamData666.length) {
+        //     return null;
+        // }
+        //
+        // console.log('obj', this.props.TeamData666);
+        // const teams666 = filterByRegion(1, this.props.TeamData666.team);
+        // console.log('teams666 ', teams666);
         const teams = filterByRegion("East", this.props.TeamData.teams);
-        const finalFour = this.props.TeamData.teams;
 
         return (
             <div className="region__A1">
