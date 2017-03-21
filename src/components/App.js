@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './Header';
+import axios from 'axios';
 import TeamData from '../Data/data.js';
 
 class App extends React.Component {
@@ -10,9 +11,9 @@ class App extends React.Component {
 
         this.state = {
             TeamData: TeamData,
-            Users: {}
         };
     }
+
 
     searchWins(teamData, wins) {
         //use filter to find teams that have more than 1 win
@@ -36,7 +37,7 @@ class App extends React.Component {
             if (wins === 6) { // Winner of Bracket
                 return team.wins === 6;
             }
-        });;
+        });
         return teamDataFilter;
     }
 
@@ -59,8 +60,9 @@ class App extends React.Component {
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
                 TeamData: this.state.TeamData,
+                Users: this.state.Users,
                 updateSelectedTeam: this.updateSelectedTeam,
-                searchWins: this.searchWins
+                searchWins: this.searchWins,
             });
         });
 

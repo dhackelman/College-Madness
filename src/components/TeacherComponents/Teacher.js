@@ -1,15 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router'
-import axios from 'axios';
 import Roster from './Roster.js';
 import Inbox from './Inbox.js';
 import Homeroom from './Homeroom.js';
 
 class TeacherLogin extends React.Component {
 
+
     render() {
 
-      
         return (
           <div className="teacher__container">
             <nav className="teacher__nav">
@@ -21,7 +20,7 @@ class TeacherLogin extends React.Component {
             </nav>
             <h1 className="welcome__message">Welcome Teacher!</h1>
             <div className="teacher__things__container">
-              <Roster roster/>
+              <Roster/>
               <Inbox/>
               <Homeroom/>
             </div>

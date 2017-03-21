@@ -1,33 +1,27 @@
 import React from 'react';
+import Message from './Message';
+import axios from 'axios';
 
 class Inbox extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      Messages: []
+    };
+  }
+  componentDidMount() {
+    axios.get("https://kipp-madness-api.herokuapp.com/users.json")
+      .then((roster) =>{
+        this.setState({Messages: roster.data.users});
+        console.log(roster.data.users);
+      });
+    }
 
     render() {
         return (
           <div className="teacher__inbox">
             <p className="inbox__header">Room 2105</p>
-            <div className="inbox__messages">
-              <div className="inbox__single">
-                <p>This is a message from your student. Read it and Weep.</p>
-                <button className="inbox__pass">Pass</button>
-                <button className="inbox__fail">Fail</button>
-              </div>
-              <div className="inbox__single">
-                <p>This is a message from your student. Read it and Weep.</p>
-                <button className="inbox__pass">Pass</button>
-                <button className="inbox__fail">Fail</button>
-              </div>
-              <div className="inbox__single">
-                <p>This is a message from your student. Read it and Weep.</p>
-                <button className="inbox__pass">Pass</button>
-                <button className="inbox__fail">Fail</button>
-              </div>
-              <div className="inbox__single">
-                <p>This is a message from your student. Read it and Weep.</p>
-                <button className="inbox__pass">Pass</button>
-                <button className="inbox__fail">Fail</button>
-              </div>
-            </div>
+            <Message messages={this.state.Messages}/>
           </div>
         );
     }
