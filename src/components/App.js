@@ -9,7 +9,8 @@ class App extends React.Component {
         this.searchWins = this.searchWins.bind(this);
 
         this.state = {
-            TeamData: TeamData
+            TeamData: TeamData,
+            Users: {}
         };
     }
 
