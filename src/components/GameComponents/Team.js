@@ -14,7 +14,7 @@ class Team extends React.Component {
         const matchup = this.activeTeam.classList[1];
         const selectedMatch = document.querySelectorAll('.' + matchup);
 
-        selectedMatch.forEach((team) => { // omg
+        selectedMatch.forEach((team) => {
 
             if (!found) {
                 if (this.activeTeam === team && !team.classList.contains('team__selected')) {

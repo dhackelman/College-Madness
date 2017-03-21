@@ -20,6 +20,7 @@ class RegionA1 extends React.Component {
         // console.log('obj', this.props.TeamData666);
         // const teams666 = filterByRegion(1, this.props.TeamData666.team);
         // console.log('teams666 ', teams666);
+
         const teams = filterByRegion("East", this.props.TeamData.teams);
 
         return (
