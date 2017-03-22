@@ -20,9 +20,9 @@ class Round8 extends React.Component {
         let teamSouthBottom = null;
 
         east.forEach((team) => {
-            if ((team.seed === 1 || team.seed === 16 || team.seed === 8 || team.seed === 9 || team.seed === 5 || team.seed === 12 || team.seed === 4 || team.seed === 13) && team.region === "East") {
+            if ((team.team.seed === 1 || team.team.seed === 16 || team.team.seed === 8 || team.team.seed === 9 || team.team.seed === 5 || team.team.seed === 12 || team.team.seed === 4 || team.team.seed === 13) && team.region === "East") {
                 teamEastTop = team;
-            } else if ((team.seed === 6 || team.seed === 11 || team.seed === 3 || team.seed === 14 || team.seed === 7 || team.seed === 10 || team.seed === 2 || team.seed === 15) && team.region === "East") {
+            } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "East") {
                 teamEastBottom = team;
             } else {
                 console.log('Error in Round 8 ForEach loop');
@@ -30,9 +30,9 @@ class Round8 extends React.Component {
         })
 
         midwest.forEach((team) => {
-            if ((team.seed === 1 || team.seed === 16 || team.seed === 8 || team.seed === 9 || team.seed === 5 || team.seed === 12 || team.seed === 4 || team.seed === 13) && team.region === "Midwest") {
+            if ((team.team.seed === 1 || team.team.seed === 16 || team.team.seed === 8 || team.team.seed === 9 || team.team.seed === 5 || team.team.seed === 12 || team.team.seed === 4 || team.team.seed === 13) && team.region === "Midwest") {
                 teamMidwestTop = team;
-            } else if ((team.seed === 6 || team.seed === 11 || team.seed === 3 || team.seed === 14 || team.seed === 7 || team.seed === 10 || team.seed === 2 || team.seed === 15) && team.region === "Midwest") {
+            } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "Midwest") {
                 teamMidwestBottom = team;
             } else {
                 console.log('Error in Round 8 ForEach loop');
@@ -40,9 +40,9 @@ class Round8 extends React.Component {
         })
 
         west.forEach((team) => {
-            if ((team.seed === 1 || team.seed === 16 || team.seed === 8 || team.seed === 9 || team.seed === 5 || team.seed === 12 || team.seed === 4 || team.seed === 13) && team.region === "West") {
+            if ((team.team.seed === 1 || team.team.seed === 16 || team.team.seed === 8 || team.team.seed === 9 || team.team.seed === 5 || team.team.seed === 12 || team.team.seed === 4 || team.team.seed === 13) && team.region === "West") {
                 teamWestTop = team;
-            } else if ((team.seed === 6 || team.seed === 11 || team.seed === 3 || team.seed === 14 || team.seed === 7 || team.seed === 10 || team.seed === 2 || team.seed === 15) && team.region === "West") {
+            } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "West") {
                 teamWestBottom = team;
             } else {
                 console.log('Error in Round 8 ForEach loop');
@@ -50,9 +50,9 @@ class Round8 extends React.Component {
         })
 
         south.forEach((team) => {
-            if ((team.seed === 1 || team.seed === 16 || team.seed === 8 || team.seed === 9 || team.seed === 5 || team.seed === 12 || team.seed === 4 || team.seed === 13) && team.region === "South") {
+            if ((team.team.seed === 1 || team.team.seed === 16 || team.team.seed === 8 || team.team.seed === 9 || team.team.seed === 5 || team.team.seed === 12 || team.team.seed === 4 || team.team.seed === 13) && team.region === "South") {
                 teamSouthTop = team;
-            } else if ((team.seed === 6 || team.seed === 11 || team.seed === 3 || team.seed === 14 || team.seed === 7 || team.seed === 10 || team.seed === 2 || team.seed === 15) && team.region === "South") {
+            } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "South") {
                 teamSouthBottom = team;
             } else {
                 console.log('Error in Round 8 ForEach loop');

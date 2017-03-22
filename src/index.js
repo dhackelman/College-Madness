@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {browserHistory, Router, Route, IndexRoute} from 'react-router';
-// import {BrowserRouter as Router, Route, Link} from 'react-router-dom';
 import './styles/app.css';
 import App from './components/App';
 import Login from './components/Login';

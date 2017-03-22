@@ -1,23 +1,37 @@
 import React from 'react';
-// import Container from '../Container';
-import RegionA1 from './RegionA1';
-import RegionA2 from './RegionA2';
-import RegionB1 from './RegionB1';
-import RegionB2 from './RegionB2';
-import EliteEight from './EliteEight';
+import Region from './Region';
+
+// import EliteEight from './EliteEight';
 
 class MainBracket extends React.Component {
+    shouldComponentUpdate(nextProps) {
+      if(nextProps.East.length > 0) {
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    componentWillUpdate(nextProps) {
+        console.log("in will update yo");
+    }
+
 
     render() {
+      const eastern = this.props.East;
+      const western = this.props.West;
+      const midwestern = this.props.Midwest;
+      const southern = this.props.South;
+        let regions = [eastern, western, midwestern, southern];
+
         return (
             <div className="component__container">
+              {regions.map((region) => {
 
-                <RegionA1 TeamData={this.props.TeamData} TeamData666={this.props.TeamData666} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
-                <RegionB1 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
-                <RegionA2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
-                <RegionB2 TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
-                <EliteEight TeamData={this.props.TeamData} update={this.props.updateSelectedTeam} searchWins={this.props.searchWins}/>
-
+                  const setRegion = region;
+                  // console.log('set region ', setRegion);
+                  return <Region key={setRegion[0].team.region} setRegion={region} searchWins={this.props.searchWins} updateSelectedTeam={this.props.updateSelectedTeam}></Region>;
+              })}
             </div>
         );
     }

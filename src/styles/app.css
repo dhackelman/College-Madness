@@ -199,6 +199,25 @@ img {
   justify-content: space-around;
   width: 100%; }
 
+.region {
+  border: 5px solid #16345c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%; }
+  .region .sign__east {
+    border: 5px solid #16345c;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 0; }
+    .region .sign__east .sign__span-east {
+      font-size: 30px;
+      font-weight: 600;
+      color: #2d2d2d;
+      padding: 15px 35px; }
+
 .region__A1 {
   border: 5px solid #16345c;
   display: flex;

@@ -21,6 +21,33 @@
   justify-content: space-around;
   width: 100%;
 }
+// Temporary **********************************************************************
+.region {
+  border: 5px solid $navy;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  .sign__east {
+    border: 5px solid $navy;
+    height: 50px;
+    position: absolute;
+    left: 50%;
+    top: 0;
+
+    .sign__span-east {
+      font-size: 30px;
+      font-weight: 600;
+      color: $smoothGray;
+      padding: 15px 35px;
+    }
+  }
+}
+
+
+// Temporary **********************************************************************
+
 
 .region__A1 {
   border: 5px solid $navy;
