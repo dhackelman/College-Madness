@@ -480,16 +480,16 @@ h1 {
       margin: 1%;
       padding: 1% 2%;
       width: 30%; }
-      .teacher__inbox .inbox__messages .inbox__single .inbox__pass, .teacher__inbox .inbox__messages .inbox__single .inbox__fail {
-        background-color: #bbd72e;
-        border: none;
-        border-radius: 5px;
-        margin: 5% 5%;
-        width: 40%; }
-      .teacher__inbox .inbox__messages .inbox__single .inbox__fail {
-        background-color: #e47323; }
-      .teacher__inbox .inbox__messages .inbox__single .inbox__pass:hover, .teacher__inbox .inbox__messages .inbox__single .inbox__fail:hover {
-        animation: scale .5s both; }
+    .teacher__inbox .inbox__messages .inbox__pass, .teacher__inbox .inbox__messages .inbox__fail {
+      background-color: #bbd72e;
+      border: none;
+      border-radius: 5px;
+      margin: 5% 5%;
+      width: 40%; }
+    .teacher__inbox .inbox__messages .inbox__fail {
+      background-color: #e47323; }
+    .teacher__inbox .inbox__messages .inbox__pass:hover, .teacher__inbox .inbox__messages .inbox__fail:hover {
+      animation: scale .5s both; }
 
 .teacher__roster {
   display: flex;
@@ -507,7 +507,7 @@ h1 {
     padding: 2%;
     text-align: center;
     width: 100%; }
-  .teacher__roster .roster__student:hover {
+  .teacher__roster .roster__student li:hover {
     animation: scale 0.25s both;
     background-color: rgba(255, 218, 3, 0.5);
     border-top: 2px solid #ffda03;

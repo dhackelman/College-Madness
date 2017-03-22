@@ -20,11 +20,12 @@
       flex-wrap: wrap;
       padding: 2% 2%;
 
-      .inbox__single {
-        background: #fff;
-        margin: 1%;
-        padding: 1% 2%;
-        width: 30%;
+        .inbox__single {
+          background: #fff;
+          margin: 1%;
+          padding: 1% 2%;
+          width: 30%;
+        }
 
         .inbox__pass, .inbox__fail {
           background-color: $avocado;
@@ -42,4 +43,3 @@
         }
       }
     }
-  }

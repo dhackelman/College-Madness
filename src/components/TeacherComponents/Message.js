@@ -4,9 +4,9 @@ class Message extends React.Component {
 
     render() {
         return (
-          <ul>
+          <ul className="inbox__messages">
           {this.props.messages.map((user)=>{
-            return <div key={user.id}className="inbox__single"><p>This is a message from {user.name}. My id is {user.id}. My homeroom is {user.classroom_id}</p><button className="inbox__pass">Pass</button><button className="inbox__fail">Fail</button></div>
+            return <li className="inbox__single" key={user.id}><p>This is a message from {user.name}. My id is {user.id}. My homeroom is {user.classroom_id}</p><button className="inbox__pass">Pass</button><button className="inbox__fail">Fail</button></li>
             })}
           </ul>
         );
