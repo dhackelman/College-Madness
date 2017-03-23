@@ -136,6 +136,14 @@ img {
 .is-visible {
   display: inline-block; }
 
+a {
+  color: inherit;
+  text-decoration: none; }
+
+a:visited {
+  text-decoration-style: none;
+  color: inherit; }
+
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-1px, 0, 0); }
@@ -162,18 +170,23 @@ img {
   background-color: #f2f2f2;
   border-bottom: 5px solid #235695;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%; }
 
 .header__logo {
-  height: 87px;
-  margin: 1% 5%;
-  width: 300px; }
+  max-height: 100px;
+  margin: 1% auto;
+  max-width: 25%; }
+
+.header__homerooom {
+  margin: 1% auto;
+  text-align: center; }
+  .header__homerooom h1 {
+    width: 100%; }
 
 .header__logout {
-  margin: 2% 0;
-  max-height: 50px;
-  margin-right: 5%; }
+  margin: 2% auto;
+  max-height: 50px; }
 
 .header__logout:hover {
   background-color: #ffda03;
@@ -538,20 +551,17 @@ h1 {
     background-color: #ffda03;
     color: #235695; }
 
-.research__start {
-  display: flex; }
+.research__container {
+  display: flex;
+  width: 100%; }
 
-.college__visuals, .college__basics {
+.college__basics {
   align-items: center;
+  border: 2px solid #235695;
   display: flex;
   flex-direction: column;
   margin: 1%;
-  padding: 0 2%;
-  width: 40%; }
-
-.college__basics {
-  border: 2px solid #235695;
-  padding: 1%;
+  padding: 2%;
   width: 55%; }
   .college__basics h2 {
     text-align: center;
@@ -559,9 +569,49 @@ h1 {
   .college__basics p {
     font-weight: 700;
     text-align: left;
-    width: 90%; }
+    width: 100%; }
   .college__basics span {
-    font-weight: 400; }
+    font-weight: 400;
+    padding: 1%; }
+  .college__basics .college__visuals {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; }
+
+.research__form {
+  align-items: center;
+  border: 2px solid #235695;
+  display: flex;
+  flex-direction: column;
+  margin: 1%;
+  max-height: 450px;
+  width: 40%; }
+  .research__form h2 {
+    background-color: #235695;
+    color: #f2f2f2;
+    margin: 0;
+    padding: 3% 0;
+    text-align: center;
+    width: 100%; }
+  .research__form form,
+  .research__form input,
+  .research__form textarea {
+    box-sizing: border-box;
+    margin: 2%;
+    padding: 2%;
+    width: 95%; }
+    .research__form form textarea,
+    .research__form input textarea,
+    .research__form textarea textarea {
+      color: #16345c;
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      height: 280px; }
+  .research__form input:focus,
+  .research__form textarea:focus {
+    background: white;
+    border-radius: 5px;
+    outline: none; }
 
 p {
   color: #2d2d2d;

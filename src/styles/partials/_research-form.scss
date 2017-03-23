@@ -1,0 +1,43 @@
+.research__form {
+    align-items: center;
+    border: 2px solid $royal;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    max-height: 450px;
+    width: 40%;
+
+    h2 {
+        background-color: $royal;
+        color: $almost;
+        margin: 0;
+        padding: 3% 0;
+        text-align: center;
+        width: 100%;
+    }
+
+    form,
+    input,
+    textarea {
+        box-sizing: border-box;
+        margin: 2%;
+        padding: 2%;
+        width: 95%;
+
+        textarea {
+          color: $navy;
+          font-family: $primaryFont;
+          font-size: 20px;
+          height: 280px;
+        }
+    }
+
+
+
+    input:focus,
+    textarea:focus {
+        background: white;
+        border-radius: 5px;
+        outline: none;
+    }
+}
