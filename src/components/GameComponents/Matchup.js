@@ -4,12 +4,11 @@ import Team from './Team';
 class Matchup extends React.Component {
 
     render() {
-        // console.log('matchup comp props id: ', this.props.id);  the team abbrev
         return (
 
             <div className="matchup__container">
-                <Team updateSelectedTeam={this.props.updateSelectedTeam} id={`matchup-${this.props.id}`} team={this.props.team1}/>
-                <Team updateSelectedTeam={this.props.updateSelectedTeam} id={`matchup-${this.props.id}`} team={this.props.team2}/>
+              <Team home={this.props.team1} away={this.props.team2} round={this.props.round} selectTeam={this.props.selectTeam}/>
+              <Team home={this.props.team2} away={this.props.team1} round={this.props.round} selectTeam={this.props.selectTeam}/>
             </div>
 
         );

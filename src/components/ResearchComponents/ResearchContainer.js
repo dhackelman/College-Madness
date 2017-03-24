@@ -1,6 +1,5 @@
 import React from 'react';
 import axios from 'axios';
-import Schools from '../../Data/schools';
 import ResearchStart from './ResearchStart';
 import ResearchForm from './ResearchForm';
 import ResearchAcademicStats from './ResearchAcademicStats';

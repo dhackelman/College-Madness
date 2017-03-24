@@ -359,22 +359,6 @@ a:visited {
   justify-content: center;
   margin: 10px;
   width: 210px; }
-  .round_64__container .matchup__container:nth-child(1) {
-    order: 1; }
-  .round_64__container .matchup__container:nth-child(2) {
-    order: 8; }
-  .round_64__container .matchup__container:nth-child(3) {
-    order: 6; }
-  .round_64__container .matchup__container:nth-child(4) {
-    order: 4; }
-  .round_64__container .matchup__container:nth-child(5) {
-    order: 3; }
-  .round_64__container .matchup__container:nth-child(6) {
-    order: 5; }
-  .round_64__container .matchup__container:nth-child(7) {
-    order: 7; }
-  .round_64__container .matchup__container:nth-child(8) {
-    order: 2; }
 
 .round_32__container {
   display: flex;
