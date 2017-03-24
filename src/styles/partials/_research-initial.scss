@@ -1,23 +1,10 @@
-.research__start {
-  display: flex;
-}
-
-.college__visuals, .college__basics {
+.college__basics {
   align-items: center;
+  border: 2px solid $royal;
   display: flex;
   flex-direction: column;
   margin: 1%;
-  padding: 0 2%;
-  width: 40%;
-
-  img {
-
-  }
-}
-
-.college__basics {
-  border: 2px solid $royal;
-  padding: 1%;
+  padding: 2%;
   width: 55%;
 
   h2 {
@@ -27,10 +14,16 @@
   p {
     font-weight: 700;
     text-align: left;
-    width: 90%;
+    width: 100%;
   }
   span {
     font-weight: 400;
+    padding: 1%;
+  }
+  .college__visuals {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
   }
 
 }

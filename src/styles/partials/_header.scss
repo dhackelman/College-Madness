@@ -2,24 +2,27 @@
   background-color: $almost;
   border-bottom: 5px solid $royal;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
 }
 
 .header__logo {
-  height: 87px;
-  margin: 1% 5%;
-  width: 300px;
+  max-height: 100px;
+  margin: 1% auto;
+  max-width: 25%
 }
 
 .header__homerooom {
-
+  margin: 1% auto;
+  text-align: center;
+  h1 {
+    width: 100%;
+  }
 }
 
 .header__logout {
-  margin: 2% 0;
+  margin: 2% auto;
   max-height: 50px;
-  margin-right: 5%;
 }
 .header__logout:hover {
   background-color: $lemon;
