@@ -1,6 +1,7 @@
 import React from 'react';
 import Round from './Round';
 import Dummy32 from '../../Data/Dummy32.js';
+import Dummy16 from '../../Data/Dummy16.js';
 
 class Region extends React.Component {
     constructor() {
@@ -8,7 +9,7 @@ class Region extends React.Component {
         this.state = {
             round64: [],
             round32: Dummy32.user_predictions,
-            round16: []
+            round16: Dummy16.user_predictions
         }
         this.selectTeam = this.selectTeam.bind(this);
     }
@@ -111,6 +112,7 @@ class Region extends React.Component {
             <div className="region">
                 <Round  teams={this.state.round64} round='round_64' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
+                <Round teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
             </div>
         );
     }
