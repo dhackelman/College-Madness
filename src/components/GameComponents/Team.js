@@ -7,7 +7,7 @@ class Team extends React.Component {
     render() {
 
         return (
-            <div className="team__container" onClick={()=> {this.props.selectTeam(this.props.home.team.id, this.props.away.team.id, this.props.round)}}>
+            <div className="team__container" onClick={()=> {this.props.selectTeam(this.props.home.team.id, this.props.away.team.id, this.props.round, this.props.home.team.region)}}>
                 <Link to="/research/"><FaInfoCircle className="team__info" size={30}/></Link>
                 <img className="team__logo" src={this.props.home.team.image} alt={this.props.home.team.abbrev}></img>
                 <span className="team__seed">{this.props.home.team.seed ? this.props.home.team.seed : ''}</span>
