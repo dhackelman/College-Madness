@@ -2,6 +2,7 @@ import React from 'react';
 import Region from './Region';
 
 // import EliteEight from './EliteEight';
+// <EliteEight key={setRegion[0].team.region} setRegion={region} searchWins={this.props.searchWins} updateSelectedTeam={this.props.updateSelectedTeam} />
 
 class MainBracket extends React.Component {
     shouldComponentUpdate(nextProps) {
@@ -32,6 +33,7 @@ class MainBracket extends React.Component {
                   // console.log('set region ', setRegion);
                   return <Region key={setRegion[0].team.region} setRegion={region} searchWins={this.props.searchWins} updateSelectedTeam={this.props.updateSelectedTeam}></Region>;
               })}
+
             </div>
         );
     }
