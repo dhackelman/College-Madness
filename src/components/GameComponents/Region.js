@@ -113,11 +113,6 @@ class Region extends React.Component {
         this.setState({round16: teams16Diff});
 
       }
-
-
-
-
-
       if (roundId === 'round_16') {
         winTeam.predicted_wins = 3;
         loseTeam.predicted_wins = 2;
@@ -135,7 +130,6 @@ class Region extends React.Component {
         }
 
         this.setState({round8: teams8Diff});
-        console.log('');
        }
 
   }
@@ -148,6 +142,8 @@ class Region extends React.Component {
                 <Round teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round8} round='round_8' selectTeam={this.selectTeam}/>
+                <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
+                <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
             </div>
         );
     }
