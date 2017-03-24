@@ -19,24 +19,17 @@ class Region extends React.Component {
 
 
 
-    selectTeam(winTeamId, loseTeamId, roundId, winPosition) {
+    selectTeam(winTeamId, loseTeamId, roundId) {
 
       let allTeams = this.state.round64;
-      console.log('round64 ', allTeams);
       let teams32 = this.state.round32;
-
-      // console.log('before ', this.state.round64[winTeamId - 1]);
       let winTeam = this.props.allTeams[winTeamId - 1];
-      // console.log('afer ', winTeam);
       let loseTeam = this.props.allTeams[loseTeamId - 1];
 
       if (roundId === 'round_64') {
-
         winTeam.predicted_wins = 1;
         loseTeam.predicted_wins = 0;
         this.setState({round64: allTeams});
-
-        // let winTeamId = winTeam.team.id;
 
         if (winTeamId === 1 || winTeamId === 2 || winTeamId === 17 || winTeamId === 18 || winTeamId === 33 || winTeamId === 34 || winTeamId === 49 || winTeamId === 50 ) {
           teams32[0] = winTeam;
