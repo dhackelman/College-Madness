@@ -7,14 +7,18 @@ import axios from 'axios';
 
 class MainBracket extends React.Component {
   constructor() {
+
+
     super();
+    this.eliteEight = this.eliteEight.bind(this);
     this.filterByRegion = this.filterByRegion.bind(this);
     this.state = {
       AllTeams: [],
       East: [],
       West: [],
       Midwest: [],
-      South: []
+      South: [],
+      Eight: []
     };
   }
   componentDidMount() {
@@ -53,16 +57,22 @@ class MainBracket extends React.Component {
         return
     }
 
+    eliteEight(arg) {
+      console.log('arg ', arg);
+    }
+
     render() {
       if (!this.state.AllTeams.length) {
         return (<h1>Loading</h1>);
       }
         return (
             <div className="component__container">
-              <Region teams={this.state.East} allTeams={this.state.AllTeams}/>
-              <Region teams={this.state.West} allTeams={this.state.AllTeams}/>
-              <Region teams={this.state.Midwest} allTeams={this.state.AllTeams} />
-              <Region teams={this.state.South} allTeams={this.state.AllTeams}/>
+              <Region teams={this.state.East} elite={this.eliteEight} allTeams={this.state.AllTeams}/>
+              <Region teams={this.state.West} elite={this.eliteEight} allTeams={this.state.AllTeams}/>
+              <Region teams={this.state.Midwest} elite={this.eliteEight} allTeams={this.state.AllTeams} />
+              <Region teams={this.state.South} elite={this.eliteEight} allTeams={this.state.AllTeams}/>
+              <Region teams={this.state.Eight} allTeams={this.state.AllTeams}/>
+
             </div>
         );
     }

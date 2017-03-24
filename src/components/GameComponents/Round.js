@@ -2,6 +2,17 @@ import React from 'react';
 import Matchup from './Matchup';
 
 class Round extends React.Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state={
+  //     round32: []
+  //   };
+  // }
+
+  // componentDidMount() {
+  //   const currentTeams = this.props.teams;
+  //   this.setState({round32: this.props.teams})
+  // }
 
     render() {
       let allMatchups = [];
