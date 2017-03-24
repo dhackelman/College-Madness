@@ -57,8 +57,8 @@ class MainBracket extends React.Component {
         return
     }
 
-    eliteEight(arg) {
-      console.log('arg ', arg);
+    eliteEight(arg, index) {
+
     }
 
     render() {

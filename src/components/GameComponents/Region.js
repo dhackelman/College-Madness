@@ -108,6 +108,7 @@ class Region extends React.Component {
         if (winTeamId === 13 || winTeamId === 14 || winTeamId === 29 || winTeamId === 30 || winTeamId === 45 || winTeamId === 46 || winTeamId === 61 || winTeamId === 62 || winTeamId === 15 || winTeamId === 16 || winTeamId === 31 || winTeamId === 32 || winTeamId === 47 || winTeamId === 48 || winTeamId === 63 || winTeamId === 64 ) {
           teams16Diff = teams16.slice();
           teams16Diff[3] = winTeam;
+
         }
         this.setState({round16: teams16Diff});
 
@@ -117,26 +118,25 @@ class Region extends React.Component {
 
 
 
-    if (roundId === 'round_16') {
-      winTeam.predicted_wins = 3;
-      loseTeam.predicted_wins = 2;
-      this.setState({round8: teams8});
-
-      if (winTeamId === 1 || winTeamId === 2 || winTeamId === 17 || winTeamId === 18 || winTeamId === 33 || winTeamId === 34 || winTeamId === 49 || winTeamId === 50 || winTeamId === 3 || winTeamId === 4 || winTeamId === 19 || winTeamId === 20 || winTeamId === 35 || winTeamId === 36 || winTeamId === 51 || winTeamId === 52 || winTeamId === 5 || winTeamId === 6 || winTeamId === 21 || winTeamId === 22 || winTeamId === 37 || winTeamId === 38 || winTeamId === 53 || winTeamId === 54 || winTeamId === 7 || winTeamId === 8 || winTeamId === 23 || winTeamId === 24 || winTeamId === 39 || winTeamId === 40 || winTeamId === 55 || winTeamId === 56) {
-
-        teams8Diff = teams8.slice();
-        teams8Diff[0] = winTeam;
-      }
+      if (roundId === 'round_16') {
+        winTeam.predicted_wins = 3;
+        loseTeam.predicted_wins = 2;
 
 
+        if (winTeamId === 1 || winTeamId === 2 || winTeamId === 17 || winTeamId === 18 || winTeamId === 33 || winTeamId === 34 || winTeamId === 49 || winTeamId === 50 || winTeamId === 3 || winTeamId === 4 || winTeamId === 19 || winTeamId === 20 || winTeamId === 35 || winTeamId === 36 || winTeamId === 51 || winTeamId === 52 || winTeamId === 5 || winTeamId === 6 || winTeamId === 21 || winTeamId === 22 || winTeamId === 37 || winTeamId === 38 || winTeamId === 53 || winTeamId === 54 || winTeamId === 7 || winTeamId === 8 || winTeamId === 23 || winTeamId === 24 || winTeamId === 39 || winTeamId === 40 || winTeamId === 55 || winTeamId === 56) {
 
-      if (winTeamId === 9 || winTeamId === 10 || winTeamId === 25 || winTeamId === 26 || winTeamId === 41 || winTeamId === 42 || winTeamId === 57 || winTeamId === 58 || winTeamId === 11 || winTeamId === 12 || winTeamId === 27 || winTeamId === 28 || winTeamId === 43 || winTeamId === 44 || winTeamId === 59 || winTeamId === 60 || winTeamId === 13 || winTeamId === 14 || winTeamId === 29 || winTeamId === 30 || winTeamId === 45 || winTeamId === 46 || winTeamId === 61 || winTeamId === 62 || winTeamId === 15 || winTeamId === 16 || winTeamId === 31 || winTeamId === 32 || winTeamId === 47 || winTeamId === 48 || winTeamId === 63 || winTeamId === 64) {
-        teams8Diff = teams8.slice();
-        teams8Diff[1] = winTeam;
-      }
-      this.setState({round8: teams8});
-      this.props.elite(teams8);
-    }
+          teams8Diff = teams8.slice();
+          teams8Diff[0] = winTeam;
+        }
+
+        if (winTeamId === 9 || winTeamId === 10 || winTeamId === 25 || winTeamId === 26 || winTeamId === 41 || winTeamId === 42 || winTeamId === 57 || winTeamId === 58 || winTeamId === 11 || winTeamId === 12 || winTeamId === 27 || winTeamId === 28 || winTeamId === 43 || winTeamId === 44 || winTeamId === 59 || winTeamId === 60 || winTeamId === 13 || winTeamId === 14 || winTeamId === 29 || winTeamId === 30 || winTeamId === 45 || winTeamId === 46 || winTeamId === 61 || winTeamId === 62 || winTeamId === 15 || winTeamId === 16 || winTeamId === 31 || winTeamId === 32 || winTeamId === 47 || winTeamId === 48 || winTeamId === 63 || winTeamId === 64) {
+          teams8Diff = teams8.slice();
+          teams8Diff[1] = winTeam;
+        }
+
+        this.setState({round8: teams8Diff});
+        console.log('');
+       }
 
   }
 
@@ -147,6 +147,7 @@ class Region extends React.Component {
                 <Round teams={this.state.round64} round='round_64' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
+                <Round teams={this.state.round8} round='round_8' selectTeam={this.selectTeam}/>
             </div>
         );
     }
