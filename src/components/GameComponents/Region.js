@@ -2,6 +2,8 @@ import React from 'react';
 import Round from './Round';
 import Dummy32 from '../../Data/Dummy32.js';
 import Dummy16 from '../../Data/Dummy16.js';
+import Dummy8 from '../../Data/Dummy8.js';
+import Dummy4 from '../../Data/Dummy4.js';
 
 class Region extends React.Component {
     constructor() {
