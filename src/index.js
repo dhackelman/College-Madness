@@ -20,7 +20,7 @@ ReactDOM.render((
             <Route path='bracket' component={MainBracket}/>
             <Route path='teacher' component={TeacherLogin}/>
             <Route path='student' component={StudentLogin}/>
-            <Route path='research' component={ResearchContainer}/>
+            <Route path='research/:id' component={ResearchContainer}/>
             <Route path='researchAcademics' component={ResearchAcademicStats}/>
             <Route path="*" component={NotFound}/>
         </Route>
