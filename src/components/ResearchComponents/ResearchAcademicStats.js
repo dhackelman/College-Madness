@@ -6,7 +6,7 @@ class ResearchAcademicStats extends React.Component {
 
     render() {
       // const school = this.props.school;
-      const school = this.props.params.id;
+      const school = this.props.school;
 
         return (
                 <div className="college__basics">
