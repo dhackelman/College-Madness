@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import ResearchStart from './ResearchStart';
 import ResearchForm from './ResearchForm';
+import CollegePrograms from './CollegePrograms';
 import ResearchAcademicStats from './ResearchAcademicStats';
 
 class ResearchContainer extends React.Component {
@@ -14,7 +15,6 @@ class ResearchContainer extends React.Component {
   componentWillMount() {
     axios.get("https://kipp-madness-api.herokuapp.com/teams/1.json")
       .then((response) =>{
-        console.log(response.data);
         this.setState({Schools:response.data});
       });
     }
@@ -33,6 +33,7 @@ class ResearchContainer extends React.Component {
                 <div className="research__container">
                   <ResearchStart className="research__initial" school={this.state.Schools}/>
                   <ResearchAcademicStats className="research__initial" school={this.state.Schools}/>
+                  <CollegePrograms className="research__initial" school={this.state.Schools}/>
                   <ResearchForm className="research__form" />
                 </div>
             </div>

@@ -133,7 +133,8 @@ class Region extends React.Component {
        }
 
   }
-
+  // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
+  // <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
     render() {
 
         return (
@@ -142,8 +143,7 @@ class Region extends React.Component {
                 <Round teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
                 <Round teams={this.state.round8} round='round_8' selectTeam={this.selectTeam}/>
-                <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
-                <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
+
             </div>
         );
     }
