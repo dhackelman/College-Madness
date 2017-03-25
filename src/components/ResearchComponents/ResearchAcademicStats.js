@@ -5,6 +5,7 @@ class ResearchAcademicStats extends React.Component {
 
 
     render() {
+
       const school = this.props.school;
 
         return (
