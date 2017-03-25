@@ -17,19 +17,16 @@ class App extends React.Component {
     axios.get("https://kipp-madness-api.herokuapp.com/users.json")
       .then((roster) =>{
         this.setState({Users: roster.data.users});
-        console.log(roster.data.users);
       });
     }
 
   updateFormInput(formData) {
-      console.log('arg --> ', formData);
       const inputData = {
           ...this.state.inputData
       }
       const timestamp = Date.now();
       inputData[`input-${timestamp}`] = formData;
-      this.setState({inputData: inputData})
-      console.log('state!! ', this.state.inputData);
+      this.setState({inputData: inputData});
   }
 
 
