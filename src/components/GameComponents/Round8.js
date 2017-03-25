@@ -25,7 +25,7 @@ class Round8 extends React.Component {
             } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "East") {
                 teamEastBottom = team;
             } else {
-                console.log('Error in Round 8 ForEach loop');
+                // console.log('Error in Round 8 ForEach loop');
             }
         })
 
@@ -35,7 +35,7 @@ class Round8 extends React.Component {
             } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "Midwest") {
                 teamMidwestBottom = team;
             } else {
-                console.log('Error in Round 8 ForEach loop');
+                // console.log('Error in Round 8 ForEach loop');
             }
         })
 
@@ -45,7 +45,7 @@ class Round8 extends React.Component {
             } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "West") {
                 teamWestBottom = team;
             } else {
-                console.log('Error in Round 8 ForEach loop');
+                // console.log('Error in Round 8 ForEach loop');
             }
         })
 
@@ -55,7 +55,7 @@ class Round8 extends React.Component {
             } else if ((team.team.seed === 6 || team.team.seed === 11 || team.team.seed === 3 || team.team.seed === 14 || team.team.seed === 7 || team.team.seed === 10 || team.team.seed === 2 || team.team.seed === 15) && team.region === "South") {
                 teamSouthBottom = team;
             } else {
-                console.log('Error in Round 8 ForEach loop');
+                // console.log('Error in Round 8 ForEach loop');
             }
         })
 
