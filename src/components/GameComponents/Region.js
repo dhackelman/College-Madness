@@ -31,10 +31,10 @@ class Region extends React.Component {
       let teams16Diff = [];
       let teams8 = this.state.round8;
       let teams8Diff = [];
-      let teams4 = this.state.round4;
-      let teams4Diff = [];
-      let teams2 = this.state.round2;
-      let teams2Diff = [];
+      // let teams4 = this.state.round4;
+      // let teams4Diff = [];
+      // let teams2 = this.state.round2;
+      // let teams2Diff = [];
       let winTeam = this.props.allTeams[winTeamId - 1];
       let loseTeam = this.props.allTeams[loseTeamId - 1];
 
