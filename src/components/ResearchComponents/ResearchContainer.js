@@ -22,7 +22,7 @@ class ResearchContainer extends React.Component {
     };
   }
   componentWillMount() {
-    axios.get("https://kipp-madness-api.herokuapp.com/teams/1.json")
+    axios.get(`https://kipp-madness-api.herokuapp.com/teams/${this.props.params.id}.json`)
       .then((response) =>{
         this.setState({Schools:response.data});
       });
