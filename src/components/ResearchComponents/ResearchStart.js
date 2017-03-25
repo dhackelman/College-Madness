@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router';
+import CollegeOnAMap from './CollegeOnAMap';
 
 class ResearchStart extends React.Component {
 
@@ -21,7 +22,7 @@ class ResearchStart extends React.Component {
                     </p>
                     <div className="college__visuals">
                         <div className="college__map">
-                            <img src="https://www.google.com/maps/vt/data=RfCSdfNZ0LFPrHSm0ublXdzhdrDFhtmHhN1u-gM,MQYmmxMkSb11rVrXqbjhVUiMRzr2yAYSBbjHe9hajcF--o0juyNVgcQPEocEP8EJFCnY5yzCAiv7-uW3MG9BT5U5u_oGfVwj977iwzQG-eD8Cv3uSwTKUdesO3jaWE6gscbJLcJgo-QN0L3l66EHHkhZFENPRChecjZcshyf9mXZVhfZmEJ9VzlJcpMrEUsMqVc74LMfVeLiT7d9nduTNpw_HcOhzOUQiSsDwL45cEc_yle-2wvRHDxn-3zCBeJsb446SBDiQfE7NGvBnzID4KDzyeZQBoA" alt="Map"/>
+                            <CollegeOnAMap lat={this.props.school.latitude} lon={this.props.school.longitude}/>
                         </div>
                         <div className="college__logo">
                             <img src="https://static1.squarespace.com/static/54341f4be4b0ebdd5103ead3/54d3d1b2e4b09df3e6abc9a2/55e75676e4b0786e908e5ea7/1442942133747/fan-feet-carolina-unc-tarheeled-rameses.png" alt="Mascot"/>

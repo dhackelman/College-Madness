@@ -1,0 +1,19 @@
+.confirm__button {
+  background: $royal;
+  border: none;
+  border-radius: 5px;
+  color: $almost;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 20%;
+}
+
+.confirm__yes:active {
+  background-color: $avocado;
+}
+.confirm__no:active {
+    background-color: $burnt;
+}
