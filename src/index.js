@@ -8,7 +8,7 @@ import Login from './components/Login';
 import TeacherConfirm from './components/TeacherConfirm';
 import TeacherLogin from './components/TeacherComponents/Teacher';
 import SelectClass from './components/SelectClass';
-import StudentLogin from './components/Student';
+import StudentLogin from './components/TeacherComponents/Student';
 import MainBracket from './components/GameComponents/MainBracket';
 import ResearchContainer from './components/ResearchComponents/ResearchContainer';
 import ResearchAcademicStats from './components/ResearchComponents/ResearchAcademicStats';
@@ -24,6 +24,7 @@ ReactDOM.render((
             <Route path='teacher-confirm/:id' component={TeacherConfirm}/>
             <Route path='select-class/:user' component={SelectClass}/>
             <Route path='student' component={StudentLogin}/>
+            <Route path='teacher-confirm' component={TeacherConfirm}/>
             <Route path='research/:id' component={ResearchContainer}/>
             <Route path='researchAcademics' component={ResearchAcademicStats}/>
             <Route path="*" component={NotFound}/>
