@@ -66,7 +66,7 @@ class ResearchContainer extends React.Component {
                   {start}
                   {academic}
                   {programs}
-                  <ResearchForm props={this.props} school={this.state.Schools} className="research__form" />
+                  <ResearchForm updateFormInput={this.props.updateFormInput} props={this.props} school={this.state.Schools} className="research__form" />
                 </div>
             </div>
         );
