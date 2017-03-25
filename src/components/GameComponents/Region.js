@@ -133,7 +133,8 @@ class Region extends React.Component {
        }
 
   }
-
+  // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
+  // <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
     render() {
       // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
       // <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
