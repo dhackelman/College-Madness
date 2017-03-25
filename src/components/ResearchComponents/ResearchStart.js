@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 
 class ResearchStart extends React.Component {
 
@@ -6,6 +7,7 @@ class ResearchStart extends React.Component {
 
     render() {
       const school = this.props.school;
+      const site = "http://" + this.props.school.url;
         return (
                 <div className="college__basics">
                     <h2>{school.name}</h2>
@@ -15,7 +17,7 @@ class ResearchStart extends React.Component {
                     </p>
                     <p>Cost:<span>${school.out_of_state_tuition_average}</span>
                     </p>
-                    <p>Learn More: <span><a href={school.url}>{school.url}</a></span>
+                    <p>Learn More: <span><Link to={site} target="_blank" alt={this.props.school.name}>{this.props.school.url}</Link></span>
                     </p>
                     <div className="college__visuals">
                         <div className="college__map">
