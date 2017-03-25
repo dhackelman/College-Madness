@@ -5,7 +5,7 @@ class ResearchStart extends React.Component {
 
 
     render() {
-      const school = this.props.school;
+      const school = this.props.params.id;
         return (
                 <div className="college__basics">
                     <h2>{school.name}</h2>
