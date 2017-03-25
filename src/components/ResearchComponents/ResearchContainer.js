@@ -48,9 +48,9 @@ class ResearchContainer extends React.Component {
 
 
     render() {
-      const start = this.state.showStart ? <ResearchStart className="research__initial" school={this.state.Schools}/> : '';
-      const academic = this.state.showAcademic ? <ResearchAcademicStats className="research__initial" school={this.state.Schools}/> : '';
-      const programs = this.state.showSpecial ? <CollegePrograms className="research__initial" school={this.state.Schools}/> : '';
+      const start = this.state.showStart ? <ResearchStart props={this.props} className="research__initial" school={this.state.Schools}/> : '';
+      const academic = this.state.showAcademic ? <ResearchAcademicStats props={this.props} className="research__initial" school={this.state.Schools}/> : '';
+      const programs = this.state.showSpecial ? <CollegePrograms props={this.props} className="research__initial" school={this.state.Schools}/> : '';
 
         return (
             <div>
@@ -66,7 +66,7 @@ class ResearchContainer extends React.Component {
                   {start}
                   {academic}
                   {programs}
-                  <ResearchForm className="research__form" />
+                  <ResearchForm props={this.props} className="research__form" />
                 </div>
             </div>
         );
