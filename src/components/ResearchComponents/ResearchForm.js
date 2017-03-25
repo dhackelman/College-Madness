@@ -4,9 +4,10 @@ class ResearchForm extends React.Component {
   sendData(event) {
       event.preventDefault();
       const formData = {
-          // student_id: 
-          input: this.input.value,
-          school: this.props.school.school_name
+          student_id: null,
+          team_id: null,
+          input: this.input.value
+
       }
       this.props.updateFormInput(formData);
       this.inputForm.reset();

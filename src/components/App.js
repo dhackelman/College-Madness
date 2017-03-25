@@ -9,6 +9,7 @@ class App extends React.Component {
     this.updateFormInput = this.updateFormInput.bind(this);
     this.state = {
         Users: [],
+        CurrentUser: {},
         inputData: {}
     }
   }
@@ -20,6 +21,15 @@ class App extends React.Component {
         console.log(roster.data.users);
       });
     }
+
+    // confirmNo() { // Button Confirm Component --> 
+    //   const rosterId = this.state.Users.map((match) => {
+    //     if(match.id === Number(this.props.props.params.users)) {
+    //       console.log('match id ', match.id);
+    //       this.setState({CurrentUser: match.id});
+    //     }
+    //   });
+    // }
 
   updateFormInput(formData) {
       console.log('arg --> ', formData);
