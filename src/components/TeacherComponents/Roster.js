@@ -24,7 +24,7 @@ class Roster extends React.Component {
     return (
         <div className="teacher__roster">
           <span className="roster__header">Student Scholar</span>
-          <Student roster={this.state.Users}/>
+          <Student roster={this.props.roster} />
         </div>
       );
   }

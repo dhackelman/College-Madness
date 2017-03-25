@@ -20,7 +20,7 @@ class TeacherLogin extends React.Component {
             </nav>
             <h1 className="welcome__message">Welcome Teacher!</h1>
             <div className="teacher__things__container">
-              <Roster/>
+              <Roster roster={this.props.roster} />
               <Inbox/>
               <Homeroom/>
             </div>
