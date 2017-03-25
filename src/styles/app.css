@@ -424,7 +424,7 @@ h1 {
     padding-bottom: 3%;
     width: 100%; }
 
-.confirm__button {
+.confirm__button, .confirm__link {
   background: #235695;
   border: none;
   border-radius: 5px;
@@ -439,7 +439,19 @@ h1 {
 .confirm__yes:active {
   background-color: #bbd72e; }
 
-.confirm__no:active {
+.confirm__no {
+  background: #235695;
+  border: none;
+  border-radius: 5px;
+  color: #f2f2f2;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 1%;
+  padding-top: 1%;
+  padding-bottom: 3%;
+  width: 95%; }
+
+.confirm__link:active, .confirm__no:active {
   background-color: #e47323; }
 
 .teacher__nav {
