@@ -20,7 +20,7 @@ class MainBracket extends React.Component {
       .then((response) =>{
 
         const regionalBreakdown = response.data.user_predictions;
-        console.log('what up ', response.data);
+        console.log('what up ', response.datauser_predictions);
         this.filterByRegion(1, regionalBreakdown);
         this.filterByRegion(2, regionalBreakdown);
         this.filterByRegion(3, regionalBreakdown);
@@ -59,6 +59,7 @@ class MainBracket extends React.Component {
         });
         if (region === 1) {
             this.setState({East: teams});
+            console.log('teams reg 1 east ', teams);
         }
         if (region === 2) {
             this.setState({West: teams});
