@@ -15,10 +15,12 @@ class MainBracket extends React.Component {
     };
   }
   componentDidMount() {
-    axios.get("https://kipp-madness-api.herokuapp.com/users/3.json")
+    const currentUser = this.state.CurrentUser || 3;
+    axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
 
         const regionalBreakdown = response.data.user_predictions;
+        console.log('what up ', response.data);
         this.filterByRegion(1, regionalBreakdown);
         this.filterByRegion(2, regionalBreakdown);
         this.filterByRegion(3, regionalBreakdown);
@@ -26,6 +28,29 @@ class MainBracket extends React.Component {
         this.setState({AllTeams: regionalBreakdown});
       });
     }
+
+    // filterByWins(wins, data) {
+    //     const teams = data.filter((val) => {
+    //       // return val.team.region === region;
+    //         return val.team.region === region;
+    //     });
+    //     if (region === 1) {
+    //         this.setState({East: teams});
+    //     }
+    //     if (region === 2) {
+    //         this.setState({West: teams});
+    //     }
+    //     if (region === 3) {
+    //         this.setState({Midwest: teams});
+    //
+    //     }
+    //     if (region === 4) {
+    //         this.setState({South: teams});
+    //
+    //     }
+    //     // console.log('teams ', teams);
+    //     return
+    // }
 
     filterByRegion(region, data) {
         const teams = data.filter((val) => {
@@ -62,7 +87,6 @@ class MainBracket extends React.Component {
               <Region teams={this.state.West} allTeams={this.state.AllTeams}/>
               <Region teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region teams={this.state.South} allTeams={this.state.AllTeams}/>
-
             </div>
         );
     }

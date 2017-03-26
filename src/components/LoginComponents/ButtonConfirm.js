@@ -14,15 +14,18 @@ class Buttons extends React.Component {
     }
   }
   confirmYes() {
-    const rosterId = this.props.roster.map((match) => {
+      this.props.roster.map((match) => {
       if(match.id === Number(this.props.props.params.users)) {
         let data = {teacher:true};
           axios.put(`https://kipp-madness-api.herokuapp.com/users/${match.id}`, data).
-          then(response => console.log(response));
+          then(response =>
+            console.log(response)
+            
+          );
       }
     });
   }
-
+  // const rosterId =
   // confirmNo(users, userId) {
   //   const rosterId = this.props.roster.map((match) => {
   //     if(match.id === Number(this.props.props.params.users)) {
@@ -33,7 +36,7 @@ class Buttons extends React.Component {
   // }
 
     render() {
-      console.log('state of currentUser ', this.state.CurrentUser);
+      // console.log('state of currentUser ', this.state.CurrentUser);
 
         return (
             <div>
