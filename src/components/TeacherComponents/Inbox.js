@@ -20,6 +20,7 @@ class Inbox extends React.Component {
     }
 
   iterateStudentInput(arg) {
+    console.log('arg --> ', arg);
     let messageInnards = arg;
     let butts = [];
     for (let i=0; i < messageInnards.length; i++) {

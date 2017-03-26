@@ -7,6 +7,8 @@ class App extends React.Component {
   constructor() {
     super();
     this.updateFormInput = this.updateFormInput.bind(this);
+    this.updateCurrentUser = this.updateCurrentUser.bind(this);
+
     this.state = {
         Users: [],
         CurrentUser: {},
@@ -21,7 +23,11 @@ class App extends React.Component {
       });
     }
 
-    // confirmNo() { // Button Confirm Component --> 
+    updateCurrentUser(id) {
+      this.setState({CurrentUser: id})
+    }
+
+    // confirmNo() { // Button Confirm Component -->
     //   const rosterId = this.state.Users.map((match) => {
     //     if(match.id === Number(this.props.props.params.users)) {
     //       console.log('match id ', match.id);
@@ -45,7 +51,9 @@ class App extends React.Component {
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
               updateFormInput: this.updateFormInput,
-              roster: this.state.Users
+              roster: this.state.Users,
+              user: this.state.CurrentUser,
+              updateCurrentUser: this.updateCurrentUser
             });
         });
 

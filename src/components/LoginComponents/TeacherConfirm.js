@@ -1,6 +1,6 @@
 import React from 'react';
-import {Link} from 'react-router';
-import Teacher from '../TeacherComponents/Teacher';
+// import {Link} from 'react-router';
+// import Teacher from '../TeacherComponents/Teacher';
 import SelectClass from './SelectClass';
 import Buttons from './ButtonConfirm';
 
@@ -20,7 +20,7 @@ class TeacherConfirm extends React.Component {
   }
     render() {
 
-      const confirmStudent = this.state.ConfirmStudent ? <SelectClass props={this.props}/> : '';
+      const confirmStudent = this.state.ConfirmStudent ? <SelectClass updateCurrentUser={this.props.updateCurrentUser} props={this.props}/> : '';
       const buttons = this.state.Buttons ? <Buttons addClass={this.addClass} props={this.props} roster={this.props.roster} /> : '';
         return (
             <div>

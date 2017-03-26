@@ -1,6 +1,6 @@
 import React from 'react';
 import axios from 'axios';
-import map from 'lodash/map';
+import { Link } from 'react-router';
 
 class SelectClass extends React.Component {
   constructor() {
@@ -10,7 +10,6 @@ class SelectClass extends React.Component {
       CurrentUser: {}
     };
     this.updateHomeroom = this.updateHomeroom.bind(this);
-
   }
 
   componentWillMount() {
@@ -22,30 +21,23 @@ class SelectClass extends React.Component {
     }
 
     updateHomeroom(arg) {
-
-      // console.log('params user ', this.props.params.user, );
-      // console.log(this.state.Classes.id );
-      // let id = this.props.params.id;
-      // let data = {teacher:true};
-      //   axios.put(`https://kipp-madness-api.herokuapp.com/users/${id}`, data).then(response => console.log(response));
-      console.log('params user ', this.props);
-      console.log('class name ', arg);
+      console.log('what ', this.props);
+      const id = Number(this.props.props.params.users);
+      this.props.updateCurrentUser(id);
+      const data = {classroom_id: arg};
+      axios.put(`https://kipp-madness-api.herokuapp.com/users/${id}`, data).then(response => console.log(response));
+      console.log('class name ', id);
     }
 
-
-
     render() {
-
-// onClick={this.updateHomeroom}
-
-
+        // onClick={this.updateHomeroom}
         return (
             <div>
                 <h1>Please Select Class</h1>
 
                   {this.state.Classes.map((classes)=>{
                     console.log('classes --> ', classes);
-                      return <button value={classes.id} onClick={() => this.updateHomeroom(classes.id)} key={classes.id}>{classes.name}</button>;
+                      return <Link to="/bracket" value={classes.id} onClick={() => this.updateHomeroom(classes.id)} key={classes.id}>{classes.name}</Link>;
                     })}
             </div>
         );
