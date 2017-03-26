@@ -1,6 +1,5 @@
 import React from 'react';
-// import {Link} from 'react-router';
-// import Teacher from '../TeacherComponents/Teacher';
+import Teacher from '../TeacherComponents/Teacher';
 import SelectClass from './SelectClass';
 import Buttons from './ButtonConfirm';
 
