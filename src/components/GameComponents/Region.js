@@ -14,8 +14,8 @@ class Region extends React.Component {
             round32: Dummy32.user_predictions,
             round16: Dummy16.user_predictions,
             round8: Dummy8.user_predictions,
-            round4: Dummy4.user_predictions,
-            round2: Dummy2.user_predictions
+            round4: Dummy4.user_predictions
+            // round2: Dummy2.user_predictions
         }
         this.selectTeam = this.selectTeam.bind(this);
     }
@@ -26,18 +26,24 @@ class Region extends React.Component {
     selectTeam(winTeamId, loseTeamId, roundId) {
       let allTeams = this.state.round64;
       let teams32 = this.state.round32;
+      // console.log('teams32 in region ', teams32);
       let teams32Diff = [];
       let teams16 = this.state.round16;
       let teams16Diff = [];
       let teams8 = this.state.round8;
       let teams8Diff = [];
-      // let teams4 = this.state.round4;
-      // let teams4Diff = [];
+      let teams4 = this.state.round4;
+      let teams4Diff = [];
       // let teams2 = this.state.round2;
       // let teams2Diff = [];
       let winTeam = this.props.allTeams[winTeamId - 1];
       let loseTeam = this.props.allTeams[loseTeamId - 1];
-
+      //////////////////////////////////////////////////////////////////////////
+      // FINAL FOUR
+      //////////////////////////////////////////////////////////////////////////
+      let score = winTeam.predicted_wins;
+      this.props.filter(score, this.props.allTeams);
+      console.log('logging score in region ', score);
       // allTeams[winTeamId-1] = winTeam;
       // allTeams[loseTeamId-1] = loseTeam;
 
@@ -131,6 +137,18 @@ class Region extends React.Component {
 
         this.setState({round8: teams8Diff});
        }
+
+       if (roundId === 'round_8') {
+         winTeam.predicted_wins = 4;
+         loseTeam.predicted_wins = 3;
+        //  teams4Diff = teams4.slice();
+        //  teams4Diff[1] = winTeam;
+        console.log('in round 8 ', winTeam);
+
+
+        //  this.setState({round4: teams4Diff});
+         this.props.check(winTeam);
+        }
 
   }
   // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
