@@ -13,35 +13,18 @@ class FinalFour extends React.Component {
   constructor() {
       super();
       this.selectFour = this.selectFour.bind(this);
-      this.selectTwo = this.selectTwo.bind(this);
-
       this.state = {
-          round64: [],
-          round4: Dummy4.user_predictions,
           round2: Dummy2.user_predictions
       }
   }
-  componentWillMount() {
-      this.setState({round64: this.props.allTeams});
-  }
 
-  selectTwo(winTeamId, loseTeamId, roundId) {
-    // let allTeams = this.state.round64;
-    // let winTeam = this.props.allTeams[winTeamId - 1];
-    // console.log('in f4 - select Team ', winTeamId, winTeam);
-    // let round2 = [...this.state.round2];
-    // round2.push(winTeam);
-    // this.setState({round2});
-  }
 
   selectFour(winTeamId, loseTeamId, roundId) {
-    let allTeams = this.state.round64;
+
+    let allTeams = this.props.allTeams;
     let winTeam = this.props.allTeams[winTeamId - 1];
     let loseTeam = this.props.allTeams[loseTeamId - 1];
-
-    // let teams4 = this.state.round4;
-    // let teams4Diff = [];
-    let teams2 = this.state.round2;
+    let teams2 = this.props.two;
     let teams2Diff = [];
 
     console.log('in f4 - select Team ', winTeam);
@@ -54,12 +37,10 @@ class FinalFour extends React.Component {
       teams2Diff = teams2.slice();
       teams2Diff[0] = winTeam;
 
-      // let round2 = [...this.state.round2];
-      // round2.push(winTeam);
       this.setState({round2: teams2Diff});
      }
-    }
 
+<<<<<<< HEAD
     componentDidMount() {
     let round4 = [1,2,3,4];
     round4[0] = this.props.teams[0];
@@ -68,29 +49,33 @@ class FinalFour extends React.Component {
     round4[3] = this.props.teams[3];
     this.setState({round4});
       console.log('componentWillMount in f4 -> ', this.props.teams);
+=======
+    if (roundId === 'round_2') {
+      winTeam.predicted_wins = 6;
+      loseTeam.predicted_wins = 5;
+
+      let NattyChamps = [...this.state.round2];
+      console.log('pre-set', FinalFour);
+      // if (arg1 === 1 || arg1 === 2) {
+      //
+      // }
+      // if (arg1 === 3 || arg1 === 4) {
+      //   teams2Diff[2] = arg2;
+      // }
+      this.setState({round2: teams2Diff});
+     }
+>>>>>>> 5da97e927f147f396c005d9856e39e9cac706e0f
     }
 
+
+
+
+
     render() {
-      // let allMatchups = [];
-      // let teams = this.props.teams;
-      // console.log('teams in f4 matchup ', teams);
-      // teams.map((team) => {
-      //
-      //   return <FinalTeam key={`${team.abbrev}-match`} matchupId={`${team.abbrev}-match`} selectTeam={this.selectTeam}></FinalMatchup>);
-      // })
 
-          // allMatchups.push(<FinalMatchup key={`${team1.team.abbrev}-match`} matchupId={`${team1.team.abbrev}-match`} team1={team1} team2={team2} round={this.props.round} selectTeam={this.props.selectTeam}></FinalMatchup>);
-          // let rnd4 = this.state.round4.map((team) => {
-          //   console.log('team in map -> ', team);
-          //   return <FinalRound key={team.abbrev} teams={team} round='round_4' selectFour={this.selectFour}/>
-          // });
-          // console.log('pr. teams in f4 ', this.props.teams);
-
-          // {this.props.teams.map((team) => {
-          //   return <FinalTeam key={team.abbrev} home={team}  selectFour={this.selectFour}/>})}
-        return (
+      return (
             <div className="region">
-              <FinalRound teams={this.state.round4} round='round_4' selectTwo={this.selectFour}/>
+              <FinalRound teams={this.props.teams} round='round_4' selectFour={this.selectFour}/>
               <FinalRound teams={this.state.round2} round='round_2' selectTwo={this.selectTwo}/>
             </div>
         );

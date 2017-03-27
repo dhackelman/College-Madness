@@ -145,7 +145,7 @@ class Region extends React.Component {
         //  teams4Diff[1] = winTeam;
          console.log(' win team in round 8 ', winTeam);
         //  this.setState({round4: teams4Diff});
-         this.props.check(winTeam);
+         this.props.check(winTeam.team.region, winTeam);
         }
 
   }
