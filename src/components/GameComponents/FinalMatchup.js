@@ -4,7 +4,6 @@ import FinalTeam from './FinalTeam';
 class FinalMatchup extends React.Component {
 
     render() {
-      console.log('in finalMatchup- team1 / team2 ', this.props.team1, this.props.team2);
         return (
 
             <div className="matchup__container">

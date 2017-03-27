@@ -1,6 +1,8 @@
 import React from 'react';
 import FinalRound from './FinalRound';
 import Dummy2 from '../../Data/Dummy2.js';
+import Dummy0 from '../../Data/Dummy0.js';
+import FinalChamp from './FinalChamp';
 
 
 
@@ -10,7 +12,7 @@ class FinalFour extends React.Component {
       this.selectFour = this.selectFour.bind(this);
       this.state = {
           NatChampGame: Dummy2.user_predictions,
-          Champ: Dummy2.user_predictions
+          Champ: Dummy0.user_predictions
       }
   }
 
@@ -21,44 +23,29 @@ class FinalFour extends React.Component {
     let winTeam = this.props.allTeams[winTeamId - 1];
     let loseTeam = this.props.allTeams[loseTeamId - 1];
 
-    console.log('in f4 - select Team ', winTeam);
-
     if (roundId === 'round_4') {
       winTeam.predicted_wins = 5;
       loseTeam.predicted_wins = 4;
       let finals = [...this.state.NatChampGame];
-      console.log('pre-set', finals);
       if (winTeam.team.region === 1 || winTeam.team.region === 2) {
         finals[0] = winTeam;
       }
       if (winTeam.team.region === 3 || winTeam.team.region === 4) {
         finals[1] = winTeam;
       }
-
       this.setState({NatChampGame:finals});
-      console.log('from MB', this.state.NatChampGame);
      }
 
      if (roundId === 'round_2') {
+       console.log('in round 2 / WinTeam ', winTeam);
        winTeam.predicted_wins = 6;
        loseTeam.predicted_wins = 5;
-       let finals = [...this.state.NatChampGame];
-       console.log('pre-set', finals);
-       if (winTeam.team.region === 1 || winTeam.team.region === 2) {
-         finals[0] = winTeam;
-       }
-       if (winTeam.team.region === 3 || winTeam.team.region === 4) {
-         finals[1] = winTeam;
-       }
-
-       this.setState({NatChampGame:finals});
-       console.log('from MB', this.state.NatChampGame);
+       let champ = [...this.state.Champ];
+       champ[0] =  winTeam;
+       console.log('champ => ', champ);
+       this.setState({Champ: champ});
       }
     }
-
-
-
-
 
     render() {
 
@@ -66,6 +53,7 @@ class FinalFour extends React.Component {
             <div className="region">
               <FinalRound check={this.props.check} teams={this.props.teams} round='round_4' selectFour={this.selectFour}/>
               <FinalRound check={this.props.check} teams={this.state.NatChampGame} round='round_2' selectFour={this.selectFour}/>
+              <FinalChamp check={this.props.check} teams={this.state.Champ} round='round_0'/>
             </div>
         );
     }

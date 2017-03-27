@@ -7,9 +7,7 @@ class FinalTeam extends React.Component {
 
     render() {
 
-
       const collegeSpecificResearch = "research/" + this.props.home.team.id;
-
         return (
           <div className="team__container" onClick={()=> {this.props.selectFour(this.props.home.team.id, this.props.away.team.id, this.props.round)}}>
             <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>
