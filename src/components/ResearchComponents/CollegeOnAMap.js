@@ -1,20 +1,21 @@
 import React from 'react';
 // import axios from 'axios';
+import GoogleMapReact from 'google-map-react';
 
 class CollegeOnAMap extends React.Component {
 
 
-// AIzaSyB0v8a3gjvjeM_vzDQfGgnLCu_6GNVO7Qc
-    render() {
-
+      render() {
+        const props = {
+        center: {lat:this.props.lat, lng:this.props.lng},
+        zoom: 9,
+      };
         return (
-                <div className="college__basics">
-                  <div>{this.props.lat}</div>
-
-                    <div>{this.props.lon}</div>
-                </div>
-        );
+             <GoogleMapReact center={props.center} defaultZoom={props.zoom} >
+            </GoogleMapReact>
+          );
+        }
     }
-}
+
 
 export default CollegeOnAMap;

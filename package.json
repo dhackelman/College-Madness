@@ -19,8 +19,11 @@
   "dependencies": {
     "axios": "^0.15.3",
     "google-map-react": "^0.23.0",
+    "google-maps-react": "^1.0.19",
     "history": "4.2.0",
+    "install": "^0.8.7",
     "lodash": "^4.17.4",
+    "npm": "^4.4.4",
     "re-base": "2.2.0",
     "react": "15.3.2",
     "react-addons-css-transition-group": "15.3.2",
