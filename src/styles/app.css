@@ -518,6 +518,27 @@ h1 {
     .teacher__inbox .inbox__messages .inbox__pass:hover, .teacher__inbox .inbox__messages .inbox__fail:hover {
       animation: scale .5s both; }
 
+.table {
+  width: 100%;
+  height: 100%; }
+
+.row {
+  width: 100%;
+  min-height: 1px;
+  height: auto;
+  margin: 0; }
+
+.cell {
+  float: left;
+  margin: 0;
+  padding: 0; }
+
+.onecol {
+  width: 100%; }
+
+.twocol {
+  width: 50%; }
+
 .teacher__roster {
   display: flex;
   flex-direction: column;

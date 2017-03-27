@@ -18,7 +18,7 @@ class MainBracket extends React.Component {
     const currentUser = this.state.CurrentUser || 3;
     axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
-
+        console.log(response);
         const regionalBreakdown = response.data.user_predictions;
         console.log('what up ', response.data);
         this.filterByRegion(1, regionalBreakdown);

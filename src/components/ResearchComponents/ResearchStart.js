@@ -22,7 +22,7 @@ class ResearchStart extends React.Component {
                     </p>
                     <div className="college__visuals">
                         <div className="college__map">
-                            <CollegeOnAMap lat={this.props.school.latitude} lon={this.props.school.longitude}/>
+                            <CollegeOnAMap map={this.props.map} lat={this.props.school.latitude} lon={this.props.school.longitude}/>
                         </div>
                         <div className="college__logo">
                             <img src="https://static1.squarespace.com/static/54341f4be4b0ebdd5103ead3/54d3d1b2e4b09df3e6abc9a2/55e75676e4b0786e908e5ea7/1442942133747/fan-feet-carolina-unc-tarheeled-rameses.png" alt="Mascot"/>

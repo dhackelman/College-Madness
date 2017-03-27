@@ -13,6 +13,7 @@ class ResearchContainer extends React.Component {
     this.addStart = this.addStart.bind(this);
     this.addAcademic = this.addAcademic.bind(this);
     this.addSpecial = this.addSpecial.bind(this);
+    // this.collegeMap = this.collegeMap.bind(this);
 
     this.state = {
       Schools: [],
@@ -45,10 +46,18 @@ class ResearchContainer extends React.Component {
       this.setState({showSpecial: true});
     }
 
+    // collegeMap(arg1, arg2) {
+    //   let mapProp= {
+    //       center:new google.maps.LatLng(arg1, arg2),
+    //       zoom:5,
+    //   };
+    //   let map= new google.maps.Map(document.getElementById("googleMap"),mapProp);
+    //   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0v8a3gjvjeM_vzDQfGgnLCu_6GNVO7Qc=myMap"
+    //   }
 
 
     render() {
-      const start = this.state.showStart ? <ResearchStart props={this.props} className="research__initial" school={this.state.Schools}/> : '';
+      const start = this.state.showStart ? <ResearchStart map={this.collegeMap} props={this.props} className="research__initial" school={this.state.Schools}/> : '';
       const academic = this.state.showAcademic ? <ResearchAcademicStats props={this.props} className="research__initial" school={this.state.Schools}/> : '';
       const programs = this.state.showSpecial ? <CollegePrograms props={this.props} className="research__initial" school={this.state.Schools}/> : '';
 
