@@ -23,7 +23,7 @@ class TeacherLogin extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://kipp-madness-api.herokuapp.com/classrooms/2.json")
+    axios.get("https://kipp-madness-api.herokuapp.com/classrooms/1.json")
       .then((roster) =>{
         let studentsObj = roster.data.students;
         this.setState({Students:studentsObj});
