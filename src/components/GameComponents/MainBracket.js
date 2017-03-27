@@ -12,6 +12,7 @@ class MainBracket extends React.Component {
     // this.filterByWins = this.filterByWins.bind(this);
     // this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
     this.checkFinalFour = this.checkFinalFour.bind(this);
+    this.checkNatChamp = this.checkNatChamp.bind(this);
 
     this.state = {
       AllTeams: [],
@@ -47,7 +48,7 @@ class MainBracket extends React.Component {
 
     checkFinalFour(arg1, arg2) {
       let FinalFour = [...this.state.FinalFour];
-      console.log('pre-set', FinalFour);
+
       if (arg1 === 1) {
         FinalFour[0] = arg2;
       }
@@ -60,9 +61,23 @@ class MainBracket extends React.Component {
       if (arg1 === 4) {
         FinalFour[3] = arg2;
       }
-      console.log('from MB', FinalFour);
+
       this.setState({FinalFour});
     }
+
+    checkNatChamp(arg1, arg2) {
+      // let NatChamp = [...this.state.NatChamp];
+      // console.log('pre-set', NatChamp);
+      // if (arg1 === 1 || arg1 === 2) {
+      //   NatChamp[0] = arg2;
+      // }
+      // if (arg1 === 3 || arg1 === 4) {
+      //   NatChamp[1] = arg2;
+      // }
+      console.log('main');
+      // this.setState({NatChamp});
+    }
+
 
     // filterByWins(score, data) {
     //     const teams = data.filter((val) => {
@@ -134,7 +149,7 @@ class MainBracket extends React.Component {
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
-              <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
+              <FinalFour teams={this.state.FinalFour} check={this.checkNatChamp} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
 
             </div>
         );
