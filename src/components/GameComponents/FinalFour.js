@@ -60,9 +60,13 @@ class FinalFour extends React.Component {
      }
     }
 
-    componentWillMount() {
-    let round4 = [...this.state.round4];
-    round4 = this.props.teams;
+    componentDidMount() {
+    let round4 = [1,2,3,4];
+    round4[0] = this.props.teams[0];
+    round4[1] = this.props.teams[1];
+    round4[2] = this.props.teams[2];
+    round4[3] = this.props.teams[3];
+    this.setState({round4});
       console.log('componentWillMount in f4 -> ', this.props.teams);
     }
 
