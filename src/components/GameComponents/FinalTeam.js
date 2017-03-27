@@ -9,7 +9,7 @@ class FinalTeam extends React.Component {
 
 
       const collegeSpecificResearch = "research/" + this.props.home.team.id;
-      console.log('final team ', this.props);
+
         return (
           <div className="team__container" onClick={()=> {this.props.selectFour(this.props.home.team.id)}}>
             <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>

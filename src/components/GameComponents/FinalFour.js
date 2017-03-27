@@ -1,6 +1,7 @@
 import React from 'react';
 import FinalMatchup from './FinalMatchup';
 import FinalTeam from './FinalTeam';
+import FinalRound from './FinalRound';
 
 
 import Dummy4 from '../../Data/Dummy4.js';
@@ -12,18 +13,57 @@ class FinalFour extends React.Component {
   constructor() {
       super();
       this.selectFour = this.selectFour.bind(this);
+      this.selectTwo = this.selectTwo.bind(this);
 
       this.state = {
+          round64: [],
           round4: Dummy4.user_predictions,
-          round2: []
+          round2: Dummy2.user_predictions
       }
   }
+  componentWillMount() {
+      this.setState({round64: this.props.allTeams});
+  }
 
-    selectFour(winTeamId) {
-      console.log('in f4 - select Team ', winTeamId);
-      let round2 = [...this.state.round2];
-      round2.push(winTeamId);
-      this.setState({round2});
+  selectTwo(winTeamId, loseTeamId, roundId) {
+    // let allTeams = this.state.round64;
+    // let winTeam = this.props.allTeams[winTeamId - 1];
+    // console.log('in f4 - select Team ', winTeamId, winTeam);
+    // let round2 = [...this.state.round2];
+    // round2.push(winTeam);
+    // this.setState({round2});
+  }
+
+  selectFour(winTeamId, loseTeamId, roundId) {
+    let allTeams = this.state.round64;
+    let winTeam = this.props.allTeams[winTeamId - 1];
+    let loseTeam = this.props.allTeams[loseTeamId - 1];
+
+    // let teams4 = this.state.round4;
+    // let teams4Diff = [];
+    let teams2 = this.state.round2;
+    let teams2Diff = [];
+
+    console.log('in f4 - select Team ', winTeam);
+
+
+    if (roundId === 'round_4') {
+      winTeam.predicted_wins = 5;
+      loseTeam.predicted_wins = 4;
+
+      teams2Diff = teams2.slice();
+      teams2Diff[0] = winTeam;
+
+      // let round2 = [...this.state.round2];
+      // round2.push(winTeam);
+      this.setState({round2: teams2Diff});
+     }
+    }
+
+    componentWillMount() {
+    let round4 = [...this.state.round4];
+    round4 = this.props.teams;
+      console.log('componentWillMount in f4 -> ', this.props.teams);
     }
 
     render() {
@@ -36,12 +76,18 @@ class FinalFour extends React.Component {
       // })
 
           // allMatchups.push(<FinalMatchup key={`${team1.team.abbrev}-match`} matchupId={`${team1.team.abbrev}-match`} team1={team1} team2={team2} round={this.props.round} selectTeam={this.props.selectTeam}></FinalMatchup>);
+          // let rnd4 = this.state.round4.map((team) => {
+          //   console.log('team in map -> ', team);
+          //   return <FinalRound key={team.abbrev} teams={team} round='round_4' selectFour={this.selectFour}/>
+          // });
+          // console.log('pr. teams in f4 ', this.props.teams);
+
+          // {this.props.teams.map((team) => {
+          //   return <FinalTeam key={team.abbrev} home={team}  selectFour={this.selectFour}/>})}
         return (
-            <div className="region__common">
-              {this.props.teams.map((team) => {
-                console.log('team in map ', team);
-                console.log('team abbr ', team.abbrev);
-                  return <FinalTeam key={team.abbrev} home={team}  selectFour={this.selectFour}/>})}
+            <div className="region">
+              <FinalRound teams={this.state.round4} round='round_4' selectTwo={this.selectFour}/>
+              <FinalRound teams={this.state.round2} round='round_2' selectTwo={this.selectTwo}/>
             </div>
         );
     }
