@@ -1,16 +1,31 @@
 import React from 'react';
 import {Link} from 'react-router';
+import YouTube from 'react-youtube';
 
 class CollegePrograms extends React.Component {
 
 
 
     render() {
-
-      const site = "http://" + this.props.school.url;
+      console.log('hre', this.props.school.video_url);
+      const opts = {
+        height: '290',
+        width: '440',
+        playerVars: {
+          autoplay: 1
+        }
+      };
+      let site = this.props.school.url;
+      let yt = this.props.school.video_url;
+      let videoId = yt.split("v=")[1].substring(0, 11)
         return (
                 <div className="college__basics">
-                  <Link to={site} target="_blank" alt={this.props.school.name}>{this.props.school.url}</Link>
+                  <YouTube
+                    videoId={videoId}
+                    opts={opts}
+                    onReady={this._onReady}
+                  />
+                <Link to={site} target="_blank" alt={this.props.school.name}>Learn More @ {this.props.school.url}</Link>
 
               </div>
         );
