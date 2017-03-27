@@ -43,11 +43,14 @@ class App extends React.Component {
       const timestamp = Date.now();
       inputData[`input-${timestamp}`] = formData;
       this.setState({inputData: inputData});
+      axios.post("https://kipp-madness-api.herokuapp.com/submissions", formData)
+        .then((response) =>{
+          console.log('response from submssion ', response);
+        });
   }
 
 
     render() {
-
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
               updateFormInput: this.updateFormInput,

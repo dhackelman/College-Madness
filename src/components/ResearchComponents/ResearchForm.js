@@ -4,10 +4,9 @@ class ResearchForm extends React.Component {
   sendData(event) {
       event.preventDefault();
       const formData = {
-          student_id: null,
-          team_id: null,
+          team_id: this.props.school.id,
+          user_id: this.props.user,
           input: this.input.value
-
       }
       this.props.updateFormInput(formData);
       this.inputForm.reset();
@@ -18,7 +17,7 @@ class ResearchForm extends React.Component {
               <div className="research__form">
                   <h2>Show What You Know</h2>
                   <form ref={(input) => this.inputForm = input} onSubmit={(event) => this.sendData(event)}>
-                      <textarea ref={(input) => this.input = input} placeholder="Dear Ms. Edmonson,"></textarea>
+                      <textarea ref={(input) => this.input = input} placeholder="Dear Teacher,"></textarea>
                       <input type="submit"></input>
                   </form>
               </div>
