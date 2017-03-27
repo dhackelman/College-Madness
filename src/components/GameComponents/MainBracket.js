@@ -3,13 +3,14 @@ import Region from './Region';
 import FinalFour from './FinalFour';
 import axios from 'axios';
 import Dummy4 from '../../Data/Dummy4.js';
+import Dummy2 from '../../Data/Dummy2.js';
 
 class MainBracket extends React.Component {
   constructor() {
     super();
     this.filterByRegion = this.filterByRegion.bind(this);
-    this.filterByWins = this.filterByWins.bind(this);
-    this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
+    // this.filterByWins = this.filterByWins.bind(this);
+    // this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
     this.checkFinalFour = this.checkFinalFour.bind(this);
 
     this.state = {
@@ -19,12 +20,14 @@ class MainBracket extends React.Component {
       Midwest: [],
       South: [],
       FinalFour: Dummy4.user_predictions,
-      NatChamp: [],
+      // Four: Dummy4.user_predictions,
+      NatChamp: Dummy2.user_predictions,
       Champion: []
     };
   }
   componentDidMount() {
-    const currentUser = this.state.CurrentUser || 3;
+    const currentUser = this.state.CurrentUser || 2;
+    console.log(currentUser);
     axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
         console.log(response);
@@ -36,49 +39,62 @@ class MainBracket extends React.Component {
         this.filterByRegion(4, regionalBreakdown);
         this.setState({AllTeams: regionalBreakdown});
         // for actual wins // vvv
-        this.filterByWins(4, regionalBreakdown);
-        this.filterByWins(5, regionalBreakdown);
-        this.filterByWins(6, regionalBreakdown);
+        // this.filterByWins(4, regionalBreakdown);
+        // this.filterByWins(5, regionalBreakdown);
+        // this.filterByWins(6, regionalBreakdown);
       });
     }
 
-    checkFinalFour(args) {
+    checkFinalFour(arg1, arg2) {
       let FinalFour = [...this.state.FinalFour];
-      FinalFour.push(args);
+      console.log('pre-set', FinalFour);
+      if (arg1 === 1) {
+        FinalFour[0] = arg2;
+      }
+      if (arg1 === 2) {
+        FinalFour[1] = arg2;
+      }
+      if (arg1 === 3) {
+        FinalFour[2] = arg2;
+      }
+      if (arg1 === 4) {
+        FinalFour[3] = arg2;
+      }
+      console.log('from MB', FinalFour);
       this.setState({FinalFour});
     }
 
-    filterByWins(score, data) {
-        const teams = data.filter((val) => {
-            return val.team.wins === score;
-        });
-        if (score === 4) {
-            this.setState({FinalFour: teams});
-        }
-        if (score === 5) {
-            this.setState({NatChamp: teams});
-        }
-        if (score === 6) {
-            this.setState({Champion: teams});
-        }
-        return
-    }
-
-    filterByPredictedWins(score, data) {
-        const teams = data.filter((val) => {
-            return val.predicted_wins === score;
-        });
-        if (score === 4) {
-            this.setState({FinalFour: teams});
-        }
-        if (score === 5) {
-            this.setState({NatChamp: teams});
-        }
-        if (score === 6) {
-            this.setState({Champion: teams});
-        }
-        return
-    }
+    // filterByWins(score, data) {
+    //     const teams = data.filter((val) => {
+    //         return val.team.wins === score;
+    //     });
+    //     if (score === 4) {
+    //         this.setState({FinalFour: teams});
+    //     }
+    //     if (score === 5) {
+    //         this.setState({NatChamp: teams});
+    //     }
+    //     if (score === 6) {
+    //         this.setState({Champion: teams});
+    //     }
+    //     return
+    // }
+    //
+    // filterByPredictedWins(score, data) {
+    //     const teams = data.filter((val) => {
+    //         return val.predicted_wins === score;
+    //     });
+    //     if (score === 4) {
+    //         this.setState({FinalFour: teams});
+    //     }
+    //     if (score === 5) {
+    //         this.setState({NatChamp: teams});
+    //     }
+    //     if (score === 6) {
+    //         this.setState({Champion: teams});
+    //     }
+    //     return
+    // }
 
     filterByRegion(region, data) {
         const teams = data.filter((val) => {
@@ -109,6 +125,7 @@ class MainBracket extends React.Component {
       if (!this.state.AllTeams.length) {
         return (<h1>Loading</h1>);
       }
+      console.log('render', this.state.FinalFour);
 
 
         return (
