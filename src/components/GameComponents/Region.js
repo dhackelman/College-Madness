@@ -34,16 +34,16 @@ class Region extends React.Component {
       let teams8Diff = [];
       let teams4 = this.state.round4;
       let teams4Diff = [];
-      // let teams2 = this.state.round2;
-      // let teams2Diff = [];
+      let teams2 = this.state.round2;
+      let teams2Diff = [];
       let winTeam = this.props.allTeams[winTeamId - 1];
       let loseTeam = this.props.allTeams[loseTeamId - 1];
       //////////////////////////////////////////////////////////////////////////
       // FINAL FOUR
       //////////////////////////////////////////////////////////////////////////
-      let score = winTeam.predicted_wins;
-      this.props.filter(score, this.props.allTeams);
-      console.log('logging score in region ', score);
+      // let score = winTeam.predicted_wins;
+      // this.props.filter(score, this.props.allTeams);
+      // console.log('logging score in region ', score);
       // allTeams[winTeamId-1] = winTeam;
       // allTeams[loseTeamId-1] = loseTeam;
 
@@ -143,19 +143,15 @@ class Region extends React.Component {
          loseTeam.predicted_wins = 3;
         //  teams4Diff = teams4.slice();
         //  teams4Diff[1] = winTeam;
-        console.log('in round 8 ', winTeam);
-
-
+         console.log(' win team in round 8 ', winTeam);
         //  this.setState({round4: teams4Diff});
          this.props.check(winTeam);
         }
 
   }
-  // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
-  // <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
+
     render() {
-      // <Round teams={this.state.round4} round='round_4' selectTeam={this.selectTeam}/>
-      // <Round teams={this.state.round2} round='round_2' selectTeam={this.selectTeam}/>
+
         return (
             <div className="region">
                 <Round teams={this.state.round64} round='round_64' selectTeam={this.selectTeam}/>

@@ -51,7 +51,6 @@ class App extends React.Component {
 
 
     render() {
-
         const childWithProp = React.Children.map(this.props.children, (child) => {
             return React.cloneElement(child, {
               updateFormInput: this.updateFormInput,

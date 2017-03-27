@@ -44,10 +44,9 @@ class MainBracket extends React.Component {
 
     checkFinalFour(args) {
       console.log('in 4');
-      let FinalFour = { ...this.state.FinalFour};
-      let array = [];
-      array.push(args);
-      this.setState({FinalFour: array});
+      let FinalFour = [...this.state.FinalFour];
+      FinalFour.push(args);
+      this.setState({FinalFour});
     }
 
     filterByWins(score, data) {
