@@ -17,7 +17,6 @@ class MainBracket extends React.Component {
       West: [],
       Midwest: [],
       South: [],
-      // Elite: [],
       FinalFour: [],
       NatChamp: [],
       Champion: []
@@ -43,7 +42,6 @@ class MainBracket extends React.Component {
     }
 
     checkFinalFour(args) {
-      console.log('in 4');
       let FinalFour = [...this.state.FinalFour];
       FinalFour.push(args);
       this.setState({FinalFour});
