@@ -39,11 +39,22 @@ class FinalFour extends React.Component {
 
      }
 
+<<<<<<< HEAD
+    componentDidMount() {
+    let round4 = [1,2,3,4];
+    round4[0] = this.props.teams[0];
+    round4[1] = this.props.teams[1];
+    round4[2] = this.props.teams[2];
+    round4[3] = this.props.teams[3];
+    this.setState({round4});
+      console.log('componentWillMount in f4 -> ', this.props.teams);
+=======
     if (roundId === 'round_2') {
       winTeam.predicted_wins = 6;
       loseTeam.predicted_wins = 5;
       // this.props.check(winTeam.team.region, winTeam);
      }
+>>>>>>> 5da97e927f147f396c005d9856e39e9cac706e0f
     }
 
 
