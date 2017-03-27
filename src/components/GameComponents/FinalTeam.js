@@ -1,31 +1,22 @@
 import React from 'react';
-import TeamLogo from '../../styles/images/teamLogo.png';
+import { Link } from 'react-router';
+import FaInfoCircle from 'react-icons/lib/fa/info-circle';
+
 
 class FinalTeam extends React.Component {
 
     render() {
 
-        let teams = this.props.searchWins(this.props.TeamData, 6);
-        let teamFinal = null;
-        teams.forEach((team) => {
-            if (team.wins === 6) {
-                teamFinal = team;
-            } else {
-                console.log('Error in Final Round ForEach loop');
-            }
-        })
 
-        if (teamFinal === null) {
-            return null;
-        }
-
+      const collegeSpecificResearch = "research/" + this.props.home.team.id;
+      console.log('final team ', this.props);
         return (
-            <div>
-                <div className="round_1__container">
-                    <img className="team__logo-final" src={TeamLogo} alt="Team Logo"></img>
-                    <h1 key={teamFinal.id} className="team__name">{teamFinal.name}</h1>
-                </div>
-            </div>
+          <div className="team__container" onClick={()=> {this.props.selectFour(this.props.home.team.id)}}>
+            <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>
+            <img className="team__logo" src={this.props.home.team.image} alt={this.props.home.team.abbrev}></img>
+            <span className="team__seed">{this.props.home.team.seed ? this.props.home.team.seed : ''}</span>
+            <span className="team__name">{this.props.home.team.abbrev}</span>
+          </div>
         );
     }
 }

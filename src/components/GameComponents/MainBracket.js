@@ -2,6 +2,7 @@ import React from 'react';
 import Region from './Region';
 import FinalFour from './FinalFour';
 import axios from 'axios';
+import Dummy4 from '../../Data/Dummy4.js';
 
 class MainBracket extends React.Component {
   constructor() {
@@ -17,7 +18,7 @@ class MainBracket extends React.Component {
       West: [],
       Midwest: [],
       South: [],
-      FinalFour: [],
+      FinalFour: Dummy4.user_predictions,
       NatChamp: [],
       Champion: []
     };
@@ -116,7 +117,7 @@ class MainBracket extends React.Component {
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
-              <FinalFour four={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
+              <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
 
             </div>
         );

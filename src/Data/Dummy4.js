@@ -22,7 +22,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "2",
+              abbrev: "3",
               image: "../styles/images/teamLogo.png"
 
           }
@@ -31,7 +31,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "2",
+              abbrev: "4",
               image: "../styles/images/teamLogo.png"
 
           }
