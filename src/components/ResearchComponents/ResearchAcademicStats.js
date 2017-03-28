@@ -15,9 +15,9 @@ class ResearchAcademicStats extends React.Component {
                     </p>
                     <p>Average SAT Math:<span>{school.average_sat_math}</span>
                     </p>
-                    <p>Average SAT Reading:<span>${school.average_sat_critical_reading}</span>
+                    <p>Average SAT Reading:<span>{school.average_sat_critical_reading}</span>
                     </p>
-                    <p>Admission Rate: <span>{school.admission_rate}</span>
+                    <p>Admission Rate: <span>{school.admission_rate}%</span>
                     </p>
                 </div>
         );
