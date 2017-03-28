@@ -1,12 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router';
 import FaInfoCircle from 'react-icons/lib/fa/info-circle';
-<<<<<<< HEAD
-// import FaDribble from 'react-icons/lib/fa/dribble';
 import Dummy from '../../Data/Dummy.js';
-=======
-// import Dummy from '../../Data/Dummy.js';
->>>>>>> d034a7308fceca200f616ad9693dcb62ba5fceec
 // import bball from '../../styles/images/bball-placeholder.png';
 
 
