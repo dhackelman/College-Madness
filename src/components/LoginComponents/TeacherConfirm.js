@@ -1,5 +1,4 @@
 import React from 'react';
-// import Teacher from '../TeacherComponents/Teacher';
 import SelectClass from './SelectClass';
 import Buttons from './ButtonConfirm';
 

@@ -4,9 +4,7 @@ import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 
 
 class FinalTeam extends React.Component {
-
     render() {
-
       const collegeSpecificResearch = "research/" + this.props.home.team.id;
         return (
           <div className="team__container" onClick={()=> {this.props.selectFour(this.props.home.team.id, this.props.away.team.id, this.props.round)}}>

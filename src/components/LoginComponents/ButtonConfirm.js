@@ -8,7 +8,6 @@ class Buttons extends React.Component {
     super();
     this.confirmYes = this.confirmYes.bind(this);
     // this.confirmNo = this.confirmNo.bind(this);
-
     this.state = {
       CurrentUser: {}
     }
@@ -20,31 +19,22 @@ class Buttons extends React.Component {
           axios.put(`https://kipp-madness-api.herokuapp.com/users/${match.id}`, data).
           then(response =>
             console.log(response)
-            
           );
       }
     });
   }
-  // const rosterId =
-  // confirmNo(users, userId) {
-  //   const rosterId = this.props.roster.map((match) => {
-  //     if(match.id === Number(this.props.props.params.users)) {
-  //       console.log('match id ', match.id);
-  //       this.setState({CurrentUser: match.id});
-  //     }
-  //   });
-  // }
 
     render() {
-      // console.log('state of currentUser ', this.state.CurrentUser);
 
         return (
             <div>
-              <h1>Are You a Teacher?</h1>
+              <h1>Welcome to College Madness</h1>
+              <h2 className="is-centered">Please Login</h2>
               <div className="login__container">
-                      <Link to="teacher" onClick={this.confirmYes} className="confirm__button confirm__yes">Yes!</Link>
-                      <button onClick={this.props.addClass} className="confirm__no">No</button>
+                <button onClick={this.props.addClass} className="kippBtn">Student Login</button>
+                <Link to="teacher" onClick={this.confirmYes} className="kippBtn">Teacher Login</Link>
               </div>
+
             </div>
         );
     }

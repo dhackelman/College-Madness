@@ -5,7 +5,7 @@ const Data = {
         team: {
             name: "",
             abbrev: "1",
-            image: "../styles/images/teamLogo.png"
+            image: "../styles/images/bball-placeholder.png"
 
         }
     }, {
@@ -14,7 +14,7 @@ const Data = {
         team: {
             name: "",
             abbrev: "2",
-            image: "../styles/images/teamLogo.png"
+            image: "../styles/images/bball-placeholder.png"
 
         }
     }]

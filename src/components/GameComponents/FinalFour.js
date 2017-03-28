@@ -4,8 +4,6 @@ import Dummy2 from '../../Data/Dummy2.js';
 import Dummy0 from '../../Data/Dummy0.js';
 import FinalChamp from './FinalChamp';
 
-
-
 class FinalFour extends React.Component {
   constructor() {
       super();
@@ -16,10 +14,9 @@ class FinalFour extends React.Component {
       }
   }
 
-
   selectFour(winTeamId, loseTeamId, roundId) {
 
-    let allTeams = this.props.allTeams;
+    // let allTeams = this.props.allTeams;
     let winTeam = this.props.allTeams[winTeamId - 1];
     let loseTeam = this.props.allTeams[loseTeamId - 1];
 
@@ -37,12 +34,10 @@ class FinalFour extends React.Component {
      }
 
      if (roundId === 'round_2') {
-       console.log('in round 2 / WinTeam ', winTeam);
        winTeam.predicted_wins = 6;
        loseTeam.predicted_wins = 5;
        let champ = [...this.state.Champ];
        champ[0] =  winTeam;
-       console.log('champ => ', champ);
        this.setState({Champ: champ});
       }
     }
