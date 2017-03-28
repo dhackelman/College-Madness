@@ -3,14 +3,43 @@
 // kipp button style !
 .kippBtn {
   background-color: $royal;
+  border: 5px solid $royal;
   border-radius: 5px;
   color: $almost;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   padding: 15px 35px;
+  &:hover {
+    background-color: $burnt;
+    color: $almost;
+    border: 5px solid $royal;
+  }
 }
 
 // main container for app
 .app__container {
 
+}
+
+form,
+input,
+textarea {
+    box-sizing: border-box;
+    margin: 2%;
+    padding: 2%;
+    width: 95%;
+
+    textarea {
+      color: $navy;
+      font-family: $primaryFont;
+      font-size: 20px;
+      height: 280px;
+    }
+}
+
+input:focus,
+textarea:focus {
+    background: white;
+    border-radius: 5px;
+    outline: none;
 }

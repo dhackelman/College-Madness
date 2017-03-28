@@ -33,14 +33,16 @@ class ButtonConfirm extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="login__container">
               <h1>Welcome to College Madness</h1>
-              <h2 className="is-centered">Please Login</h2>
-              <div className="login__container">
+              <div className="login__student-confirm">
                 <button onClick={this.props.addClass} className="kippBtn">Student Login</button>
-                <Link to="classroom" onClick={this.confirmYes} className="kippBtn">Teacher Login</Link>
               </div>
-
+              <div className="login__teach-container">
+                <Link to="teacher" onClick={this.confirmYes} className="kippBtn">Teacher Login</Link>
+                <h2>Auth Code</h2>
+                <input type="text"></input>
+              </div>
             </div>
         );
     }
