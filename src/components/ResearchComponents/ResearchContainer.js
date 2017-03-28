@@ -67,7 +67,7 @@ class ResearchContainer extends React.Component {
                     <ul>
                         <li className="research__nav__item" onClick={this.addStart}>Start Here!</li>
                         <li className="research__nav__item" onClick={this.addAcademic}>Academic Stats</li>
-                        <li className="research__nav__item" onClick={this.addSpecial}>Special Programs</li>
+                        <li className="research__nav__item" onClick={this.addSpecial}>Watch & Learn</li>
                         {/*<li className="research__nav__item">Watch & Learn</li>*/}
                     </ul>
                 </nav>

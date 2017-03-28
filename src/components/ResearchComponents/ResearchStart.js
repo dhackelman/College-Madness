@@ -12,7 +12,7 @@ class ResearchStart extends React.Component {
       console.log(school);
         return (
                 <div className="college__basics">
-                    <h2>{school.name}</h2>
+                    <h2>{school.school_name}</h2>
                     <p>Location:<span>{school.city},{school.state}</span>
                     </p>
                     <p>Student Population:<span>{school.student_size} students</span>

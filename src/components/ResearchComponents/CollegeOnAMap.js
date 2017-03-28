@@ -8,8 +8,8 @@ class CollegeOnAMap extends React.Component {
       render() {
         const props = {
         center: {lat:this.props.lat, lng:this.props.lng},
-        zoom: 9,
-      };
+        zoom: 4,
+      }
         return (
              <GoogleMapReact center={props.center} defaultZoom={props.zoom} >
             </GoogleMapReact>
