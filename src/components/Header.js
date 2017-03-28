@@ -7,12 +7,12 @@ class Header extends React.Component {
     render() {
         return (
             <div className="header__container">
-                <img className="header__logo" src={require('../styles/images/KIPP-Logo.png')} alt={"KIPP Logo"}/>
+                <img className="header__logo" src={require('../styles/images/CM-logo.png')} alt={"KIPP Logo"}/>
                 <div className="header__homerooom">
                     <h1><Link to="/teacher"><FaGraduationCap size={50}/>
-                        My Homeroom</Link></h1>
+                        Classroom UNC</Link></h1>
                 </div>
-                <span className="header__logout kippBtn"><Link to="/">Logout</Link></span>
+                <Link className="header__logout kippBtn" to="/">Logout</Link>
             </div>
         );
     }

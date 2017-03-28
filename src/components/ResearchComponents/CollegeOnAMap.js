@@ -1,7 +1,7 @@
 import React from 'react';
 // import axios from 'axios';
 import GoogleMapReact from 'google-map-react';
-import Marker from 'google-map-react';
+// import Marker from 'google-map-react';
 
 const AnyReactComponent = ({ text }) => (
   <div style={{

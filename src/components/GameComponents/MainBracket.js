@@ -27,7 +27,8 @@ class MainBracket extends React.Component {
     };
   }
   componentDidMount() {
-    const currentUser = this.props.user || 2; // remove 'or' for production
+    const currentUser = 2; 
+    // remove 'or' for production this.props.user ||
 
     axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{

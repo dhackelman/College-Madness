@@ -2,29 +2,30 @@
   background-color: $almost;
   border-bottom: 5px solid $royal;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
   width: 100%;
+  padding: 10px;
 }
 
 .header__logo {
   max-height: 100px;
-  margin: 1% auto;
   max-width: 25%
 }
 
 .header__homerooom {
-  margin: 1% auto;
-  text-align: center;
   h1 {
     width: 100%;
   }
 }
 
 .header__logout {
-  margin: 2% auto;
+  display: flex;
+  align-items: center;
   max-height: 50px;
 }
 .header__logout:hover {
-  background-color: $lemon;
-  color: $royal;
+  background-color: $burnt;
+  color: $almost;
+  border: 5px solid $royal;
 }
