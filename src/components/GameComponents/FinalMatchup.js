@@ -10,7 +10,6 @@ class FinalMatchup extends React.Component {
               <FinalTeam  home={this.props.team1} away={this.props.team2} round={this.props.round} teams={this.props.teams} selectFour={this.props.selectFour}/>
               <FinalTeam  home={this.props.team2} away={this.props.team1} round={this.props.round} teams={this.props.teams} selectFour={this.props.selectFour}/>
             </div>
-
         );
     }
 }

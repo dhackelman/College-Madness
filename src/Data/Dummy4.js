@@ -5,7 +5,7 @@ const Data = {
           team: {
               name: "",
               abbrev: "1",
-              image: "../styles/images/teamLogo.png"
+              image: "../styles/images/bball-placeholder.png"
 
           }
       }, {
@@ -14,7 +14,7 @@ const Data = {
           team: {
               name: "",
               abbrev: "2",
-              image: "../styles/images/teamLogo.png"
+              image: "../styles/images/bball-placeholder.png"
 
           }
       }, {
@@ -23,7 +23,7 @@ const Data = {
           team: {
               name: "",
               abbrev: "3",
-              image: "../styles/images/teamLogo.png"
+              image: "../styles/images/bball-placeholder.png"
 
           }
       }, {
@@ -32,7 +32,7 @@ const Data = {
           team: {
               name: "",
               abbrev: "4",
-              image: "../styles/images/teamLogo.png"
+              image: "../styles/images/bball-placeholder.png"
 
           }
       }]

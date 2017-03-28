@@ -21,22 +21,18 @@ class SelectClass extends React.Component {
     }
 
     updateHomeroom(arg) {
-      console.log('what ', this.props);
       const id = Number(this.props.props.params.users);
       this.props.updateCurrentUser(id);
       const data = {classroom_id: arg};
       axios.put(`https://kipp-madness-api.herokuapp.com/users/${id}`, data).then(response => console.log(response));
-      console.log('class name ', id);
     }
 
     render() {
-        // onClick={this.updateHomeroom}
         return (
             <div>
                 <h1>Please Select Class</h1>
 
                   {this.state.Classes.map((classes)=>{
-                    console.log('classes --> ', classes);
                       return <Link to="/bracket" value={classes.id} onClick={() => this.updateHomeroom(classes.id)} key={classes.id}>{classes.name}</Link>;
                     })}
             </div>
