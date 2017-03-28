@@ -28,8 +28,9 @@ class MainBracket extends React.Component {
   }
   componentDidMount() {
 
-    console.log('user ? ', this.state.CurrentUser);
-    const currentUser = this.state.CurrentUser || 2;
+    console.log('user ? ', this.props.user);
+    const currentUser = this.props.user;
+
 
     axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
