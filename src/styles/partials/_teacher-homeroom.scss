@@ -23,3 +23,35 @@
 .twocol {
     width: 50%;
 }
+
+.pickClass__container {
+  display: flex;
+  flex-flow: column nowrap;
+  line-height: 2.5;
+  text-align: center;
+  width: 30%;
+  margin: 2%;
+  .pickClass__title {
+    background: $royal;
+    color: $almost;
+    font-weight: 700;
+    height: 50px;
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
+    width: 100%;
+  }
+  .pickClass__items {
+
+    li:hover {
+      animation: scale 0.25s both;
+      background-color: rgba($lemon, .5);
+      border-top: 2px solid $lemon;
+      border-bottom: 2px solid $lemon;
+      box-shadow: 0px 0px 0px 0px rgba(0, 0 , 139, 1);
+      color: $royal;
+      margin: 0 0 0 2%;
+      z-index: 2;
+    }
+  }
+}

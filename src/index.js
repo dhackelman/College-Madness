@@ -7,6 +7,7 @@ import App from './components/App';
 import Login from './components/Login';
 import Teacher from './components/TeacherComponents/Teacher';
 import TeacherConfirm from './components/LoginComponents/TeacherConfirm';
+import TeacherCreateClass from './components/TeacherComponents/CreateClass';
 import MainBracket from './components/GameComponents/MainBracket';
 import ResearchContainer from './components/ResearchComponents/ResearchContainer';
 
@@ -19,6 +20,7 @@ ReactDOM.render((
             <Route path='bracket' component={MainBracket}/>
             <Route path='teacher' component={Teacher}/>
             <Route path='teacher-confirm/:users' component={TeacherConfirm}/>
+            <Route path='classroom' component={TeacherCreateClass}/>
             <Route path='research/:id' component={ResearchContainer}/>
             <Route path="*" component={NotFound}/>
         </Route>

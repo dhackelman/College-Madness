@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router';
 import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 import Dummy from '../../Data/Dummy.js';
-import bball from '../../styles/images/bball-placeholder.png';
+// import bball from '../../styles/images/bball-placeholder.png';
 
 
 class Team extends React.Component {
@@ -21,10 +21,10 @@ class Team extends React.Component {
 
     render() {
 
-      console.log('state ', this.state.TeamFiller);
+      // console.log('state ', this.state.TeamFiller);
       const collegeSpecificResearch = "research/" + this.props.home.team.id;
 
-      console.log('img ', this.props.home.team.image);
+      // console.log('img ', this.props.home.team.image);
 
         return (
             <div className="team__container" onClick={()=> {this.props.selectTeam(this.props.home.team.id, this.props.away.team.id, this.props.round)}}>

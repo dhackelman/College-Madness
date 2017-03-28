@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router';
 import ResearchStart from './ResearchStart';
 import ResearchForm from './ResearchForm';
 import CollegePrograms from './CollegePrograms';
@@ -65,10 +66,10 @@ class ResearchContainer extends React.Component {
             <div>
                 <nav className="research__nav">
                     <ul>
-                        <li className="research__nav__item" onClick={this.addStart}>Start Here!</li>
+                        <li className="research__nav__item" onClick={this.addStart}>College Starter</li>
                         <li className="research__nav__item" onClick={this.addAcademic}>Academic Stats</li>
-                        <li className="research__nav__item" onClick={this.addSpecial}>Special Programs</li>
-                        {/*<li className="research__nav__item">Watch & Learn</li>*/}
+                        <li className="research__nav__item" onClick={this.addSpecial}>Watch & Learn</li>
+                        <Link to="/bracket" className="research__nav__item">Back to Bracket</Link>
                     </ul>
                 </nav>
                 <div className="research__container">

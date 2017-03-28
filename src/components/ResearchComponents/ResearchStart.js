@@ -9,7 +9,6 @@ class ResearchStart extends React.Component {
     render() {
       const school = this.props.school;
       const site = "http://" + this.props.school.url;
-      console.log(school);
         return (
                 <div className="college__basics">
                     <h2>{school.name}</h2>

@@ -15,7 +15,7 @@ class SelectClass extends React.Component {
   componentWillMount() {
     axios.get(`https://kipp-madness-api.herokuapp.com/classrooms.json`)
       .then((response) =>{
-        console.log(response);
+        // console.log(response);
         this.setState({Classes:response.data});
       });
     }

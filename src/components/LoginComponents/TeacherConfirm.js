@@ -1,6 +1,6 @@
 import React from 'react';
 import SelectClass from './SelectClass';
-import Buttons from './ButtonConfirm';
+import ButtonConfirm from './ButtonConfirm';
 
 class TeacherConfirm extends React.Component {
   constructor() {
@@ -19,7 +19,7 @@ class TeacherConfirm extends React.Component {
     render() {
 
       const confirmStudent = this.state.ConfirmStudent ? <SelectClass updateCurrentUser={this.props.updateCurrentUser} props={this.props}/> : '';
-      const buttons = this.state.Buttons ? <Buttons addClass={this.addClass} props={this.props} roster={this.props.roster} /> : '';
+      const buttons = this.state.Buttons ? <ButtonConfirm updateCurrentUser={this.props.updateCurrentUser} create={this.props.createClass} addClass={this.addClass} props={this.props} roster={this.props.roster} /> : '';
         return (
             <div>
                   {buttons}

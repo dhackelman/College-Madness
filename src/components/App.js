@@ -8,6 +8,8 @@ class App extends React.Component {
     super();
     this.updateFormInput = this.updateFormInput.bind(this);
     this.updateCurrentUser = this.updateCurrentUser.bind(this);
+    // this.createClassFormInput = this.createClassFormInput.bind(this);
+
 
     this.state = {
         Users: [],
@@ -23,9 +25,11 @@ class App extends React.Component {
       });
     }
 
+
     updateCurrentUser(id) {
       this.setState({CurrentUser: id})
     }
+
 
     // confirmNo() { // Button Confirm Component -->
     //   const rosterId = this.state.Users.map((match) => {
@@ -56,7 +60,8 @@ class App extends React.Component {
               updateFormInput: this.updateFormInput,
               roster: this.state.Users,
               user: this.state.CurrentUser,
-              updateCurrentUser: this.updateCurrentUser
+              updateCurrentUser: this.updateCurrentUser,
+              createClass: this.createClassFormInput
             });
         });
 
