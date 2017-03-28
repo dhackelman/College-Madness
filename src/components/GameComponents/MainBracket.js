@@ -13,6 +13,7 @@ class MainBracket extends React.Component {
     // this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
     this.checkFinalFour = this.checkFinalFour.bind(this);
     // this.checkNatChamp = this.checkNatChamp.bind(this);
+    this.sendBracketData = this.sendBracketData.bind(this);
 
     this.state = {
       AllTeams: [],
@@ -109,6 +110,32 @@ class MainBracket extends React.Component {
             this.setState({South: teams});
         }
         return
+    }
+
+    sendBracketData(event) {
+      let currentId = this.props.user;
+      event.preventDefault();
+
+      let allTeams = this.state.AllTeams;
+      let brentice = {
+        "id":currentId,
+        arrWins: []
+      };
+      allTeams.map((team) => {
+          let data = {
+            "id": team.id,
+            "predicted_wins": team.predicted_wins
+          }
+          brentice.arrWins.push(data);
+
+      });
+      console.log('in send bracket data', brentice);
+      // console.log('in send bracket data', submitBracket);
+      axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)
+        .then((response) =>{
+          console.log('They\'re good dogs Bront');
+        });
+
     }
 
     render() {
