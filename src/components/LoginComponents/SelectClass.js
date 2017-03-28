@@ -29,13 +29,14 @@ class SelectClass extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Please Select Class</h1>
-
-                  {this.state.Classes.map((classes)=>{
-                      return <Link to="/bracket" value={classes.id} onClick={() => this.updateHomeroom(classes.id)} key={classes.id}>{classes.name}</Link>;
-                    })}
-            </div>
+              <div className="pickClass__container">
+                <h3 className="pickClass__title">Please Select Class</h3>
+                  <ul>
+                    {this.state.Classes.map((classes)=>{
+                        return <Link className="pickClass__items" to="/bracket" value={classes.id} onClick={() => this.updateHomeroom(classes.id)} key={classes.id}><li>{classes.name}</li></Link>;
+                      })}
+                  </ul>
+              </div>
         );
     }
 }

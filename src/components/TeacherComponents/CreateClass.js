@@ -39,7 +39,7 @@ class CreateClass extends React.Component {
         return (
             <div>
               <div className="pickClass__container">
-                <h1 className="pickClass__title">Please Select Class</h1>
+                <h3 className="pickClass__title">Please Select Class</h3>
                   <ul>
                   {this.state.Classes.map((classes)=>{
                       return <Link className="pickClass__items" to="teacher" value={classes.id} onClick={() => this.chooseClass(classes.id)} key={classes.id}><li>{classes.name}</li></Link>;

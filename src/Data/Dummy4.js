@@ -4,8 +4,8 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "1",
-              image: "../styles/images/bball-placeholder.png"
+              abbrev: "1"
+
 
           }
       }, {
@@ -13,8 +13,8 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "2",
-              image: "../styles/images/bball-placeholder.png"
+              abbrev: "2"
+
 
           }
       }, {
@@ -22,8 +22,8 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "3",
-              image: "../styles/images/bball-placeholder.png"
+              abbrev: "3"
+
 
           }
       }, {
@@ -31,8 +31,8 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "4",
-              image: "../styles/images/bball-placeholder.png"
+              abbrev: "4"
+
 
           }
       }]

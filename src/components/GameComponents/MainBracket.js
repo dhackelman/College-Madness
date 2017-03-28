@@ -126,7 +126,7 @@ class MainBracket extends React.Component {
             "id": team.id,
             "predicted_wins": team.predicted_wins
           }
-          brentice.arrWins.push(data);
+        brentice.arrWins.push({"user_prediction": data});
 
       });
       console.log('in send bracket data', brentice);

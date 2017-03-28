@@ -9,7 +9,7 @@ class FinalChamp extends React.Component {
         return (
           <div className="team__container">
             <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>
-            <img className="team__logo" src={this.props.teams[0].team.image} alt={this.props.teams[0].team.abbrev}></img>
+            <img className="team__logo" src={this.props.teams[0].team.image ? this.props.home.team.image : "https://s-media-cache-ak0.pinimg.com/236x/7c/aa/e9/7caae9c662662230b13d53033e4dbbfa.jpg"} alt={this.props.teams[0].team.abbrev}></img>
             <span className="team__seed">{this.props.teams[0].team.seed ? this.props.teams[0].team.seed : ''}</span>
             <span className="team__name">{this.props.teams[0].team.abbrev}</span>
           </div>

@@ -4,8 +4,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "1",
-              image: "../styles/images/bball-placeholder.png"
+              abbrev: "1"
 
           }
       }]

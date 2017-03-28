@@ -7,8 +7,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "Choose Team",
-                abbrev: "1",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "1"
 
             }
         }, {
@@ -16,8 +15,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "2",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "2"
 
             }
         }, {
@@ -25,8 +23,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "3",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "3"
 
             }
         }, {
@@ -34,8 +31,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "4",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "4"
 
             }
         }, {
@@ -43,8 +39,8 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "5",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "5"
+
 
             }
         }, {
@@ -52,8 +48,8 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "6",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "6"
+
 
             }
         }, {
@@ -61,8 +57,8 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "7",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "7"
+
 
             }
         }, {
@@ -70,8 +66,8 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "8",
-                image: "../../styles/images/bball-placeholder.png"
+                abbrev: "8"
+
 
             }
         }
