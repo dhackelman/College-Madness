@@ -19,6 +19,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "google-map-react": "^0.23.0",
+    "google-maps": "^3.2.1",
     "google-maps-react": "^1.0.19",
     "history": "4.2.0",
     "install": "^0.8.7",

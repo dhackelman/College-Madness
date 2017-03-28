@@ -70,6 +70,8 @@ class ResearchContainer extends React.Component {
                         <li className="research__nav__item" onClick={this.addAcademic}>Academic Stats</li>
                         <li className="research__nav__item" onClick={this.addSpecial}>Watch & Learn</li>
                         <Link to="/bracket" className="research__nav__item">Back to Bracket</Link>
+                        {/*<li className="research__nav__item">Watch & Learn</li>*/}
+
                     </ul>
                 </nav>
                 <div className="research__container">
