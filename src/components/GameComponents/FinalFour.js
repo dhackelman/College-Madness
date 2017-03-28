@@ -45,8 +45,10 @@ class FinalFour extends React.Component {
     render() {
 
       return (
-            <div className="region">
+            <div className="region final__four">
+              <h3>Final Four</h3>
               <FinalRound check={this.props.check} teams={this.props.teams} round='round_4' selectFour={this.selectFour}/>
+              <h3>Championship</h3> 
               <FinalRound check={this.props.check} teams={this.state.NatChampGame} round='round_2' selectFour={this.selectFour}/>
               <FinalChamp check={this.props.check} teams={this.state.Champ} round='round_0'/>
             </div>

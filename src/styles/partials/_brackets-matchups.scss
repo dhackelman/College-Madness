@@ -23,8 +23,9 @@
     }
 
   .team__logo {
-    max-height: 32px;
-    max-width: 32px;
+    height: 30px;
+    width: 30px;
+    margin: 3px 3px 0 3px;
     }
 
   .team__seed {
@@ -58,4 +59,8 @@
 .team__logo-final {
   width: 150px;
   height: 150px;
+}
+
+.final__team {
+  display: none;
 }
