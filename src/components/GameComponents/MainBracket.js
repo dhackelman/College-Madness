@@ -27,9 +27,36 @@ class MainBracket extends React.Component {
       Champion: []
     };
   }
+
+  componentWillUpdate(nextProps, nextState) {
+    localStorage.setItem("east", JSON.stringify(nextState.East));
+    localStorage.setItem("west", JSON.stringify(nextState.West));
+    localStorage.setItem("midwest", JSON.stringify(nextState.Midwest));
+    localStorage.setItem("south", JSON.stringify(nextState.South));
+  }
+
   componentDidMount() {
     this.props.smallHeader(true);
-    const currentUser = 2;
+
+    const localStorageRef = localStorage.getItem("east");
+    if(localStorageRef) {
+      this.setState({East: JSON.parse(localStorageRef)});
+    }
+    const localStorageRefWest = localStorage.getItem("west");
+    if(localStorageRefWest) {
+      this.setState({West: JSON.parse(localStorageRefWest)});
+    }
+    const localStorageRefMid = localStorage.getItem("midwest");
+    if(localStorageRefMid) {
+      this.setState({Midwest: JSON.parse(localStorageRefMid)});
+    }
+    const localStorageRefSouth = localStorage.getItem("south");
+    if(localStorageRefSouth) {
+      this.setState({South: JSON.parse(localStorageRefSouth)});
+    }
+    console.log('what the ?? ', this.props.user);
+    const currentUser = Number(this.props.user);
+    console.log('this fucking guy ---> ', currentUser);
     // remove 'or' for production this.props.user ||
 
 

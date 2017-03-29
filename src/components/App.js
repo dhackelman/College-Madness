@@ -26,6 +26,16 @@ class App extends React.Component {
       .then((roster) =>{
         this.setState({Users: roster.data.users});
       });
+
+      const localStorageRef = localStorage.getItem("user");
+      if(localStorageRef) {
+        this.setState({CurrentUser: JSON.parse(localStorageRef)});
+      }
+    }
+
+    componentWillUpdate(nextProps, nextState) {
+      console.log('will update ', nextProps, nextState);
+      localStorage.setItem("user", JSON.stringify(nextState.CurrentUser));
     }
 
     updateHeader(arg) {
@@ -46,7 +56,7 @@ class App extends React.Component {
 
 
     updateCurrentUser(id) {
-      this.setState({CurrentUser: id})
+      this.setState({CurrentUser: Number(id)})
     }
 
 
