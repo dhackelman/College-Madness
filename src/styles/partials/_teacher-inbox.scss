@@ -1,7 +1,7 @@
 .teacher__inbox {
     background: $almost;
     border: 2px solid $royal;
-
+    position: relative;
     width: 60%;
     margin: 2%;
 
@@ -87,4 +87,14 @@
     -webkit-text-stroke: 1px white;
     width: 100%;
   }
+}
+
+.inbox__overlay {
+  background-color: rgba($skyBlue, .6);
+  position: absolute;
+  height: 90%;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  
 }

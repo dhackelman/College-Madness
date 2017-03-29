@@ -14,7 +14,8 @@ class TeacherLogin extends React.Component {
       ShowRoster: true,
       ShowHomeroom: false,
       Students: [],
-      Submissions:[]
+      Submissions:[],
+      Overlay:false
     };
     this.getId = this.getId.bind(this);
     this.updateSubmssionScore = this.updateSubmssionScore.bind(this);
@@ -41,6 +42,7 @@ class TeacherLogin extends React.Component {
         }
         }
     })
+    this.setState({Overlay:true});
   }
 
   updateSubmssionScore(arg1, arg2) {
