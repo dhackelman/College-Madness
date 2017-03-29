@@ -6,30 +6,37 @@
   width: 100%;
 }
 .homeroom__table {
+  border: 3px solid $royal;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 auto 5%;
   padding: 2%;
   width: 65%;
+
+  .header {
+    background-color: $royal;
+    color: $almost;
+    font-size: 1.5rem;
+  }
 }
 
-.homeroom__table:nth-child(even) {
+.student__row:nth-child(even) {
   background: $almost;
 }
+.student__row:nth-child(odd) {
+  background: white;
+}
 
-.row {
+.student__row, .row {
     width: 90%;
     min-height: 1px;
     height: auto;
     margin: 0;
 }
 
-.student:hover {
-  // background-color: rgba($lemon, .5);
-  // border-top: 2px solid $lemon;
-  // border-bottom: 2px solid $lemon;
-  // box-shadow: 0px 0px 0px 0px rgba(0, 0 , 139, 1);
-  // color: $royal;
-  // z-index: 2;
+.student__row:hover {
+  background-color: rgba($tangerine, .4);
+  color: $royal;
+  z-index: 2;
 }
 
 .cell {

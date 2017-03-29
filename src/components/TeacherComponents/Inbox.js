@@ -9,7 +9,7 @@ class Inbox extends React.Component {
           <div className="teacher__inbox">
             <p className="inbox__header">Student Messsages</p>
             <ul className="inbox__messages">
-
+                <li className={this.props.submssions === [] ? "default__inbox" :  "is-hidden"}>Please select a student from the Roster</li>
               {this.props.submssions.map((thing)=> {
                 return <li className="inbox__single" key={thing.submission_id}>
                   <p>{thing.input}</p>
