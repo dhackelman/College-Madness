@@ -21,8 +21,8 @@ class ResearchStart extends React.Component {
                     <p>Learn More: <span><Link to={site} target="_blank" alt={this.props.school.name}>{this.props.school.url}</Link></span>
                     </p>
                     <div className="college__visuals">
-                      <div id="thisFuckingMap" style={{width: '100%', height: '400px'}}>
-                        <CollegeOnAMap lat={school.latitude} lng={school.longitude}/>
+                      <div style={{width: '80%', height: '300px'}}>
+                        <CollegeOnAMap lat={this.props.school.latitude} lng={this.props.school.longitude}/>
                       </div>
                         <div className="college__logo">
                             <img src={this.props.school.school_image_url} alt="Mascot"/>
