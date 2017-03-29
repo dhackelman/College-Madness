@@ -231,7 +231,6 @@ textarea:focus {
 .component__container {
   display: flex;
   flex-flow: row wrap;
-  margin: 10px auto;
   width: 99vw; }
 
 .region {
@@ -284,6 +283,7 @@ textarea:focus {
   100% {
     transform: rotate(360deg); } }
 .matchup__container {
+  border: 2px solid #235695;
   display: flex;
   flex-flow: column nowrap;
   margin: 4px 0;
@@ -296,7 +296,7 @@ textarea:focus {
   justify-content: flex-start;
   width: 100%; }
   .team__container .team__info {
-    color: #ffbb13;
+    color: #ffda03;
     max-height: 25px;
     max-width: 25px;
     padding: 1px;

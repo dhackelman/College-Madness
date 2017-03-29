@@ -10,12 +10,13 @@ class MainBracket extends React.Component {
   constructor() {
     super();
     this.filterByRegion = this.filterByRegion.bind(this);
-    // this.filterByWins = this.filterByWins.bind(this);
-    // this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
+    this.filterByWins = this.filterByWins.bind(this);
+    this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
     this.checkFinalFour = this.checkFinalFour.bind(this);
     // this.checkNatChamp = this.checkNatChamp.bind(this);
     this.sendBracketData = this.sendBracketData.bind(this);
     this.updateLocalStorage = this.updateLocalStorage.bind(this);
+    this.filterAndSetState = this.filterAndSetState.bind(this);
 
     this.state = {
       AllTeams: [],
@@ -30,45 +31,33 @@ class MainBracket extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    // localStorage.setItem("east", JSON.stringify(nextState.East));
-    // localStorage.setItem("west", JSON.stringify(nextState.West));
-    // localStorage.setItem("midwest", JSON.stringify(nextState.Midwest));
-    // localStorage.setItem("south", JSON.stringify(nextState.South));
+    console.log('in setitem');
     localStorage.setItem("allteams", JSON.stringify(nextState.AllTeams));
-
   }
 
   updateLocalStorage() {
+    console.log('in set item function ');
     localStorage.setItem("allteams", JSON.stringify(this.state.AllTeams));
   }
 
-  componentDidMount() {
-    let localStorageRef = localStorage.getItem("allteams");
-    // if(localStorageRef) {
-    //   console.log('in localStorageRef if');
-    //   this.setState({AllTeams: JSON.parse(localStorageRef)});
-    //   console.log('get item after if ', localStorage.getItem("allteams"));
-    // }
+  filterAndSetState(allTeams) {
+    const regionalBreakdown = allTeams;
+    this.filterByRegion(1, regionalBreakdown);
+    this.filterByRegion(2, regionalBreakdown);
+    this.filterByRegion(3, regionalBreakdown);
+    this.filterByRegion(4, regionalBreakdown);
+    this.setState({AllTeams: regionalBreakdown});
+    // for actual wins // vvv
+    this.filterByWins(4, regionalBreakdown);
+    this.filterByWins(5, regionalBreakdown);
+    this.filterByWins(6, regionalBreakdown);
+  }
 
-    // const localStorageRefEast = localStorage.getItem("east");
-    // if(localStorageRefEast) {
-    //   console.log('in localStorageRef east');
-    //   this.setState({East: JSON.parse(localStorageRefEast)});
-    // }
-    // const localStorageRefWest = localStorage.getItem("west");
-    // if(localStorageRefWest) {
-    //   console.log('in localStorageRef west');
-    //   this.setState({West: JSON.parse(localStorageRefWest)});
-    // }
-    // const localStorageRefMid = localStorage.getItem("midwest");
-    // if(localStorageRefMid) {
-    //   console.log('in localStorageRef mid');
-    //   this.setState({Midwest: JSON.parse(localStorageRefMid)});
-    // }
-    // const localStorageRefSouth = localStorage.getItem("south");
-    // if(localStorageRefSouth) {
-    //   console.log('in localStorageRef south');
-    //   this.setState({South: JSON.parse(localStorageRefSouth)});
+  componentDidMount() {
+    // console.log('in get item');
+    // let localStorageRef = localStorage.getItem("allteams");
+    // if(localStorage.getItem("allteams")) {
+    //   this.setState({AllTeams: localStorageRef});
     // }
 
     let currentUser = this.props.user;
@@ -76,19 +65,19 @@ class MainBracket extends React.Component {
       currentUser = localStorage.getItem("user");
     }
 
-    axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
+    if(localStorage.getItem("allteams")) {
+      console.log('setting from local storage');
+      console.log('local storage - data ', JSON.parse(localStorage.getItem("allteams")));
+
+      // this.setState({AllTeams: JSON.parse(localStorage.getItem("allteams")) })
+      this.filterAndSetState(JSON.parse(localStorage.getItem("allteams")))
+
+    } else {    axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
-        const regionalBreakdown = response.data.user_predictions;
-        this.filterByRegion(1, regionalBreakdown);
-        this.filterByRegion(2, regionalBreakdown);
-        this.filterByRegion(3, regionalBreakdown);
-        this.filterByRegion(4, regionalBreakdown);
-        this.setState({AllTeams: regionalBreakdown});
-        // for actual wins // vvv
-        // this.filterByWins(4, regionalBreakdown);
-        // this.filterByWins(5, regionalBreakdown);
-        // this.filterByWins(6, regionalBreakdown);
+        this.filterAndSetState(response.data.user_predictions)
       });
+}
+
     }
 
     checkFinalFour(arg1, arg2) {
@@ -108,37 +97,37 @@ class MainBracket extends React.Component {
       }
       this.setState({FinalFour});
     }
-    // filterByWins(score, data) {
-    //     const teams = data.filter((val) => {
-    //         return val.team.wins === score;
-    //     });
-    //     if (score === 4) {
-    //         this.setState({FinalFour: teams});
-    //     }
-    //     if (score === 5) {
-    //         this.setState({NatChamp: teams});
-    //     }
-    //     if (score === 6) {
-    //         this.setState({Champion: teams});
-    //     }
-    //     return
-    // }
-    //
-    // filterByPredictedWins(score, data) {
-    //     const teams = data.filter((val) => {
-    //         return val.predicted_wins === score;
-    //     });
-    //     if (score === 4) {
-    //         this.setState({FinalFour: teams});
-    //     }
-    //     if (score === 5) {
-    //         this.setState({NatChamp: teams});
-    //     }
-    //     if (score === 6) {
-    //         this.setState({Champion: teams});
-    //     }
-    //     return
-    // }
+    filterByWins(score, data) {
+        const teams = data.filter((val) => {
+            return val.team.wins === score;
+        });
+        if (score === 4) {
+            this.setState({FinalFour: teams});
+        }
+        if (score === 5) {
+            this.setState({NatChamp: teams});
+        }
+        if (score === 6) {
+            this.setState({Champion: teams});
+        }
+        return
+    }
+
+    filterByPredictedWins(score, data) {
+        const teams = data.filter((val) => {
+            return val.predicted_wins === score;
+        });
+        if (score === 4) {
+            this.setState({FinalFour: teams});
+        }
+        if (score === 5) {
+            this.setState({NatChamp: teams});
+        }
+        if (score === 6) {
+            this.setState({Champion: teams});
+        }
+        return
+    }
 
     filterByRegion(region, data) {
         const teams = data.filter((val) => {
@@ -171,7 +160,6 @@ class MainBracket extends React.Component {
             "predicted_wins": team.predicted_wins
           }
         brentice.push({"user_prediction": data});
-
       });
       console.log('in send bracket data', brentice);
       axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)

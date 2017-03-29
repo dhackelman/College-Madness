@@ -1,4 +1,5 @@
 .matchup__container {
+  border: 2px solid $royal;
   display: flex;
   flex-flow: column nowrap;
   margin: 4px 0;
@@ -15,7 +16,7 @@
   width: 100%;
 
   .team__info {
-    color: $tangerine;
+    color: $lemon;
     max-height: 25px;
     max-width: 25px;
     padding: 1px;
