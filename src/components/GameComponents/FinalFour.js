@@ -11,7 +11,7 @@ class FinalFour extends React.Component {
       this.state = {
           NatChampGame: Dummy2.user_predictions,
           Champ: '',
-          Ready2Submit: false
+          Ready2Submit: true
       }
   }
 
