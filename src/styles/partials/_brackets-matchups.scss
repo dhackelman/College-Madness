@@ -24,9 +24,15 @@
     }
 
   .team__logo {
+    align-items: center;
     height: 30px;
     width: 30px;
-    margin: 3px 3px 0 3px;
+    }
+
+    .placeholder {
+      height: 20px;
+      width: 20px;
+      margin: 3px 0;
     }
 
   .team__seed {

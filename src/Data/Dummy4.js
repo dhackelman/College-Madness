@@ -4,7 +4,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "1"
+              abbrev: " "
 
 
           }
@@ -13,7 +13,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "2"
+              abbrev: "  "
 
 
           }
@@ -22,7 +22,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "3"
+              abbrev: "  "
 
 
           }
@@ -31,7 +31,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "4"
+              abbrev: " "
 
 
           }

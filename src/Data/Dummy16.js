@@ -1,10 +1,19 @@
 const Data = {
     user_predictions: [{
-        id: 1,
+        id: 4,
         predicted_wins: 0,
         team: {
             name: "",
-            abbrev: "1"
+            abbrev: " "
+
+
+        }
+    }, {
+        id: 3,
+        predicted_wins: 0,
+        team: {
+            name: "",
+            abbrev: "  "
 
 
         }
@@ -13,25 +22,16 @@ const Data = {
         predicted_wins: 0,
         team: {
             name: "",
-            abbrev: "2"
+            abbrev: "   "
 
 
         }
     }, {
-        id: 1,
+        id: 2,
         predicted_wins: 0,
         team: {
             name: "",
-            abbrev: "3"
-
-
-        }
-    }, {
-        id: 1,
-        predicted_wins: 0,
-        team: {
-            name: "",
-            abbrev: "4"
+            abbrev: "    "
 
 
         }

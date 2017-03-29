@@ -161,6 +161,11 @@ a:visited {
     transform: scale(1); }
   100% {
     transform: scale(1.1); } }
+@keyframes scale2 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(1.2); } }
 .kippBtn {
   background-color: #235695;
   border: 5px solid #235695;
@@ -232,6 +237,7 @@ textarea:focus {
 .component__container {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 auto;
   width: 99vw; }
 
 .region {
@@ -281,7 +287,7 @@ textarea:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%; }
+  width: 50%; }
 
 .loading-ball {
   animation: spin 2s linear infinite; }
@@ -309,9 +315,13 @@ textarea:focus {
     padding: 1px;
     margin: 3px 3px 0 3px; }
   .team__container .team__logo {
+    align-items: center;
     height: 30px;
-    width: 30px;
-    margin: 3px 3px 0 3px; }
+    width: 30px; }
+  .team__container .placeholder {
+    height: 20px;
+    width: 20px;
+    margin: 3px 0; }
   .team__container .team__seed {
     margin: 5px 3px; }
   .team__container .team__name {
@@ -510,22 +520,48 @@ h1 {
   .teacher__inbox .inbox__messages {
     display: flex;
     flex-wrap: wrap;
-    padding: 2% 2%; }
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 1% 1%;
+    width: 100%; }
     .teacher__inbox .inbox__messages .inbox__single {
       background: #fff;
-      margin: 1%;
+      min-height: 150px;
+      margin: 1% auto;
+      overflow: hidden;
       padding: 1% 2%;
-      width: 30%; }
-    .teacher__inbox .inbox__messages .inbox__pass, .teacher__inbox .inbox__messages .inbox__fail {
-      background-color: #bbd72e;
-      border: none;
-      border-radius: 5px;
-      margin: 5% 5%;
-      width: 40%; }
-    .teacher__inbox .inbox__messages .inbox__fail {
-      background-color: #e47323; }
-    .teacher__inbox .inbox__messages .inbox__pass:hover, .teacher__inbox .inbox__messages .inbox__fail:hover {
-      animation: scale .5s both; }
+      width: 45%; }
+      .teacher__inbox .inbox__messages .inbox__single p {
+        margin-bottom: 10%; }
+    .teacher__inbox .inbox__messages .button__holder {
+      align-items: center;
+      display: flex;
+      justify-content: space-between; }
+      .teacher__inbox .inbox__messages .button__holder .inbox__pass, .teacher__inbox .inbox__messages .button__holder .inbox__fail {
+        background-color: #bbd72e;
+        border: none;
+        color: #235695;
+        font-size: 1rem;
+        padding: 1% 0;
+        width: 40%; }
+      .teacher__inbox .inbox__messages .button__holder .inbox__fail {
+        background-color: #ffbb13; }
+      .teacher__inbox .inbox__messages .button__holder .inbox__pass:hover, .teacher__inbox .inbox__messages .button__holder .inbox__fail:hover {
+        animation: scale2 .5s both; }
+
+.transparent {
+  background-color: transparent;
+  width: 100%; }
+
+.message__processed {
+  max-height: 100%;
+  max-width: 100%; }
+
+.overlay {
+  background-color: rgba(141, 134, 134, 0.6);
+  height: 100%;
+  width: 100%;
+  z-index: 100; }
 
 .teacher__homeroom {
   width: 100%; }

@@ -47,10 +47,6 @@ class MainBracket extends React.Component {
     this.filterByRegion(3, regionalBreakdown);
     this.filterByRegion(4, regionalBreakdown);
     this.setState({AllTeams: regionalBreakdown});
-    // for actual wins // vvv
-    this.filterByWins(4, regionalBreakdown);
-    this.filterByWins(5, regionalBreakdown);
-    this.filterByWins(6, regionalBreakdown);
   }
 
   componentDidMount() {
@@ -59,7 +55,6 @@ class MainBracket extends React.Component {
     // if(localStorage.getItem("allteams")) {
     //   this.setState({AllTeams: localStorageRef});
     // }
-
     let currentUser = this.props.user;
     if(localStorage.getItem("user")) {
       currentUser = localStorage.getItem("user");
@@ -76,7 +71,7 @@ class MainBracket extends React.Component {
       .then((response) =>{
         this.filterAndSetState(response.data.user_predictions)
       });
-}
+  }
 
     }
 
@@ -97,6 +92,7 @@ class MainBracket extends React.Component {
       }
       this.setState({FinalFour});
     }
+
     filterByWins(score, data) {
         const teams = data.filter((val) => {
             return val.team.wins === score;
@@ -173,6 +169,7 @@ class MainBracket extends React.Component {
       if (!this.state.AllTeams.length) {
         return (<div className="loadingball__container"><h1>Loading...</h1><Loading/></div>);
       }
+      console.log(this.state.FinalFour);
 
         return (
             <div className="component__container">

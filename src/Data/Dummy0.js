@@ -4,7 +4,7 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
-              abbrev: "1"
+              abbrev: "  "
 
           }
       }]

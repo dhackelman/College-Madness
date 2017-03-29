@@ -18,28 +18,61 @@
     .inbox__messages {
       display: flex;
       flex-wrap: wrap;
-      padding: 2% 2%;
+      justify-content: flex-start;
+      margin: 0 auto;
+      padding: 1% 1%;
+      width: 100%;
 
         .inbox__single {
           background: #fff;
-          margin: 1%;
+          min-height: 150px;
+          margin: 1% auto;
+          overflow: hidden;
           padding: 1% 2%;
-          width: 30%;
+          width: 45%;
+
+          p {
+            margin-bottom: 10%;
+          }
+        }
+        .button__holder {
+          align-items: center;
+          display: flex;
+          justify-content: space-between;
+
+          .inbox__pass, .inbox__fail {
+            background-color: $avocado;
+            border: none;
+            color: $royal;
+            font-size: 1rem;
+            padding: 1% 0;
+            width: 40%;
+          }
+          .inbox__fail {
+            background-color: $tangerine;
+          }
+
+          .inbox__pass:hover, .inbox__fail:hover {
+            animation: scale2 .5s both;
+          }
         }
 
-        .inbox__pass, .inbox__fail {
-          background-color: $avocado;
-          border: none;
-          border-radius: 5px;
-          margin: 5% 5%;
-          width: 40%;
-        }
-        .inbox__fail {
-          background-color: $burnt;
-        }
-
-        .inbox__pass:hover, .inbox__fail:hover {
-          animation: scale .5s both;
-        }
       }
     }
+
+.transparent {
+  background-color: transparent;
+  width: 100%;
+}
+
+.message__processed {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.overlay {
+  background-color: rgba($shale, .6);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+}

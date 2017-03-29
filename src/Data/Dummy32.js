@@ -7,7 +7,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "Choose Team",
-                abbrev: "1"
+                abbrev: " "
 
             }
         }, {
@@ -15,7 +15,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "2"
+                abbrev: "  "
 
             }
         }, {
@@ -23,7 +23,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "3"
+                abbrev: "   "
 
             }
         }, {
@@ -31,7 +31,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "4"
+                abbrev: "    "
 
             }
         }, {
@@ -39,16 +39,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "5"
-
-
-            }
-        }, {
-            id: 1,
-            predicted_wins: 0,
-            team: {
-                name: "",
-                abbrev: "6"
+                abbrev: "     "
 
 
             }
@@ -57,7 +48,7 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "7"
+                abbrev: "      "
 
 
             }
@@ -66,7 +57,16 @@ const Data = {
             predicted_wins: 0,
             team: {
                 name: "",
-                abbrev: "8"
+                abbrev: "       "
+
+
+            }
+        }, {
+            id: 1,
+            predicted_wins: 0,
+            team: {
+                name: "",
+                abbrev: "         "
 
 
             }
