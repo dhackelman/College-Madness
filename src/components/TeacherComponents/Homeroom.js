@@ -1,40 +1,48 @@
 import React from 'react';
+import axios from 'axios';
 
 class Homeroom extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      Students: []
+    }
+  }
+
+  componentDidMount() {
+    axios.get("https://kipp-madness-api.herokuapp.com/classrooms/2.json")
+      .then((roster) =>{
+        let studentsObj = roster.data.students;
+        this.setState({Students:studentsObj});
+      });
+    }
 
     render() {
-      console.log(this.props);
+      console.log(this.state.Students);
 
         return (
+
+          <div className="teacher__things__container">
             <div className="teacher__homeroom">
                 <h1 className="homeroom__header">This is a Homeroom</h1>
-                <div className="homeroom__table">
-                    <div className="row">
-                        <div className="cell student__col header">
-                            <span>Students</span>
-                        </div>
-                        <div className="cell points__col header">
-                            <span>Bracket Points</span>
-                        </div>
-                        <div className="cell points__col header">
-                            <span>Research Points</span>
-                        </div>
-                    </div>
-                    { this.props.roster.map((student)=> {
-                      return <div className="row dynamic">
-                          <div className="cell student__col student">
-                              <span>{student.name}</span>
-                          </div>
-                          <div className="cell points__col data">
-                              <span>{student.bracket_points}</span>
-                          </div>
-                          <div className="cell points__col data">
-                              <span>{student.research_points}</span>
-                          </div>
-                      </div>
-                    })}
+                  <table className="homeroom__table">
+                    <tbody>
+                      <tr className="row">
+                        <th className="cell student__col header">Student</th>
+                        <th className="cell points__col header">Bracket Score</th>
+                        <th className="cell points__col header">Research Score</th>
+                      </tr>
+                      {this.state.Students.map((student)=> {
+                        return <tr key={student.name} className="row">
+                          <td className="cell student__col student">{student.name}</td>
+                          <td className="cell points__col data">{student.bracket_points}</td>
+                          <td className="cell points__col data">{student.research_points}</td>
+                        </tr>
+                      })}
+                    </tbody>
+                  </table>
                 </div>
-            </div>
+              </div>
         );
     }
 }

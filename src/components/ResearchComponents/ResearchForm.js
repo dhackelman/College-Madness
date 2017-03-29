@@ -16,9 +16,9 @@ class ResearchForm extends React.Component {
         return (
               <div className="research__form">
                   <h2>Show What You Know</h2>
-                  <form ref={(input) => this.inputForm = input} onSubmit={(event) => this.sendData(event)}>
+                  <form  ref={(input) => this.inputForm = input} onSubmit={(event) => this.sendData(event)}>
                       <textarea ref={(input) => this.input = input} placeholder="Dear Teacher,"></textarea>
-                      <input type="submit"></input>
+                      <input className="kippBtn submit" type="submit"></input>
                   </form>
               </div>
         );

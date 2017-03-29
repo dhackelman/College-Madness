@@ -24,6 +24,15 @@
   flex-flow: row-reverse;
   justify-content: flex-end;
   position: relative;
+
+  .team__container {
+    background: rgba($almost, 0.5);
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
 }
 
 .region:nth-child(1), .region:nth-child(3){
