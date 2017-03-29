@@ -263,7 +263,7 @@ textarea:focus {
   justify-content: flex-start;
   position: absolute;
   left: calc(50% - 125px);
-  top: calc(50% + 210px);
+  top: calc(50% + 120px);
   width: 250px; }
   .final__four h3 {
     width: 100%;
