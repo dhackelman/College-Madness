@@ -12,6 +12,11 @@ class TeacherConfirm extends React.Component {
       Buttons: true
     }
   }
+  componentDidMount() {
+    this.props.updateLogout();
+  }
+
+
   addClass() {
     this.setState({Buttons: false});
     this.setState({ConfirmStudent: true});

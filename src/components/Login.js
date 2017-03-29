@@ -2,6 +2,12 @@ import React from 'react';
 
 class Login extends React.Component {
 
+  componentDidMount() {
+    if(this.props.logout = true) {
+      this.props.updateLogout();
+    }
+  }
+
     render() {
       // {'with_credentials': true}
         return (

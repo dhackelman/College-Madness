@@ -8,13 +8,14 @@ class App extends React.Component {
     super();
     this.updateFormInput = this.updateFormInput.bind(this);
     this.updateCurrentUser = this.updateCurrentUser.bind(this);
-    // this.createClassFormInput = this.createClassFormInput.bind(this);
+    this.updateLogoutBtn = this.updateLogoutBtn.bind(this);
 
 
     this.state = {
         Users: [],
         CurrentUser: {},
-        inputData: {}
+        inputData: {},
+        showLogout: false
     }
   }
 
@@ -23,6 +24,14 @@ class App extends React.Component {
       .then((roster) =>{
         this.setState({Users: roster.data.users});
       });
+    }
+
+    updateLogoutBtn() {
+      if(this.state.showLogout === true) {
+        this.setState({showLogout: false})
+      } else {
+        this.setState({showLogout: true})
+      }
     }
 
 
@@ -61,13 +70,15 @@ class App extends React.Component {
               roster: this.state.Users,
               user: this.state.CurrentUser,
               updateCurrentUser: this.updateCurrentUser,
-              createClass: this.createClassFormInput
+              createClass: this.createClassFormInput,
+              logout: this.state.showLogout,
+              updateLogout: this.updateLogoutBtn
             });
         });
 
         return (
             <div>
-                <Header/> {childWithProp}
+                <Header updateBtn={this.state.showLogout}/> {childWithProp}
             </div>
         );
     }

@@ -16,9 +16,11 @@
   }
 }
 
-// main container for app
-.app__container {
-
+// empty container for placeholder - DO NOT REMOVE - sm
+.empty__container {
+  visibility: hidden;
+  width: 100px;
+  height: 1px;
 }
 
 form,
