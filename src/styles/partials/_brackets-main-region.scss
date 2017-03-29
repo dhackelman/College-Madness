@@ -16,10 +16,26 @@
   position: relative;
   width: 50%;
 }
-.region:first-child {
-  height: 100%;
-  background: url(https://kipp-madness.herokuapp.com/east.png) bottom center no-repeat;
-}
+// .east__logo {
+//   position: absolute;
+//   top: 90px;
+//   left: 25%
+// }
+// .west__logo {
+//   position: absolute;
+//   top: 90px;
+//   right: 25%
+// }
+// .midwest__logo {
+//   position: absolute;
+//   bottom: -48%;
+//   left: 25%;
+// }
+// .south__logo {
+//   position: absolute;
+//   bottom: -48%;
+//   right: 25%;
+// }
 
 .region:nth-child(2), .region:nth-child(4) {
   // background: red;
@@ -37,6 +53,19 @@
     width: 100%;
   }
 
+}
+
+.region:nth-child(1) {
+  background: url() center center no-repeat;
+}
+.region:nth-child(2) {
+  background: url() center center no-repeat;
+}
+.region:nth-child(3) {
+  background: url() center center no-repeat;
+}
+.region:nth-child(4) {
+  background: url() center center no-repeat;
 }
 
 .region:nth-child(1), .region:nth-child(3){
