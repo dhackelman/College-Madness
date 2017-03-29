@@ -7,6 +7,7 @@ class CollegePrograms extends React.Component {
 
 
     render() {
+
       console.log('hre', this.props.school.video_url);
       const opts = {
         height: '290',
@@ -21,6 +22,7 @@ class CollegePrograms extends React.Component {
         return (
                 <div className="college__basics">
                   <h2>{this.props.school.school_name}</h2>
+                  <h3>Watch a short informational video</h3>
                   <YouTube
                     videoId={videoId}
                     opts={opts}

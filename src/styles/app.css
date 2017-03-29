@@ -727,6 +727,21 @@ h1 {
   background-color: #f2f2f2;
   border-radius: 50%; }
 
+.info__container-avo {
+  width: 250px;
+  border: 3px solid #44953a;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  text-align: center;
+  margin: 10px; }
+  .info__container-avo .info__title-avo {
+    background-color: #44953a;
+    font-size: 1.3rem;
+    color: #f2f2f2;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center; }
+
 .college__basics {
   align-items: center;
   border: 2px solid #235695;
@@ -743,7 +758,6 @@ h1 {
     width: 100%; }
   .college__basics p {
     font-weight: 700;
-    text-align: left;
     width: 100%; }
   .college__basics span {
     font-weight: 400;

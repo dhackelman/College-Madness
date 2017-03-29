@@ -17,6 +17,7 @@
   align-items: center;
 }
 
+
 .info__container {
   width: 250px;
   border: 3px solid $burnt;
@@ -49,29 +50,20 @@
   background-color: $almost;
   border-radius: 50%;
 }
-// .research__nav {
-//   ul {
-//     display: flex;
-//     height: 70px;
-//     justify-content: center;
-//     margin: 0 auto;
-//     width: 70%;
-//
-//     .research__nav__item {
-//       border: 2px solid $royal;
-//       border-radius: 5px;
-//       color: $royal;
-//       font-weight: 700;
-//       margin: 1%;
-//       padding-top: 1%;
-//       padding-bottom: 3%;
-//       text-align: center;
-//       width: 20%;
-//     }
-//     .research__nav__item:hover {
-//       animation: shake .75s cubic-bezier(.16,.07,.19,.9) both;
-//       background-color: $lemon;
-//       color: $royal;
-//     }
-//   }
-// }
+.info__container-avo {
+  width: 250px;
+  border: 3px solid $green;
+  border-radius: 5px;
+  background-color: $almost;
+  text-align: center;
+  margin: 10px;
+
+  .info__title-avo {
+    background-color: $green;
+    font-size: 1.3rem;
+    color: $almost;
+    margin-top: 0;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}
