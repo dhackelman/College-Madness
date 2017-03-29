@@ -613,19 +613,32 @@ h1 {
   width: 100%; }
 
 .homeroom__table {
+  border: 3px solid #235695;
   height: 100%;
-  margin: 0 auto;
+  margin: 0 auto 5%;
   padding: 2%;
   width: 65%; }
+  .homeroom__table .header {
+    background-color: #235695;
+    color: #f2f2f2;
+    font-size: 1.5rem; }
 
-.homeroom__table:nth-child(even) {
+.student__row:nth-child(even) {
   background: #f2f2f2; }
 
-.row {
+.student__row:nth-child(odd) {
+  background: white; }
+
+.student__row, .row {
   width: 90%;
   min-height: 1px;
   height: auto;
   margin: 0; }
+
+.student__row:hover {
+  background-color: rgba(255, 187, 19, 0.4);
+  color: #235695;
+  z-index: 2; }
 
 .cell {
   border: 1px solid #235695;

@@ -82,7 +82,7 @@ class TeacherLogin extends React.Component {
                 <li onClick={this.clickInbox} className={ this.state.ShowRoster ? 'nav__items is__active': 'nav__items' } >Inbox</li>
                 <li onClick={this.clickHomeroom} className={ this.state.ShowHomeroom ? 'nav__items is__active': 'nav__items' }>Homeroom</li>
                 <Link className="nav__items"to="/bracket"><li>My Bracket</li></Link>
-              </ul>s
+              </ul>
             </nav>
             <h1 className="welcome__message"></h1>
             <div className="teacher__things__container">
