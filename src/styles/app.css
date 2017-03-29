@@ -154,20 +154,13 @@ a:visited {
   display: flex;
   width: 100%; }
 
-@keyframes shake {
-  10%, 90% {
-    transform: translate3d(-1px, 0, 0); }
-  20%, 80% {
-    transform: translate3d(2px, 0, 0); }
-  30%, 50%, 70% {
-    transform: translate3d(-4px, 0, 0); }
-  40%, 60% {
-    transform: translate3d(4px, 0, 0); } }
 @keyframes scale {
   0% {
     transform: scale(1); }
+  50% {
+    transform: scale(1.1); }
   100% {
-    transform: scale(1.1); } }
+    transform: scale(1); } }
 @keyframes scale2 {
   0% {
     transform: scale(1); }
@@ -554,8 +547,10 @@ h1 {
     .teacher__inbox .inbox__messages .inbox__single {
       background: #fff;
       min-height: 150px;
+      max-height: 200px;
       margin: 1% auto;
       overflow: hidden;
+      position: relative;
       padding: 1% 2%;
       width: 45%; }
       .teacher__inbox .inbox__messages .inbox__single p {
@@ -580,15 +575,23 @@ h1 {
   background-color: transparent;
   width: 100%; }
 
-.message__processed {
-  max-height: 100%;
-  max-width: 100%; }
-
 .overlay {
-  background-color: rgba(141, 134, 134, 0.6);
+  background-color: rgba(255, 187, 19, 0.8);
+  display: flex;
   height: 100%;
-  width: 100%;
-  z-index: 100; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .overlay p {
+    align-content: center;
+    color: #16345c;
+    margin-top: 10%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px white;
+    width: 100%; }
 
 .teacher__homeroom {
   width: 100%; }
@@ -673,14 +676,16 @@ h1 {
     padding: 2%;
     text-align: center;
     width: 100%; }
+  .teacher__roster .roster__student li {
+    width: 100%; }
   .teacher__roster .roster__student li:hover {
-    animation: scale 0.25s both;
-    background-color: rgba(255, 218, 3, 0.5);
-    border-top: 2px solid #ffda03;
-    border-bottom: 2px solid #ffda03;
+    animation: scale .25s both;
+    background-color: rgba(255, 187, 19, 0.5);
+    border-top: 2px solid #ffbb13;
+    border-bottom: 2px solid #ffbb13;
     box-shadow: 0px 0px 0px 0px darkblue;
     color: #235695;
-    margin: 0 0 0 2%;
+    font-weight: 700;
     z-index: 2; }
 
 .research__container {

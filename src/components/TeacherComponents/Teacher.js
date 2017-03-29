@@ -77,12 +77,12 @@ class TeacherLogin extends React.Component {
 
         return (
           <div className="teacher__container">
-            <nav className="research__nav">
+            <nav className="nav__container">
               <ul>
-                <li onClick={this.clickInbox} className={ this.state.ShowRoster ? 'research__nav__item is__active': 'research__nav__item' } >Inbox</li>
-                <li onClick={this.clickHomeroom} className={ this.state.ShowHomeroom ? 'research__nav__item is__active': 'research__nav__item' }>Homeroom</li>
-                <Link className="research__nav__item"to="/bracket"><li>My Bracket</li></Link>
-              </ul>
+                <li onClick={this.clickInbox} className={ this.state.ShowRoster ? 'nav__items is__active': 'nav__items' } >Inbox</li>
+                <li onClick={this.clickHomeroom} className={ this.state.ShowHomeroom ? 'nav__items is__active': 'nav__items' }>Homeroom</li>
+                <Link className="nav__items"to="/bracket"><li>My Bracket</li></Link>
+              </ul>s
             </nav>
             <h1 className="welcome__message"></h1>
             <div className="teacher__things__container">
