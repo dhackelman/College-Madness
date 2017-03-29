@@ -148,16 +148,13 @@ class MainBracket extends React.Component {
       event.preventDefault();
 
       let allTeams = this.state.AllTeams;
-      let brentice = {
-        "id":currentId,
-        arrWins: []
-      };
+      let brentice = [];
       allTeams.map((team) => {
           let data = {
             "id": team.id,
             "predicted_wins": team.predicted_wins
           }
-        brentice.arrWins.push({"user_prediction": data});
+        brentice.push({"user_prediction": data});
 
       });
       console.log('in send bracket data', brentice);
@@ -180,10 +177,8 @@ class MainBracket extends React.Component {
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
-              <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
-              <form ref={(input) => this.submitBracket = input} onSubmit={(event) => this.sendBracketData(event)}>
-                <input className="kippBtn" type="submit"></input>
-              </form>
+              <FinalFour teams={this.state.FinalFour} sendBracketData={this.sendBracketData} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
+
             </div>
         );
     }

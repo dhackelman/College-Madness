@@ -37,12 +37,12 @@
   border: 4px solid $navy;
   display: flex;
   flex-flow: column;
-  height: 45%;
+  height: 460px;
   justify-content: flex-start;
   position: absolute;
-  left: 35%;
-  top: 60%;
-  width: 25%;
+  left: calc(50% - 125px);
+  top: calc(50% + 210px);
+  width: 250px;
 
   h3 {
     width: 100%;

@@ -3,24 +3,36 @@ import React from 'react';
 class Homeroom extends React.Component {
 
     render() {
+      console.log(this.props);
 
         return (
-            <div className="teacher_homeroom">
-                <h1>This is a Homeroom</h1>
-                <div class="table">
-                    <div class="row">
-                        <div class="cell twocol">
-                            <span>Content1</span>
+            <div className="teacher__homeroom">
+                <h1 className="homeroom__header">This is a Homeroom</h1>
+                <div className="homeroom__table">
+                    <div className="row">
+                        <div className="cell student__col header">
+                            <span>Students</span>
                         </div>
-                        <div class="cell twocol">
-                            <span>Content2</span>
+                        <div className="cell points__col header">
+                            <span>Bracket Points</span>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="cell onecol">
-                            <span>Content3</span>
+                        <div className="cell points__col header">
+                            <span>Research Points</span>
                         </div>
                     </div>
+                    { this.props.roster.map((student)=> {
+                      return <div className="row dynamic">
+                          <div className="cell student__col student">
+                              <span>{student.name}</span>
+                          </div>
+                          <div className="cell points__col data">
+                              <span>{student.bracket_points}</span>
+                          </div>
+                          <div className="cell points__col data">
+                              <span>{student.research_points}</span>
+                          </div>
+                      </div>
+                    })}
                 </div>
             </div>
         );

@@ -23,7 +23,7 @@ class TeacherLogin extends React.Component {
   }
 
   componentDidMount() {
-    axios.get("https://kipp-madness-api.herokuapp.com/classrooms/2.json")
+    axios.get("https://kipp-madness-api.herokuapp.com/classrooms/1.json")
       .then((roster) =>{
         let studentsObj = roster.data.students;
         this.setState({Students:studentsObj});
@@ -74,7 +74,7 @@ class TeacherLogin extends React.Component {
     render() {
       const roster = this.state.ShowRoster ? <Roster roster={this.state.Students} getId={this.getId}/> : '';
       const inbox = this.state.ShowInbox ? <Inbox submssions={this.state.Submissions} updateSubmssionScore={this.updateSubmssionScore}/> : '';
-      const homeroom = this.state.ShowHomeroom ? <Homeroom/> : '';
+      const homeroom = this.state.ShowHomeroom ? <Homeroom roster={this.state.Students}/> : '';
 
         return (
           <div className="teacher__container">
@@ -85,7 +85,7 @@ class TeacherLogin extends React.Component {
                 <Link className="research__nav__item"to="/bracket"><li>My Bracket</li></Link>
               </ul>
             </nav>
-            <h1 className="welcome__message">Select a Student to Begin</h1>
+            <h1 className="welcome__message"></h1>
             <div className="teacher__things__container">
 
               {roster}

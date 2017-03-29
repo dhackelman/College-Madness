@@ -56,11 +56,19 @@
   background-color: $burnt;
 }
 
-.team__logo-final {
-  width: 150px;
-  height: 150px;
-}
-
 .final__team {
-  display: none;
+  align-items: center;
+  height: 100px;
+  width: 90%;
+  margin-top: 2%;
+
+  .team__logo{
+    height: 40px;
+    width: 40px;
+  }
+
+  .team__name {
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
