@@ -10,7 +10,7 @@ class ResearchAcademicStats extends React.Component {
 
         return (
                 <div className="college__basics">
-                    <h2>{school.name}</h2>
+                    <h2>{school.school_name}</h2>
                     <p>Average SAT Overall:<span>{school.average_sat_overall}</span>
                     </p>
                     <p>Average SAT Math:<span>{school.average_sat_math}</span>

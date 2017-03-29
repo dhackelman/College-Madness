@@ -1,35 +1,77 @@
-.is__active {
-  background-color: $lemon;
-}
-
-.research__nav {
-  ul {
-    display: flex;
-    height: 70px;
-    justify-content: center;
-    margin: 0 auto;
-    width: 70%;
-
-    .research__nav__item {
-      border: 2px solid $royal;
-      border-radius: 5px;
-      color: $royal;
-      font-weight: 700;
-      margin: 1%;
-      padding-top: 1%;
-      padding-bottom: 3%;
-      text-align: center;
-      width: 20%;
-    }
-    .research__nav__item:hover {
-      animation: shake .75s cubic-bezier(.16,.07,.19,.9) both;
-      background-color: $lemon;
-      color: $royal;
-    }
-  }
-}
-
 .research__container {
+  padding-top: 5px;
   display: flex;
   width: 100%;
 }
+.info__full_container {
+  display: flex;
+  width: 50%;
+  flex-flow: column;
+  align-items: center;
+}
+
+.info__mascot_container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.info__container {
+  width: 250px;
+  border: 3px solid $burnt;
+  border-radius: 5px;
+  background-color: $almost;
+  text-align: center;
+  margin: 10px;
+
+.info__title {
+  font-size: 1.3rem;
+  color: $almost;
+  background-color: $burnt;
+  margin-top: 0;
+  margin-bottom: 0;
+  }
+
+.info__info {
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  }
+}
+
+.info__mascot_circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 400px;
+  background-color: $almost;
+  border-radius: 50%;
+}
+// .research__nav {
+//   ul {
+//     display: flex;
+//     height: 70px;
+//     justify-content: center;
+//     margin: 0 auto;
+//     width: 70%;
+//
+//     .research__nav__item {
+//       border: 2px solid $royal;
+//       border-radius: 5px;
+//       color: $royal;
+//       font-weight: 700;
+//       margin: 1%;
+//       padding-top: 1%;
+//       padding-bottom: 3%;
+//       text-align: center;
+//       width: 20%;
+//     }
+//     .research__nav__item:hover {
+//       animation: shake .75s cubic-bezier(.16,.07,.19,.9) both;
+//       background-color: $lemon;
+//       color: $royal;
+//     }
+//   }
+// }
