@@ -45,11 +45,11 @@ class MainBracket extends React.Component {
   componentDidMount() {
     let localStorageRef = localStorage.getItem("allteams");
     console.log('all teams ', localStorageRef);
-    if(localStorageRef) {
-      console.log('in localStorageRef if');
-      this.setState({AllTeams: JSON.parse(localStorageRef)});
-      console.log('get item after if ', localStorage.getItem("allteams"));
-    }
+    // if(localStorageRef) {
+    //   console.log('in localStorageRef if');
+    //   this.setState({AllTeams: JSON.parse(localStorageRef)});
+    //   console.log('get item after if ', localStorage.getItem("allteams"));
+    // }
 
     // const localStorageRefEast = localStorage.getItem("east");
     // if(localStorageRefEast) {
