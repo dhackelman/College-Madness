@@ -9,16 +9,13 @@ class App extends React.Component {
     this.updateFormInput = this.updateFormInput.bind(this);
     this.updateCurrentUser = this.updateCurrentUser.bind(this);
     this.updateLogoutBtn = this.updateLogoutBtn.bind(this);
-    this.updateHeader = this.updateHeader.bind(this);
-
 
     this.state = {
         Users: [],
         CurrentUser: {},
         inputData: {},
-        showLogout: false,
-        smallHeader: false
-    }
+        showLogout: false
+      }
   }
 
   componentDidMount() {
@@ -26,25 +23,17 @@ class App extends React.Component {
       .then((roster) =>{
         this.setState({Users: roster.data.users});
       });
-
-      const localStorageRef = localStorage.getItem("user");
+      let localStorageRef = localStorage.getItem("user");
       if(localStorageRef) {
         this.setState({CurrentUser: JSON.parse(localStorageRef)});
       }
     }
 
     componentWillUpdate(nextProps, nextState) {
-      console.log('will update ', nextProps, nextState);
+      // console.log('will update ', nextProps, nextState);
       localStorage.setItem("user", JSON.stringify(nextState.CurrentUser));
     }
 
-    updateHeader(arg) {
-      if(arg === true) {
-        this.setState({smallHeader: true})
-      } else {
-        this.setState({smallHeader: false})
-      }
-    }
 
     updateLogoutBtn(arg) {
       if(arg === true) {
@@ -58,7 +47,6 @@ class App extends React.Component {
     updateCurrentUser(id) {
       this.setState({CurrentUser: Number(id)})
     }
-
 
     // confirmNo() { // Button Confirm Component -->
     //   const rosterId = this.state.Users.map((match) => {
@@ -92,8 +80,7 @@ class App extends React.Component {
               updateCurrentUser: this.updateCurrentUser,
               createClass: this.createClassFormInput,
               logout: this.state.showLogout,
-              updateLogout: this.updateLogoutBtn,
-              smallHeader: this.updateHeader
+              updateLogout: this.updateLogoutBtn
             });
         });
 

@@ -27,8 +27,6 @@ class ResearchContainer extends React.Component {
       .then((response) =>{
         this.setState({Schools:response.data});
       });
-
-      this.props.smallHeader(false);
     }
 
 

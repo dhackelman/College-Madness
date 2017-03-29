@@ -118,10 +118,10 @@ class Region extends React.Component {
 
         return (
             <div className="region">
-                <Round teams={this.state.round64} round='round_64' selectTeam={this.selectTeam}/>
-                <Round teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
-                <Round teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
-                <Round teams={this.state.round8} round='round_8' selectTeam={this.selectTeam}/>
+                <Round local={this.props.local} teams={this.state.round64} round='round_64' selectTeam={this.selectTeam}/>
+                <Round local={this.props.local} teams={this.state.round32} round='round_32' selectTeam={this.selectTeam}/>
+                <Round local={this.props.local} teams={this.state.round16} round='round_16' selectTeam={this.selectTeam}/>
+                <Round local={this.props.local} teams={this.state.round8} round='round_8' selectTeam={this.selectTeam}/>
             </div>
         );
     }

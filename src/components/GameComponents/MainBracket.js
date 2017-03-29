@@ -15,6 +15,7 @@ class MainBracket extends React.Component {
     this.checkFinalFour = this.checkFinalFour.bind(this);
     // this.checkNatChamp = this.checkNatChamp.bind(this);
     this.sendBracketData = this.sendBracketData.bind(this);
+    this.updateLocalStorage = this.updateLocalStorage.bind(this);
 
     this.state = {
       AllTeams: [],
@@ -29,36 +30,52 @@ class MainBracket extends React.Component {
   }
 
   componentWillUpdate(nextProps, nextState) {
-    localStorage.setItem("east", JSON.stringify(nextState.East));
-    localStorage.setItem("west", JSON.stringify(nextState.West));
-    localStorage.setItem("midwest", JSON.stringify(nextState.Midwest));
-    localStorage.setItem("south", JSON.stringify(nextState.South));
+    // localStorage.setItem("east", JSON.stringify(nextState.East));
+    // localStorage.setItem("west", JSON.stringify(nextState.West));
+    // localStorage.setItem("midwest", JSON.stringify(nextState.Midwest));
+    // localStorage.setItem("south", JSON.stringify(nextState.South));
+    localStorage.setItem("allteams", JSON.stringify(nextState.AllTeams));
+
+  }
+
+  updateLocalStorage() {
+    localStorage.setItem("allteams", JSON.stringify(this.state.AllTeams));
   }
 
   componentDidMount() {
-    this.props.smallHeader(true);
-
-    const localStorageRef = localStorage.getItem("east");
+    let localStorageRef = localStorage.getItem("allteams");
+    console.log('all teams ', localStorageRef);
     if(localStorageRef) {
-      this.setState({East: JSON.parse(localStorageRef)});
+      console.log('in localStorageRef if');
+      this.setState({AllTeams: JSON.parse(localStorageRef)});
+      console.log('get item after if ', localStorage.getItem("allteams"));
     }
-    const localStorageRefWest = localStorage.getItem("west");
-    if(localStorageRefWest) {
-      this.setState({West: JSON.parse(localStorageRefWest)});
-    }
-    const localStorageRefMid = localStorage.getItem("midwest");
-    if(localStorageRefMid) {
-      this.setState({Midwest: JSON.parse(localStorageRefMid)});
-    }
-    const localStorageRefSouth = localStorage.getItem("south");
-    if(localStorageRefSouth) {
-      this.setState({South: JSON.parse(localStorageRefSouth)});
-    }
-    console.log('what the ?? ', this.props.user);
-    const currentUser = Number(this.props.user);
-    console.log('this fucking guy ---> ', currentUser);
-    // remove 'or' for production this.props.user ||
 
+    // const localStorageRefEast = localStorage.getItem("east");
+    // if(localStorageRefEast) {
+    //   console.log('in localStorageRef east');
+    //   this.setState({East: JSON.parse(localStorageRefEast)});
+    // }
+    // const localStorageRefWest = localStorage.getItem("west");
+    // if(localStorageRefWest) {
+    //   console.log('in localStorageRef west');
+    //   this.setState({West: JSON.parse(localStorageRefWest)});
+    // }
+    // const localStorageRefMid = localStorage.getItem("midwest");
+    // if(localStorageRefMid) {
+    //   console.log('in localStorageRef mid');
+    //   this.setState({Midwest: JSON.parse(localStorageRefMid)});
+    // }
+    // const localStorageRefSouth = localStorage.getItem("south");
+    // if(localStorageRefSouth) {
+    //   console.log('in localStorageRef south');
+    //   this.setState({South: JSON.parse(localStorageRefSouth)});
+    // }
+
+    let currentUser = this.props.user;
+    if(localStorage.getItem("user")) {
+      currentUser = localStorage.getItem("user");
+    }
 
     axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
@@ -176,10 +193,10 @@ class MainBracket extends React.Component {
 
         return (
             <div className="component__container">
-              <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.East} allTeams={this.state.AllTeams}/>
-              <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
-              <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
-              <Region filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
+              <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.East} allTeams={this.state.AllTeams}/>
+              <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
+              <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
+              <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
               <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
               <form ref={(input) => this.submitBracket = input} onSubmit={(event) => this.sendBracketData(event)}>
                 <input className="kippBtn" type="submit"></input>
