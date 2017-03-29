@@ -176,7 +176,7 @@ class MainBracket extends React.Component {
       console.log('in send bracket data', brentice);
       axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)
         .then((response) =>{
-          console.log(response);
+          console.log('fuck!', response);
         });
 
     }
