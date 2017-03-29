@@ -44,7 +44,6 @@ class MainBracket extends React.Component {
 
   componentDidMount() {
     let localStorageRef = localStorage.getItem("allteams");
-    console.log('all teams ', localStorageRef);
     // if(localStorageRef) {
     //   console.log('in localStorageRef if');
     //   this.setState({AllTeams: JSON.parse(localStorageRef)});
@@ -175,10 +174,9 @@ class MainBracket extends React.Component {
 
       });
       console.log('in send bracket data', brentice);
-      // console.log('in send bracket data', submitBracket);
       axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)
         .then((response) =>{
-          console.log('They\'re good dogs Bront');
+          console.log(response);
         });
 
     }
@@ -194,7 +192,7 @@ class MainBracket extends React.Component {
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.West} allTeams={this.state.AllTeams}/>
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
-              <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
+              <FinalFour teams={this.state.FinalFour} sendBracketData={this.sendBracketData} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
             </div>
         );
     }

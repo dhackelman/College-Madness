@@ -4,7 +4,6 @@ import Matchup from './Matchup';
 class Round extends React.Component {
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('in will update/ nextProps ', nextProps);
     nextProps.local();
   }
 
