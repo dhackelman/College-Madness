@@ -26,8 +26,10 @@
         .inbox__single {
           background: #fff;
           min-height: 150px;
+          max-height: 200px;
           margin: 1% auto;
           overflow: hidden;
+          position: relative;
           padding: 1% 2%;
           width: 45%;
 
@@ -65,14 +67,24 @@
   width: 100%;
 }
 
-.message__processed {
-  max-height: 100%;
-  max-width: 100%;
-}
-
 .overlay {
-  background-color: rgba($shale, .6);
+  background-color: rgba($tangerine, .8);
+  display: flex;
   height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  z-index: 100;
+
+  p {
+    align-content: center;
+    color: $navy;
+    // justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px white;
+    width: 100%;
+  }
 }
