@@ -1,7 +1,8 @@
 import React from 'react';
+import axios from 'axios';
+import Loading from './Loading';
 import Region from './Region';
 import FinalFour from './FinalFour';
-import axios from 'axios';
 import Dummy4 from '../../Data/Dummy4.js';
 import Dummy2 from '../../Data/Dummy2.js';
 
@@ -27,7 +28,7 @@ class MainBracket extends React.Component {
     };
   }
   componentDidMount() {
-    
+    this.props.smallHeader(true);
     const currentUser = 2;
     // remove 'or' for production this.props.user ||
 
@@ -143,7 +144,7 @@ class MainBracket extends React.Component {
 
     render() {
       if (!this.state.AllTeams.length) {
-        return (<h1>Loading</h1>);
+        return (<div className="loadingball__container"><h1>Loading...</h1><Loading/></div>);
       }
 
         return (

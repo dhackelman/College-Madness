@@ -225,6 +225,10 @@ textarea:focus {
   color: #f2f2f2;
   border: 5px solid #235695; }
 
+.header-small {
+  background-color: red;
+  height: 75px; }
+
 .component__container {
   display: flex;
   flex-flow: row wrap;
@@ -267,6 +271,19 @@ textarea:focus {
     text-align: center;
     margin: 0; }
 
+.loadingball__container {
+  flex-flow: column nowrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+
+.loading-ball {
+  animation: spin 2s linear infinite; }
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg); } }
 .matchup__container {
   display: flex;
   flex-flow: column nowrap;

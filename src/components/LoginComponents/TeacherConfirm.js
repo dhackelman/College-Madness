@@ -13,7 +13,7 @@ class TeacherConfirm extends React.Component {
     }
   }
   componentDidMount() {
-    this.props.updateLogout();
+    this.props.updateLogout(true);
   }
 
 
