@@ -537,22 +537,15 @@ h1 {
   background: #f2f2f2; }
 
 .row {
-  width: 100%;
+  width: 90%;
   min-height: 1px;
   height: auto;
   margin: 0; }
 
-.student:hover {
-  background-color: rgba(255, 218, 3, 0.5);
-  border-top: 2px solid #ffda03;
-  border-bottom: 2px solid #ffda03;
-  box-shadow: 0px 0px 0px 0px darkblue;
-  color: #235695;
-  z-index: 2; }
-
 .cell {
   border: 1px solid #235695;
   float: left;
+  height: 100%;
   margin: 0;
   padding: 1%; }
 

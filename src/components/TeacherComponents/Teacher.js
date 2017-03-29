@@ -28,7 +28,6 @@ class TeacherLogin extends React.Component {
         let studentsObj = roster.data.students;
         this.setState({Students:studentsObj});
       });
-      this.props.smallHeader(false);
     }
 
   getId(arg) {

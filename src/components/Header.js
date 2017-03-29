@@ -15,7 +15,7 @@ class Header extends React.Component {
             <div className="header__container">
                 <img className="header__logo" src={require('../styles/images/CM-logo.png')} alt={"KIPP Logo"}/>
                 <div className="header__homerooom">
-                    <h1><Link to="/teacher"><FaGraduationCap size={40}/>
+                    <h1><Link to="/homeroom"><FaGraduationCap size={40}/>
                         Classroom UNC</Link></h1>
                 </div>
                 {logout}
