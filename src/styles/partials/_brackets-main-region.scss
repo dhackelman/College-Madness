@@ -17,7 +17,8 @@
   width: 50%;
 }
 .region:first-child {
-  // background: url(https://kipp-madness.herokuapp.com/east.png) bottom center no-repeat;
+  height: 100%;
+  background: url(https://kipp-madness.herokuapp.com/east.png) bottom center no-repeat;
 }
 
 .region:nth-child(2), .region:nth-child(4) {
