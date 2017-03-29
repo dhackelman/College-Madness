@@ -243,9 +243,6 @@ textarea:focus {
   position: relative;
   width: 50%; }
 
-.region:first-child {
-  background: url(https://kipp-madness.herokuapp.com/east.png) bottom center no-repeat; }
-
 .region:nth-child(2), .region:nth-child(4) {
   border-left: none;
   display: flex;
