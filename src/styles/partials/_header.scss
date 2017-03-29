@@ -5,10 +5,11 @@
   justify-content: space-around;
   align-items: center;
   width: 100%;
-  padding: 10px;
+  padding: 5px;
 }
 
 .header__logo {
+  height: 75px;
   max-height: 100px;
   max-width: 25%
 }
@@ -16,6 +17,8 @@
 .header__homerooom {
   h1 {
     width: 100%;
+    margin-top: 0.1em;
+    margin-bottom: 0.1em;
   }
 }
 
@@ -28,9 +31,4 @@
   background-color: $burnt;
   color: $almost;
   border: 5px solid $royal;
-}
-
-.header-small {
-  background-color: red;
-  height: 75px;
 }
