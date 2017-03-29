@@ -20,6 +20,7 @@ class CollegePrograms extends React.Component {
       let videoId = yt.split("v=")[1].substring(0, 11)
         return (
                 <div className="college__basics">
+                  <h2>{this.props.school.school_name}</h2>
                   <YouTube
                     videoId={videoId}
                     opts={opts}

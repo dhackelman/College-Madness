@@ -54,12 +54,12 @@ class ResearchContainer extends React.Component {
 
         return (
             <div>
-                <nav className="research__nav">
+                <nav className="nav__container">
                     <ul>
-                        <li className={ this.state.showStart ? 'research__nav__item is__active': 'research__nav__item' } onClick={this.addStart}>College Starter</li>
-                        <li className={ this.state.showAcademic ? 'research__nav__item is__active': 'research__nav__item' } onClick={this.addAcademic}>Academic Stats</li>
-                        <li className={ this.state.showSpecial ? 'research__nav__item is__active': 'research__nav__item' }onClick={this.addSpecial}>Watch & Learn</li>
-                        <Link to="/bracket" className="research__nav__item">Back to Bracket</Link>
+                        <li className={ this.state.showStart ? 'nav__items is__active': 'nav__items' } onClick={this.addStart}>College Starter</li>
+                        <li className={ this.state.showAcademic ? 'nav__items is__active': 'nav__items' } onClick={this.addAcademic}>Academic Stats</li>
+                        <li className={ this.state.showSpecial ? 'nav__items is__active': 'nav__items' }onClick={this.addSpecial}>Watch & Learn</li>
+                        <Link to="/bracket" className="nav__items">Back to Bracket</Link>
 
                     </ul>
                 </nav>

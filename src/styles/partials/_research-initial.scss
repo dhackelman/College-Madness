@@ -4,13 +4,21 @@
   display: flex;
   flex-direction: column;
   margin: 1%;
-  padding: 2%;
+  // padding: 2%;
   width: 55%;
-
   h2 {
-    text-align: center;
-    width: 75%;
+      background-color: $royal;
+      color: $almost;
+      margin: 0;
+      padding: 15px 0;
+      text-align: center;
+      width: 100%;
   }
+
+  // h2 {
+  //   text-align: center;
+  //   width: 75%;
+  // }
   p {
     font-weight: 700;
     text-align: left;
@@ -25,6 +33,11 @@
     display: flex;
     justify-content: space-around;
     width: 100%;
+    margin: 10px;
+    .college__visuals-map {
+      border: 3px solid $navy;
+      border-radius: 5px;
+    }
   }
 
 }
