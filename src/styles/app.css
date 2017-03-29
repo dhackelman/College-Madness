@@ -249,6 +249,12 @@ textarea:focus {
   flex-flow: row-reverse;
   justify-content: flex-end;
   position: relative; }
+  .region:nth-child(2) .team__container, .region:nth-child(4) .team__container {
+    background: rgba(242, 242, 242, 0.5);
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: flex-start;
+    width: 100%; }
 
 .region:nth-child(1), .region:nth-child(3) {
   border-right: none; }
