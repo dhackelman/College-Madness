@@ -5,13 +5,14 @@ import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 class FinalChamp extends React.Component {
 
     render() {
-      const collegeSpecificResearch = "research/" + this.props.teams[0].id;
+      // const collegeSpecificResearch = "research/" + this.props.teams[0].id;
+      console.log(this.props.teams.team.name);
         return (
           <div className="team__container final__team">
-            <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>
-            <img className="team__logo" src={this.props.teams[0].team.image ? this.props.team[0].image : "https://kipp-madness.herokuapp.com/bball-placeholder.png"} alt={this.props.teams[0].team.abbrev}></img>
-            <span className="team__seed">{this.props.teams[0].team.seed ? this.props.teams[0].team.seed : ''}</span>
-            <span className="team__name">{this.props.teams[0].team.abbrev}</span>
+          <FaInfoCircle className="team__info" size={30}/>
+            <img className="team__logo" src="https://kipp-madness.herokuapp.com/bball-placeholder.png"></img>
+            <span className="team__seed">{this.props.teams.team ? this.props.teams.team : ''}</span>
+            <span className="team__name">{this.props.teams.team}</span>
           </div>
         );
     }

@@ -195,9 +195,6 @@ class MainBracket extends React.Component {
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
               <FinalFour teams={this.state.FinalFour} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
-              <form ref={(input) => this.submitBracket = input} onSubmit={(event) => this.sendBracketData(event)}>
-                <input className="kippBtn" type="submit"></input>
-              </form>
             </div>
         );
     }
