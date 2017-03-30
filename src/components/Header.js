@@ -8,10 +8,11 @@ class Header extends React.Component {
 
   // <h1><Link to="/teacher"><FaGraduationCap size={50}/>
   //     My Homeroom</Link></h1>
+  componentDidMount() {
+    console.log(this.props.curUser);
+  }
 
     render() {
-        let teachCheck = this.props.check;
-
         const logout = this.props.updateBtn ? <Logout/> : <div className="empty__container"></div>;
         return (
             <div className="header__container">

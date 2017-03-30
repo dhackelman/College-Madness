@@ -9,7 +9,6 @@ class App extends React.Component {
     this.updateFormInput = this.updateFormInput.bind(this);
     this.updateCurrentUser = this.updateCurrentUser.bind(this);
     this.updateLogoutBtn = this.updateLogoutBtn.bind(this);
-    this.teachChecker = this.teachChecker.bind(this);
 
     this.state = {
         Users: [],
@@ -33,18 +32,6 @@ class App extends React.Component {
     componentWillUpdate(nextProps, nextState) {
       // console.log('will update ', nextProps, nextState);
       localStorage.setItem("user", JSON.stringify(nextState.CurrentUser));
-    }
-
-    teachChecker() {
-      let users = this.state.Users;
-      let realId = this.state.CurrentUser;
-      users.map((id) => {
-        console.log('teachChecker -> ', id);
-        if(id.id === realId) {
-          console.log('return id', id);
-          return id;
-        }
-      })
     }
 
 
@@ -99,7 +86,7 @@ class App extends React.Component {
 
         return (
             <div>
-                <Header check={this.teachChecker} updateBtn={this.state.showLogout}/> {childWithProp}
+                <Header curUser={this.state.CurrentUser} updateBtn={this.state.showLogout}/> {childWithProp}
             </div>
         );
     }
