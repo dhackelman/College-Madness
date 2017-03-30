@@ -300,10 +300,15 @@ textarea:focus {
   .final__four h3 {
     width: 100%;
     text-align: center;
-    margin: 0; }
-  .final__four .submtit__form {
-    position: absolute;
-    top: -10%; }
+    margin: 5px;
+    padding: 0;
+    line-height: .95; }
+  .final__four .submit__form {
+    margin: 0;
+    padding: 0; }
+    .final__four .submit__form .bracket__submit {
+      font-size: 1.25rem;
+      padding: 5px; }
 
 .loadingball__container {
   flex-flow: column nowrap;
