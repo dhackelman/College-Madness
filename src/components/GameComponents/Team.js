@@ -9,7 +9,6 @@ class Team extends React.Component {
     render() {
 
       const collegeSpecificResearch = "research/" + this.props.home.team.id;
-      console.log(this.props);
 
       // console.log('img ', this.props.home.team.image);
 
