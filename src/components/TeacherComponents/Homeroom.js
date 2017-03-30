@@ -18,8 +18,6 @@ class Homeroom extends React.Component {
     }
 
     render() {
-      console.log(this.state.Students);
-
         return (
 
           <div className="teacher__things__container">

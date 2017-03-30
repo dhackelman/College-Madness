@@ -9,7 +9,7 @@ class Header extends React.Component {
   // <h1><Link to="/teacher"><FaGraduationCap size={50}/>
   //     My Homeroom</Link></h1>
   componentDidMount() {
-    console.log(this.state);
+    console.log(Link);
   }
 
     render() {

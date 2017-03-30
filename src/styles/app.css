@@ -291,11 +291,11 @@ textarea:focus {
   border: 4px solid #16345c;
   display: flex;
   flex-flow: column;
-  height: 470px;
+  height: 480px;
   justify-content: flex-start;
   position: absolute;
   left: calc(50% - 140px);
-  top: calc(50% - 235px);
+  top: calc(50% - 280px);
   width: 280px; }
   .final__four h3 {
     width: 100%;
