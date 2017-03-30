@@ -854,11 +854,6 @@ h1 {
       font-family: "Roboto", sans-serif;
       font-size: 20px;
       height: 280px; }
-  .research__form input:focus,
-  .research__form textarea:focus {
-    background: white;
-    border-radius: 5px;
-    outline: none; }
 
 .submit {
   font-size: 1rem;
