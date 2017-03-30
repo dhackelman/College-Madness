@@ -307,7 +307,7 @@ textarea:focus {
   justify-content: flex-start;
   left: calc(50% - 140px);
   position: absolute;
-  top: calc(50% - 280px);
+  top: calc(50% - 240px);
   width: 280px; }
   .final__four h3 {
     line-height: .95;
@@ -683,7 +683,7 @@ h1 {
   line-height: 2.5;
   text-align: center;
   width: 30%;
-  margin: 2%; }
+  margin: 2% auto; }
   .pickClass__container .pickClass__title {
     background: #235695;
     color: #f2f2f2;
@@ -695,9 +695,9 @@ h1 {
     width: 100%; }
   .pickClass__container .pickClass__items li:hover {
     animation: scale 0.25s both;
-    background-color: rgba(255, 218, 3, 0.5);
-    border-top: 2px solid #ffda03;
-    border-bottom: 2px solid #ffda03;
+    background-color: rgba(255, 187, 19, 0.5);
+    border-top: 2px solid #ffbb13;
+    border-bottom: 2px solid #ffbb13;
     box-shadow: 0px 0px 0px 0px darkblue;
     color: #235695;
     margin: 0 0 0 2%;

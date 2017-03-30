@@ -7,9 +7,6 @@ import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
 class Header extends React.Component {
 
 
-  componentDidMount() {
-    this.props.check();
-  }
 
     render() {
         const logout = this.props.updateBtn ? <Logout/> : <div className="empty__container"></div>;
