@@ -566,12 +566,11 @@ h1 {
     flex-wrap: wrap;
     justify-content: flex-start;
     margin: 0 auto;
-    padding: 1% 1%;
+    padding: 1%;
     width: 100%; }
     .teacher__inbox .inbox__messages .inbox__single {
       background: #fff;
       min-height: 150px;
-      max-height: 200px;
       margin: 1% auto;
       overflow: hidden;
       position: relative;
@@ -583,7 +582,8 @@ h1 {
       align-items: center;
       display: flex;
       justify-content: space-between; }
-      .teacher__inbox .inbox__messages .button__holder .inbox__pass, .teacher__inbox .inbox__messages .button__holder .inbox__fail {
+      .teacher__inbox .inbox__messages .button__holder .inbox__fail,
+      .teacher__inbox .inbox__messages .button__holder .inbox__pass {
         background-color: #bbd72e;
         border: none;
         color: #235695;
@@ -592,38 +592,9 @@ h1 {
         width: 40%; }
       .teacher__inbox .inbox__messages .button__holder .inbox__fail {
         background-color: #ffbb13; }
-      .teacher__inbox .inbox__messages .button__holder .inbox__pass:hover, .teacher__inbox .inbox__messages .button__holder .inbox__fail:hover {
-        animation: scale2 .5s both; }
-
-.transparent {
-  background-color: transparent;
-  width: 100%; }
-
-.overlay {
-  background-color: rgba(255, 187, 19, 0.8);
-  display: flex;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%; }
-  .overlay p {
-    align-content: center;
-    color: #16345c;
-    font-weight: 800;
-    font-size: 2rem;
-    margin-top: 10%;
-    text-align: center;
-    -webkit-text-stroke: 1px white;
-    width: 100%; }
-
-.inbox__overlay {
-  background-color: rgba(169, 207, 239, 0.6);
-  height: 90%;
-  left: 0;
-  position: absolute;
-  top: 10%;
-  width: 100%; }
+      .teacher__inbox .inbox__messages .button__holder .inbox__fail:hover,
+      .teacher__inbox .inbox__messages .button__holder .inbox__pass:hover {
+        animation: scale2 0.5s both; }
 
 .teacher__homeroom {
   width: 100%; }

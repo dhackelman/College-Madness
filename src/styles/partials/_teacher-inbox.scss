@@ -6,94 +6,61 @@
     width: 60%;
 
     .inbox__header {
-      background: $royal;
-      color: $almost;
-      font-weight: 700;
-      height: 50px;
-      margin: 0 auto;
-      padding: 2%;
-      text-align: center;
-      width: 100%;
+        background: $royal;
+        color: $almost;
+        font-weight: 700;
+        height: 50px;
+        margin: 0 auto;
+        padding: 2%;
+        text-align: center;
+        width: 100%;
     }
+
     .inbox__messages {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      margin: 0 auto;
-      padding: 1% 1%;
-      width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: 1%;
+        width: 100%;
 
         .inbox__single {
-          background: #fff;
-          min-height: 150px;
-          max-height: 200px;
-          margin: 1% auto;
-          overflow: hidden;
-          position: relative;
-          padding: 1% 2%;
-          width: 45%;
+            background: #fff;
+            min-height: 150px;
+            margin: 1% auto;
+            overflow: hidden;
+            position: relative;
+            padding: 1% 2%;
+            width: 45%;
 
-          p {
-            margin-bottom: 10%;
-          }
+            p {
+                margin-bottom: 10%;
+            }
         }
+
         .button__holder {
-          align-items: center;
-          display: flex;
-          justify-content: space-between;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
 
-          .inbox__pass, .inbox__fail {
-            background-color: $avocado;
-            border: none;
-            color: $royal;
-            font-size: 1rem;
-            padding: 1% 0;
-            width: 40%;
-          }
-          .inbox__fail {
-            background-color: $tangerine;
-          }
+            .inbox__fail,
+            .inbox__pass {
+                background-color: $avocado;
+                border: none;
+                color: $royal;
+                font-size: 1rem;
+                padding: 1% 0;
+                width: 40%;
+            }
 
-          .inbox__pass:hover, .inbox__fail:hover {
-            animation: scale2 .5s both;
-          }
+            .inbox__fail {
+                background-color: $tangerine;
+            }
+
+            .inbox__fail:hover,
+            .inbox__pass:hover {
+                animation: scale2 0.5s both;
+            }
         }
-
-      }
     }
-
-.transparent {
-  background-color: transparent;
-  width: 100%;
-}
-
-.overlay {
-  background-color: rgba($tangerine, .8);
-  display: flex;
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-
-  p {
-    align-content: center;
-    color: $navy;
-    font-weight: 800;
-    font-size: 2rem;
-    margin-top: 10%;
-    text-align: center;
-    -webkit-text-stroke: 1px white;
-    width: 100%;
-  }
-}
-
-.inbox__overlay {
-  background-color: rgba($skyBlue, .6);
-  height: 90%;
-  left: 0;
-  position: absolute;
-  top: 10%;
-  width: 100%;
-
 }
