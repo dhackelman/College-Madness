@@ -5,6 +5,7 @@ import Region from './Region';
 import FinalFour from './FinalFour';
 import Dummy4 from '../../Data/Dummy4.js';
 import Dummy2 from '../../Data/Dummy2.js';
+import east from '../../styles/images/east.png';
 
 class MainBracket extends React.Component {
   constructor() {
@@ -178,7 +179,12 @@ class MainBracket extends React.Component {
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.Midwest} allTeams={this.state.AllTeams} />
               <Region local={this.updateLocalStorage} filter={this.filterByPredictedWins} check={this.checkFinalFour} teams={this.state.South} allTeams={this.state.AllTeams}/>
               <FinalFour teams={this.state.FinalFour} sendBracketData={this.sendBracketData} two={this.state.NatChamp} one={this.state.Champion} allTeams={this.state.AllTeams}/>
-            </div>
+              <img className="east__logo" src={require('../../styles/images/east.png')} alt={"KIPP Logo"}/>
+              <img className="west__logo" src={require('../../styles/images/west.png')} alt={"KIPP Logo"}/>
+              <img className="midwest__logo" src={require('../../styles/images/midwest.png')} alt={"KIPP Logo"}/>
+              <img className="south__logo" src={require('../../styles/images/south.png')} alt={"KIPP Logo"}/>
+
+        </div>
         );
     }
 }
