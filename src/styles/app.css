@@ -543,7 +543,9 @@ h1 {
   text-align: center; }
 
 .teacher__things__container {
+  align-items: center;
   display: flex;
+  flex-direction: column;
   width: 100%; }
 
 .teacher__inbox {
@@ -702,6 +704,11 @@ h1 {
     color: #235695;
     margin: 0 0 0 2%;
     z-index: 2; }
+
+.back__to__bracket {
+  font-size: 1.25rem;
+  margin: 1% auto;
+  width: 20%; }
 
 .teacher__roster {
   display: flex;
