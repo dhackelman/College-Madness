@@ -5,7 +5,7 @@ import Region from './Region';
 import FinalFour from './FinalFour';
 import Dummy4 from '../../Data/Dummy4.js';
 import Dummy2 from '../../Data/Dummy2.js';
-import east from '../../styles/images/east.png';
+import Dummy0 from '../../Data/Dummy0.js';
 
 class MainBracket extends React.Component {
   constructor() {
@@ -27,17 +27,15 @@ class MainBracket extends React.Component {
       South: [],
       FinalFour: Dummy4.user_predictions,
       NatChamp: Dummy2.user_predictions,
-      Champion: []
+      Champion: Dummy0.user_predictions
     };
   }
 
   componentWillUpdate(nextProps, nextState) {
-    console.log('in setitem');
     localStorage.setItem("allteams", JSON.stringify(nextState.AllTeams));
   }
 
   updateLocalStorage() {
-    console.log('in set item function ');
     localStorage.setItem("allteams", JSON.stringify(this.state.AllTeams));
   }
 
@@ -62,8 +60,6 @@ class MainBracket extends React.Component {
     }
 
     if(localStorage.getItem("allteams")) {
-      console.log('setting from local storage');
-      console.log('local storage - data ', JSON.parse(localStorage.getItem("allteams")));
 
       // this.setState({AllTeams: JSON.parse(localStorage.getItem("allteams")) })
       this.filterAndSetState(JSON.parse(localStorage.getItem("allteams")))
@@ -104,9 +100,9 @@ class MainBracket extends React.Component {
         if (score === 5) {
             this.setState({NatChamp: teams});
         }
-        if (score === 6) {
-            this.setState({Champion: teams});
-        }
+        // if (score === 6) {
+        //     this.setState({Champion: teams});
+        // }
         return
     }
 
@@ -120,9 +116,9 @@ class MainBracket extends React.Component {
         if (score === 5) {
             this.setState({NatChamp: teams});
         }
-        if (score === 6) {
-            this.setState({Champion: teams});
-        }
+        // if (score === 6) {
+        //     this.setState({Champion: teams});
+        // }
         return
     }
 
@@ -158,10 +154,9 @@ class MainBracket extends React.Component {
           }
         brentice.push({"user_prediction": data});
       });
-      console.log('in send bracket data', brentice);
       axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)
         .then((response) =>{
-          console.log('fuck!', response);
+          return
         });
 
     }
@@ -170,7 +165,6 @@ class MainBracket extends React.Component {
       if (!this.state.AllTeams.length) {
         return (<div className="loadingball__container"><h1>Loading...</h1><Loading/></div>);
       }
-      console.log(this.state.FinalFour);
 
         return (
             <div className="component__container">

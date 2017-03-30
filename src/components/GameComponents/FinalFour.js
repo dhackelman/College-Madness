@@ -10,7 +10,7 @@ class FinalFour extends React.Component {
       this.selectFour = this.selectFour.bind(this);
       this.state = {
           NatChampGame: Dummy2.user_predictions,
-          Champ: '',
+          Champ: Dummy0.user_predictions,
           Ready2Submit: true
       }
   }
@@ -37,13 +37,13 @@ class FinalFour extends React.Component {
      if (roundId === 'round_2') {
        winTeam.predicted_wins = 6;
        loseTeam.predicted_wins = 5;
-       let champ = [...this.state.Champ];
-       champ =  winTeam;
-       this.setState({Champ: champ});
+       const last2 = [];
+       last2.push(winTeam, loseTeam);
        this.setState({Ready2Submit: true});
-
+       this.setState({Champ:last2});
       }
     }
+
   // <FinalChamp check={this.props.check} teams={this.state.Champ} round='round_0'/>
     render() {
 
@@ -54,8 +54,8 @@ class FinalFour extends React.Component {
               <h3>Championship Game</h3>
               <FinalRound check={this.props.check} teams={this.state.NatChampGame} round='round_2' selectFour={this.selectFour}/>
               <h3>National Champion</h3>
-
-                <form ref={(input) => this.submitBracket = input} onSubmit={(event) => this.props.sendBracketData(event)}>
+              <FinalChamp teams={this.state.Champ} round='round_0'/>
+                <form className="submit__form" ref={(input) => this.submitBracket = input} onSubmit={(event) => this.props.sendBracketData(event)}>
                   <input  className={ this.state.Ready2Submit ? 'kippBtn': 'kippBtn is-hidden' } type="submit"></input>
                 </form>
             </div>

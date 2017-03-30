@@ -3,7 +3,7 @@ import React from 'react';
 import GoogleMapReact from 'google-map-react';
 // import Marker from 'google-map-react';
 
-const AnyReactComponent = ({ text }) => (
+const BballComponent = ({ text }) => (
   <div style={{
     position: 'relative', color: 'transparent', background: 'transparent',
     height: 30, width: 30, top: -10, left: -75,
@@ -26,7 +26,7 @@ class CollegeOnAMap extends React.Component {
 
         return (
           <GoogleMapReact center={props.center} defaultZoom={props.zoom} >
-            <AnyReactComponent
+            <BballComponent
                lat={this.props.lat}
                lng={this.props.lng}
                text={''}

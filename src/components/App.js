@@ -14,7 +14,7 @@ class App extends React.Component {
         Users: [],
         CurrentUser: {},
         inputData: {},
-        showLogout: false
+        showLogout: true
       }
   }
 

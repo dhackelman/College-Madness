@@ -41,7 +41,7 @@ class ButtonConfirm extends React.Component {
               <div className="login__teach-container">
                 <Link to="teacher" onClick={this.confirmYes} className="kippBtn">Teacher Login</Link>
                 <h2>Auth Code</h2>
-                <input type="text"></input>
+                <input type="password"></input>
               </div>
             </div>
         );
