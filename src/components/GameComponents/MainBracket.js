@@ -14,7 +14,6 @@ class MainBracket extends React.Component {
     this.filterByWins = this.filterByWins.bind(this);
     this.filterByPredictedWins = this.filterByPredictedWins.bind(this);
     this.checkFinalFour = this.checkFinalFour.bind(this);
-    // this.checkNatChamp = this.checkNatChamp.bind(this);
     this.sendBracketData = this.sendBracketData.bind(this);
     this.updateLocalStorage = this.updateLocalStorage.bind(this);
     this.filterAndSetState = this.filterAndSetState.bind(this);
@@ -49,28 +48,21 @@ class MainBracket extends React.Component {
   }
 
   componentDidMount() {
-    // console.log('in get item');
-    // let localStorageRef = localStorage.getItem("allteams");
-    // if(localStorage.getItem("allteams")) {
-    //   this.setState({AllTeams: localStorageRef});
-    // }
     let currentUser = this.props.user;
     if(localStorage.getItem("user")) {
       currentUser = localStorage.getItem("user");
     }
 
     if(localStorage.getItem("allteams")) {
-
-      // this.setState({AllTeams: JSON.parse(localStorage.getItem("allteams")) })
       this.filterAndSetState(JSON.parse(localStorage.getItem("allteams")))
 
     } else {    axios.get(`https://kipp-madness-api.herokuapp.com/users/${currentUser}.json`)
       .then((response) =>{
         this.filterAndSetState(response.data.user_predictions)
       });
-  }
-
     }
+
+  }
 
     checkFinalFour(arg1, arg2) {
       let FinalFour = [...this.state.FinalFour];
@@ -100,9 +92,6 @@ class MainBracket extends React.Component {
         if (score === 5) {
             this.setState({NatChamp: teams});
         }
-        // if (score === 6) {
-        //     this.setState({Champion: teams});
-        // }
         return
     }
 
@@ -116,9 +105,6 @@ class MainBracket extends React.Component {
         if (score === 5) {
             this.setState({NatChamp: teams});
         }
-        // if (score === 6) {
-        //     this.setState({Champion: teams});
-        // }
         return
     }
 

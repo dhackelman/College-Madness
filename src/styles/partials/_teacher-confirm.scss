@@ -1,28 +1,26 @@
 
 .login__container {
-  // position: relative;
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
 }
 
 .login__teach-container {
-  border: 5px solid $navy;
-  position: absolute;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  border: 5px solid $navy;
   bottom: 25px;
-  left: calc(50% - 150px);
-  width: 300px;
+  display: flex;
+  flex-flow: column nowrap;
   height: 250px;
-  // padding: 15px;
-  input {
+  justify-content: center;
+  left: calc(50% - 150px);
+  position: absolute;
+  width: 300px;
+
+   input {
     width: 65%;
   }
 }
-
 
 .confirm__button, .confirm__link {
   background: $royal;

@@ -1,6 +1,5 @@
 // container for bracket in App ***
 .component__container {
-  // background-color: $carolinaBlue;
   display: flex;
   flex-flow: row wrap;
   margin: 0 auto;
@@ -17,29 +16,8 @@
   position: relative;
   width: 50%;
 }
-// .east__logo {
-//   position: absolute;
-//   top: 90px;
-//   left: 25%
-// }
-// .west__logo {
-//   position: absolute;
-//   top: 90px;
-//   right: 25%
-// }
-// .midwest__logo {
-//   position: absolute;
-//   bottom: -48%;
-//   left: 25%;
-// }
-// .south__logo {
-//   position: absolute;
-//   bottom: -48%;
-//   right: 25%;
-// }
 
 .region:nth-child(2), .region:nth-child(4) {
-  // background: red;
   border-left: none;
   display: flex;
   flex-flow: row-reverse;
@@ -70,7 +48,6 @@
 }
 
 .region:nth-child(1), .region:nth-child(3){
-  // background: red;
   border-right: none;
 }
 
@@ -83,17 +60,17 @@
   flex-flow: column;
   height: 480px;
   justify-content: flex-start;
-  position: absolute;
   left: calc(50% - 140px);
+  position: absolute;
   top: calc(50% - 280px);
   width: 280px;
 
   h3 {
-    width: 100%;
-    text-align: center;
+    line-height: .95;
     margin: 5px;
     padding: 0;
-    line-height: .95;
+    text-align: center;
+    width: 100%;
   }
 
   .submit__form {
@@ -108,10 +85,10 @@
 }
 
 .loadingball__container {
-  flex-flow: column nowrap;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   width: 50%;
 
 }

@@ -177,8 +177,8 @@ a:visited {
 
 .kippBtn:hover {
   background-color: #e47323;
-  color: #f2f2f2;
-  border: 3px solid #235695; }
+  border: 3px solid #235695;
+  color: #f2f2f2; }
 
 .nav__container {
   padding-top: 10px; }
@@ -200,9 +200,9 @@ a:visited {
       color: #235695; }
 
 .empty__container {
+  height: 1px;
   visibility: hidden;
-  width: 100px;
-  height: 1px; }
+  width: 100px; }
 
 form,
 input,
@@ -239,19 +239,19 @@ textarea:focus {
   max-width: 25%; }
 
 .header__homerooom h1 {
-  width: 100%;
+  margin-bottom: 0.1em;
   margin-top: 0.1em;
-  margin-bottom: 0.1em; }
+  width: 100%; }
 
 .header__logout {
-  display: flex;
   align-items: center;
+  display: flex;
   max-height: 50px; }
 
 .header__logout:hover {
   background-color: #e47323;
-  color: #f2f2f2;
-  border: 5px solid #235695; }
+  border: 5px solid #235695;
+  color: #f2f2f2; }
 
 .component__container {
   display: flex;
@@ -305,16 +305,16 @@ textarea:focus {
   flex-flow: column;
   height: 480px;
   justify-content: flex-start;
-  position: absolute;
   left: calc(50% - 140px);
+  position: absolute;
   top: calc(50% - 280px);
   width: 280px; }
   .final__four h3 {
-    width: 100%;
-    text-align: center;
+    line-height: .95;
     margin: 5px;
     padding: 0;
-    line-height: .95; }
+    text-align: center;
+    width: 100%; }
   .final__four .submit__form {
     margin: 0;
     padding: 0; }
@@ -323,10 +323,10 @@ textarea:focus {
       padding: 5px; }
 
 .loadingball__container {
-  flex-flow: column nowrap;
-  display: flex;
-  justify-content: center;
   align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
   width: 50%; }
 
 .loading-ball {
@@ -351,24 +351,24 @@ textarea:focus {
   width: 100%; }
   .team__container .team__info {
     color: #ffda03;
+    margin: 3px 3px 0 3px;
     max-height: 25px;
     max-width: 25px;
-    padding: 1px;
-    margin: 3px 3px 0 3px; }
+    padding: 1px; }
   .team__container .team__logo {
     align-items: center;
     height: 30px;
     width: 30px; }
   .team__container .placeholder {
     height: 20px;
-    width: 20px;
-    margin: 3px 0; }
+    margin: 3px 0;
+    width: 20px; }
   .team__container .team__seed {
     margin: 5px 3px; }
   .team__container .team__name {
-    margin: 5px 3px;
     font-size: 14px;
-    font-weight: 600; }
+    font-weight: 600;
+    margin: 5px 3px; }
   .team__container :active {
     background-color: #ffda03; }
 
@@ -385,10 +385,10 @@ textarea:focus {
   background-color: #e47323; }
 
 .the__champ {
-  border: 2px solid #235695;
-  margin: 10px;
   align-items: center;
+  border: 2px solid #235695;
   height: 100px;
+  margin: 10px;
   width: 90%; }
   .the__champ .team__logo {
     height: 40px;
@@ -469,21 +469,21 @@ h1 {
     width: 100%; }
 
 .login__container {
+  align-items: center;
   display: flex;
-  flex-flow: column nowrap;
-  align-items: center; }
+  flex-flow: column nowrap; }
 
 .login__teach-container {
-  border: 5px solid #16345c;
-  position: absolute;
-  display: flex;
-  justify-content: center;
   align-items: center;
-  flex-flow: column nowrap;
+  border: 5px solid #16345c;
   bottom: 25px;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 250px;
+  justify-content: center;
   left: calc(50% - 150px);
-  width: 300px;
-  height: 250px; }
+  position: absolute;
+  width: 300px; }
   .login__teach-container input {
     width: 65%; }
 
@@ -536,7 +536,6 @@ h1 {
       text-align: center;
       width: 20%; }
     .teacher__nav ul .teacher__nav__item:hover {
-      animation: shake 0.75s cubic-bezier(0.16, 0.07, 0.19, 0.9) both;
       background-color: #ffda03;
       color: #235695; }
 
@@ -550,9 +549,9 @@ h1 {
 .teacher__inbox {
   background: #f2f2f2;
   border: 2px solid #235695;
+  margin: 2%;
   position: relative;
-  width: 60%;
-  margin: 2%; }
+  width: 60%; }
   .teacher__inbox .inbox__header {
     background: #235695;
     color: #f2f2f2;
@@ -604,26 +603,26 @@ h1 {
   background-color: rgba(255, 187, 19, 0.8);
   display: flex;
   height: 100%;
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   width: 100%; }
   .overlay p {
     align-content: center;
     color: #16345c;
-    margin-top: 10%;
-    text-align: center;
     font-weight: 800;
     font-size: 2rem;
+    margin-top: 10%;
+    text-align: center;
     -webkit-text-stroke: 1px white;
     width: 100%; }
 
 .inbox__overlay {
   background-color: rgba(169, 207, 239, 0.6);
-  position: absolute;
   height: 90%;
-  top: 10%;
   left: 0;
+  position: absolute;
+  top: 10%;
   width: 100%; }
 
 .teacher__homeroom {
@@ -653,8 +652,8 @@ h1 {
   background: white; }
 
 .student__row, .header__row {
-  width: 100%;
-  margin: 0; }
+  margin: 0;
+  width: 100%; }
 
 .student__row:hover {
   background-color: rgba(255, 187, 19, 0.4);
@@ -733,60 +732,60 @@ h1 {
     z-index: 2; }
 
 .research__container {
-  padding-top: 5px;
   display: flex;
+  padding-top: 5px;
   width: 100%; }
 
 .info__full_container {
+  align-items: center;
   display: flex;
-  width: 50%;
   flex-flow: column;
-  align-items: center; }
+  width: 50%; }
 
 .info__mascot_container {
-  width: 50%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  width: 50%; }
 
 .info__container {
-  width: 250px;
+  background-color: #f2f2f2;
   border: 3px solid #e47323;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  margin: 10px;
   text-align: center;
-  margin: 10px; }
+  width: 250px; }
   .info__container .info__title {
-    font-size: 1.3rem;
-    color: #f2f2f2;
     background-color: #e47323;
-    margin-top: 0;
-    margin-bottom: 0; }
+    color: #f2f2f2;
+    font-size: 1.3rem;
+    margin-bottom: 0;
+    margin-top: 0; }
   .info__container .info__info {
     font-size: 1.1rem;
     font-weight: bold;
     text-align: center; }
 
 .info__mascot_circle {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
   background-color: #f2f2f2;
-  border-radius: 50%; }
+  border-radius: 50%;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  width: 400px; }
 
 .info__container-avo {
-  width: 250px;
+  background-color: #f2f2f2;
   border: 3px solid #44953a;
   border-radius: 5px;
-  background-color: #f2f2f2;
+  margin: 10px;
   text-align: center;
-  margin: 10px; }
+  width: 250px; }
   .info__container-avo .info__title-avo {
     background-color: #44953a;
-    font-size: 1.3rem;
     color: #f2f2f2;
+    font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center; }
