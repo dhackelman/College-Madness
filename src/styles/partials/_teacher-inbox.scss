@@ -64,3 +64,12 @@
         }
     }
 }
+
++.inbox__overlay {
+    background-color: rgba(169, 207, 239, 0.6);
+      position: absolute;
+        height: 90%;
+          top: 10%;
+            left: 0;
+              width: 100%; 
+}
