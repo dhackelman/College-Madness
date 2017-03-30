@@ -1,37 +1,37 @@
 .research__container {
-  padding-top: 5px;
   display: flex;
+  padding-top: 5px;
   width: 100%;
 }
 .info__full_container {
-  display: flex;
-  width: 50%;
-  flex-flow: column;
   align-items: center;
+  display: flex;
+  flex-flow: column;
+  width: 50%;
 }
 
 .info__mascot_container {
-  width: 50%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 50%;
 }
 
 
 .info__container {
-  width: 250px;
+  background-color: $almost;
   border: 3px solid $burnt;
   border-radius: 5px;
-  background-color: $almost;
-  text-align: center;
   margin: 10px;
+  text-align: center;
+  width: 250px;
 
 .info__title {
-  font-size: 1.3rem;
-  color: $almost;
   background-color: $burnt;
-  margin-top: 0;
+  color: $almost;
+  font-size: 1.3rem;
   margin-bottom: 0;
+  margin-top: 0;
   }
 
 .info__info {
@@ -42,26 +42,26 @@
 }
 
 .info__mascot_circle {
-  display: flex;
-  justify-content: center;
   align-items: center;
-  width: 400px;
-  height: 400px;
   background-color: $almost;
   border-radius: 50%;
+  display: flex;
+  height: 400px;
+  justify-content: center;
+  width: 400px;
 }
 .info__container-avo {
-  width: 250px;
+  background-color: $almost;
   border: 3px solid $green;
   border-radius: 5px;
-  background-color: $almost;
-  text-align: center;
   margin: 10px;
+  text-align: center;
+  width: 250px;
 
   .info__title-avo {
     background-color: $green;
-    font-size: 1.3rem;
     color: $almost;
+    font-size: 1.3rem;
     margin-top: 0;
     margin-bottom: 0;
     text-align: center;

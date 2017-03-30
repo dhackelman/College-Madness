@@ -31,8 +31,8 @@
 }
 
 .student__row, .header__row {
-    width: 100%;
-    margin: 0;
+  margin: 0;
+  width: 100%;
 }
 
 .student__row:hover {
@@ -43,15 +43,15 @@
 
 .cell {
   border: 1px solid $royal;
-    margin: 0;
-    padding: 1%;
+  margin: 0;
+  padding: 1%;
 }
 
 .student__col {
-    width: 48%;
+  width: 48%;
 }
 .points__col {
-    width: 17.3%;
+  width: 17.3%;
 }
 
 .data {

@@ -13,16 +13,15 @@
 }
 .kippBtn:hover {
   background-color: $burnt;
-  color: $almost;
   border: 3px solid $royal;
+  color: $almost;
 }
+
 .nav__container {
   padding-top: 10px;
   ul {
     display: flex;
-    // height: 70px;
     justify-content: space-around;
-    // margin: 0 auto;
     width: 100%;
 
     .nav__items {
@@ -32,14 +31,10 @@
       font-size: 1.5rem;
       font-weight: bold;
       padding: 5px 25px;
-      // margin: 1%;
-      // padding-top: 1%;
-      // padding-bottom: 3%;
       text-align: center;
       width: 20%;
     }
     .nav__items:hover {
-      // animation: shake .75s cubic-bezier(.16,.07,.19,.9) both;
       background-color: $skyBlue;
       color: $royal;
     }
@@ -47,9 +42,9 @@
 }
 // empty container for placeholder - DO NOT REMOVE - sm
 .empty__container {
+  height: 1px;
   visibility: hidden;
   width: 100px;
-  height: 1px;
 }
 
 form,

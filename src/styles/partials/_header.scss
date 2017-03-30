@@ -16,19 +16,19 @@
 
 .header__homerooom {
   h1 {
-    width: 100%;
-    margin-top: 0.1em;
     margin-bottom: 0.1em;
+    margin-top: 0.1em;
+    width: 100%;
   }
 }
 
 .header__logout {
-  display: flex;
   align-items: center;
+  display: flex;
   max-height: 50px;
 }
 .header__logout:hover {
   background-color: $burnt;
-  color: $almost;
   border: 5px solid $royal;
+  color: $almost;
 }
