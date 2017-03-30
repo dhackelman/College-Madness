@@ -282,6 +282,18 @@ textarea:focus {
     justify-content: flex-start;
     width: 100%; }
 
+.region:nth-child(1) {
+  background: url("https://kipp-madness.herokuapp.com/images/east.png") center center no-repeat; }
+
+.region:nth-child(2) {
+  background: url(https://kipp-madness.herokuapp.com/images/west.png) center center no-repeat; }
+
+.region:nth-child(3) {
+  background: url(https://kipp-madness.herokuapp.com/images/midwest.png) center center no-repeat; }
+
+.region:nth-child(4) {
+  background: url(https://kipp-madness.herokuapp.com/images/south.png) center center no-repeat; }
+
 .region:nth-child(1), .region:nth-child(3) {
   border-right: none; }
 
