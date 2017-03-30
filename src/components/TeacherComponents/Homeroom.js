@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router';
 import axios from 'axios';
 
 class Homeroom extends React.Component {
@@ -41,6 +42,7 @@ class Homeroom extends React.Component {
                       })}
                     </tbody>
                   </table>
+                  <Link to="/bracket"><div className="kippBtn back__to__bracket">Back to the Bracket</div></Link>
                 </div>
               </div>
         );
