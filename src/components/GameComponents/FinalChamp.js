@@ -11,7 +11,7 @@ class FinalChamp extends React.Component {
           <div className="team__container the__champ">
             <Link to={collegeSpecificResearch}><FaInfoCircle className="team__info" size={30}/></Link>
             <img className={!champ.team.image ? "is-hidden" : "team__logo"} src={champ.team.image} alt={champ.team.name}></img>
-            <img className={this.props.home.team.image ? "is-hidden" : "team__logo placeholder"}  src="https://kipp-madness.herokuapp.com/bball-placeholder.png" alt='basketball'></img>
+            <img className={champ.team.image ? "is-hidden" : "team__logo placeholder"}  src="https://kipp-madness.herokuapp.com/bball-placeholder.png" alt='basketball'></img>
             <span className="team__seed">{champ.team.seed ? champ.team.seed : ''}</span>
             <span className="team__name">{champ.team.abbrev}</span>
           </div>
