@@ -15,13 +15,11 @@ class TeacherLogin extends React.Component {
       ShowHomeroom: false,
       Students: [],
       Submissions:[],
-      Overlay:false
     };
     this.getId = this.getId.bind(this);
     this.updateSubmssionScore = this.updateSubmssionScore.bind(this);
     this.clickInbox = this.clickInbox.bind(this);
     this.clickHomeroom = this.clickHomeroom.bind(this);
-    this.counter = this.counter.bind(this);
   }
 
   componentDidMount() {
@@ -30,11 +28,6 @@ class TeacherLogin extends React.Component {
         let studentsObj = roster.data.students;
         this.setState({Students:studentsObj});
       });
-    }
-
-    counter() {
-      let i = 0;
-      return i++;
     }
 
   getId(arg) {
@@ -50,7 +43,6 @@ class TeacherLogin extends React.Component {
       }
       return arg;
     })
-    this.setState({Overlay:true});
   }
 
   updateSubmssionScore(arg1, arg2) {
@@ -81,9 +73,8 @@ class TeacherLogin extends React.Component {
   }
 
     render() {
-      const index= this.counter();
       const roster = this.state.ShowRoster ? <Roster roster={this.state.Students} getId={this.getId}/> : '';
-      const inbox = this.state.ShowInbox ? <Inbox index={index} submssions={this.state.Submissions} updateSubmssionScore={this.updateSubmssionScore}/> : '';
+      const inbox = this.state.ShowInbox ? <Inbox submssions={this.state.Submissions} updateSubmssionScore={this.updateSubmssionScore}/> : '';
       const homeroom = this.state.ShowHomeroom ? <Homeroom roster={this.state.Students}/> : '';
 
         return (

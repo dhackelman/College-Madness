@@ -1,7 +1,7 @@
 const Data = {
       submissions: [{
           submission_id:0,
-          input: "This student has 0 new submissions."
+          input: "This student has no submissions."
       }]
 }
 
