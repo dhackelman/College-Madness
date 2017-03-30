@@ -18,25 +18,25 @@ class Homeroom extends React.Component {
     }
 
     render() {
-      console.log(this.state.Students);
-
         return (
 
           <div className="teacher__things__container">
             <div className="teacher__homeroom">
                 <h1 className="homeroom__header">Homeroom Leaderboard</h1>
                   <table className="homeroom__table">
-                    <tbody>
-                      <tr className="row">
+                    <tbody className="homeroom__table__body">
+                      <tr className="header__row">
                         <th className="cell student__col header">Student</th>
                         <th className="cell points__col header">Bracket Score</th>
                         <th className="cell points__col header">Research Score</th>
+                        <th className="cell points__col header">Total Score</th>
                       </tr>
                       {this.state.Students.map((student)=> {
                         return <tr key={student.name} className="student__row">
                           <td className="cell student__col student">{student.name}</td>
                           <td className="cell points__col data">{student.bracket_points}</td>
                           <td className="cell points__col data">{student.research_points}</td>
+                          <td className="cell points__col data">{student.score}</td>
                         </tr>
                       })}
                     </tbody>

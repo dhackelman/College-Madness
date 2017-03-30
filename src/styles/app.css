@@ -291,11 +291,11 @@ textarea:focus {
   border: 4px solid #16345c;
   display: flex;
   flex-flow: column;
-  height: 500px;
+  height: 480px;
   justify-content: flex-start;
   position: absolute;
   left: calc(50% - 140px);
-  top: calc(50% - 250px);
+  top: calc(50% - 280px);
   width: 280px; }
   .final__four h3 {
     width: 100%;
@@ -627,10 +627,12 @@ h1 {
   margin: 0 auto 5%;
   padding: 2%;
   width: 65%; }
+  .homeroom__table .homeroom__table__body {
+    width: 100%; }
   .homeroom__table .header {
     background-color: #235695;
     color: #f2f2f2;
-    font-size: 1.5rem; }
+    font-size: 1.25rem; }
 
 .student__row:nth-child(even) {
   background: #f2f2f2; }
@@ -638,10 +640,8 @@ h1 {
 .student__row:nth-child(odd) {
   background: white; }
 
-.student__row, .row {
-  width: 90%;
-  min-height: 1px;
-  height: auto;
+.student__row, .header__row {
+  width: 100%;
   margin: 0; }
 
 .student__row:hover {
@@ -651,8 +651,6 @@ h1 {
 
 .cell {
   border: 1px solid #235695;
-  float: left;
-  height: 100%;
   margin: 0;
   padding: 1%; }
 
@@ -660,7 +658,7 @@ h1 {
   width: 48%; }
 
 .points__col {
-  width: 26%; }
+  width: 17.3%; }
 
 .data {
   text-align: center; }

@@ -12,10 +12,14 @@
   padding: 2%;
   width: 65%;
 
+  .homeroom__table__body {
+    width: 100%;
+  }
+
   .header {
     background-color: $royal;
     color: $almost;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 }
 
@@ -26,10 +30,8 @@
   background: white;
 }
 
-.student__row, .row {
-    width: 90%;
-    min-height: 1px;
-    height: auto;
+.student__row, .header__row {
+    width: 100%;
     margin: 0;
 }
 
@@ -41,8 +43,6 @@
 
 .cell {
   border: 1px solid $royal;
-    float: left;
-    height: 100%;
     margin: 0;
     padding: 1%;
 }
@@ -51,7 +51,7 @@
     width: 48%;
 }
 .points__col {
-    width: 26%;
+    width: 17.3%;
 }
 
 .data {
