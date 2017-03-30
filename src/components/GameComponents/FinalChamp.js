@@ -6,7 +6,6 @@ import FaInfoCircle from 'react-icons/lib/fa/info-circle';
 class FinalChamp extends React.Component {
     render() {
       const champ = this.props.teams[0];
-      console.log('champ ', champ);
       const collegeSpecificResearch = "research/" + champ.team.id;
         return (
           <div className="team__container the__champ">
