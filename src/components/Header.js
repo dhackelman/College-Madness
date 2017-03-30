@@ -10,6 +10,7 @@ class Header extends React.Component {
   //     My Homeroom</Link></h1>
 
     render() {
+        this.props.check();
         const logout = this.props.updateBtn ? <Logout/> : <div className="empty__container"></div>;
         return (
             <div className="header__container">
