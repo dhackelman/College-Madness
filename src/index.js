@@ -8,7 +8,6 @@ import Login from './components/Login';
 import Teacher from './components/TeacherComponents/Teacher';
 import Homeroom from './components/TeacherComponents/Homeroom';
 import TeacherConfirm from './components/LoginComponents/TeacherConfirm';
-import TeacherCreateClass from './components/TeacherComponents/CreateClass';
 import MainBracket from './components/GameComponents/MainBracket';
 import ResearchContainer from './components/ResearchComponents/ResearchContainer';
 

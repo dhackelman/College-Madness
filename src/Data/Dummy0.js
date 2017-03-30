@@ -4,7 +4,17 @@ const Data = {
           predicted_wins: 0,
           team: {
               name: "",
+              abbrev: ""
+
+
+          }
+      }, {
+          id: 1,
+          predicted_wins: 0,
+          team: {
+              name: "",
               abbrev: "  "
+
 
           }
       }]

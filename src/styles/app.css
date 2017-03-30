@@ -363,15 +363,15 @@ textarea:focus {
 .team__not__selected {
   background-color: #e47323; }
 
-.final__team {
+.the__champ {
   align-items: center;
   height: 100px;
   width: 90%;
   margin-top: 2%; }
-  .final__team .team__logo {
+  .the__champ .team__logo {
     height: 40px;
     width: 40px; }
-  .final__team .team__name {
+  .the__champ .team__name {
     font-size: 16px;
     font-weight: 700; }
 
