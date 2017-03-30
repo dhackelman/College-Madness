@@ -142,9 +142,7 @@ class MainBracket extends React.Component {
     }
 
     sendBracketData(event) {
-      let currentId = this.props.user;
       event.preventDefault();
-
       let allTeams = this.state.AllTeams;
       let brentice = [];
       allTeams.map((team) => {
@@ -153,6 +151,7 @@ class MainBracket extends React.Component {
             "predicted_wins": team.predicted_wins
           }
         brentice.push({"user_prediction": data});
+        return brentice;
       });
       axios.put(`https://kipp-madness-api.herokuapp.com/user_predictions/batch_update`, brentice)
         .then((response) =>{

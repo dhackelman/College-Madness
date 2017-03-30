@@ -35,29 +35,31 @@ class TeacherLogin extends React.Component {
     this.state.Students.map((student)=> {
       if (arg === student.id) {
         if (student.submissions.length > 0) {
-          console.log(student.submissions);
           this.setState({Submissions:student.submissions});
+          return arg;
         } else {
-          this.setState({Submissions: NoNewSubmissions.submissions})
+          this.setState({Submissions: NoNewSubmissions.submissions});
+          return arg;
         }
-        }
+      }
+      return arg;
     })
     this.setState({Overlay:true});
   }
 
   updateSubmssionScore(arg1, arg2) {
     if (arg1 === true) {
-      console.log(true, arg2);
       let data = {status:true};
-        axios.put(`https://kipp-madness-api.herokuapp.com/submissions/${arg2}`, data).
-        then(response =>
-          console.log(response))
+        axios.put(`https://kipp-madness-api.herokuapp.com/submissions/${arg2}`, data)
+        .then((response) =>{
+          return;
+        });
     } else {
-      console.log(false, arg2);
       let data = {status:false};
-        axios.put(`https://kipp-madness-api.herokuapp.com/submissions/${arg2}`, data).
-        then(response =>
-          console.log(response))
+        axios.put(`https://kipp-madness-api.herokuapp.com/submissions/${arg2}`, data)
+        .then((response) => {
+          return;
+        });
     }
   }
 

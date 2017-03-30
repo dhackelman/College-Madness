@@ -22,11 +22,12 @@ class ButtonConfirm extends React.Component {
       this.props.roster.map((match) => {
       if(match.id === Number(this.props.props.params.users)) {
         let data = {teacher:true};
-          axios.put(`https://kipp-madness-api.herokuapp.com/users/${match.id}`, data).
-          then(response =>
+          axios.put(`https://kipp-madness-api.herokuapp.com/users/${match.id}`, data)
+          .then(response =>
             console.log(response)
           );
       }
+      return 'yes';
     });
   }
 
