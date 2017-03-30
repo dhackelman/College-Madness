@@ -3,6 +3,7 @@ import React from 'react';
 class Inbox extends React.Component {
 
     render() {
+      const index = this.props.index;
 
         return (
           <div className="teacher__inbox">
@@ -21,8 +22,8 @@ class Inbox extends React.Component {
                 </li>
               })}
             </ul>
-            <div className={1===3 ?  "inbox__overlay" : "is-hidden"}>
-              <p  className={ 1===3 ?  "default__instruction": "is-hidden"}>Please select a student to begin.</p>
+            <div className={{index} === 0 ?  "inbox__overlay" : "is-hidden"}>
+              <p  className={ {index} ===0 ?  "default__instruction": "is-hidden"}>Please select a student to begin.</p>
           </div>
         </div>
         );
