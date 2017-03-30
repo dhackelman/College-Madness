@@ -91,12 +91,19 @@
   h3 {
     width: 100%;
     text-align: center;
-    margin: 0;
+    margin: 5px;
+    padding: 0;
+    line-height: .95;
   }
 
-  .submtit__form {
-    position: absolute;
-    top: -10%;
+  .submit__form {
+    margin: 0;
+    padding: 0;
+
+    .bracket__submit {
+      font-size: 1.25rem;
+      padding: 5px;
+    }
   }
 }
 

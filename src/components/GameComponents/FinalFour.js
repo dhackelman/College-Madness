@@ -11,7 +11,7 @@ class FinalFour extends React.Component {
       this.state = {
           NatChampGame: Dummy2.user_predictions,
           Champ: Dummy0.user_predictions,
-          Ready2Submit: true
+          Ready2Submit: false
       }
   }
 
@@ -56,7 +56,7 @@ class FinalFour extends React.Component {
               <h3>National Champion</h3>
               <FinalChamp teams={this.state.Champ} round='round_0'/>
                 <form className="submit__form" ref={(input) => this.submitBracket = input} onSubmit={(event) => this.props.sendBracketData(event)}>
-                  <input  className={ this.state.Ready2Submit ? 'kippBtn': 'kippBtn is-hidden' } type="submit"></input>
+                  <input  className={ this.state.Ready2Submit ? 'kippBtn bracket__submit': 'kippBtn is-hidden' } type="submit"></input>
                 </form>
             </div>
         );
