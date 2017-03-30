@@ -20,7 +20,7 @@ class Inbox extends React.Component {
               })}
             </ul>
             <div className="overlay">
-              <img src={req('http://college-madness.herokuapp.com/processed.png')}</img>
+              <img src={req('http://college-madness.herokuapp.com/processed.png')}></img>
             </div>
         </div>
         );
