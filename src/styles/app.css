@@ -596,6 +596,28 @@ h1 {
       .teacher__inbox .inbox__messages .button__holder .inbox__pass:hover {
         animation: scale2 0.5s both; }
 
+.transparent {
+  background-color: transparent;
+  width: 100%; }
+
+.overlay {
+  background-color: rgba(255, 187, 19, 0.8);
+  display: flex;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .overlay p {
+    align-content: center;
+    color: #16345c;
+    margin-top: 10%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 2rem;
+    -webkit-text-stroke: 1px white;
+    width: 100%; }
+
 .teacher__homeroom {
   width: 100%; }
 

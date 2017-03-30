@@ -16,12 +16,12 @@ class Inbox extends React.Component {
                     <button onClick={()=>{this.props.updateSubmssionScore(true, thing.submission_id)}} className={thing.submission_id === 0 ? "is-hidden" : "inbox__pass kippBtn"}>Great Job!</button>
                     <button onClick={()=>{this.props.updateSubmssionScore(false, thing.submission_id)}} className={thing.submission_id === 0 ? "is-hidden" : "inbox__fail kippBtn"}>Try Again</button>
                   </div>
+                  <div className={!thing.status ?  "overlay" :"transparent"}>
+                    <p className={!thing.status ?  "p" :"is-hidden"}>Feedback Given.</p>
+                  </div>
                 </li>
               })}
             </ul>
-            <div className="overlay">
-              <img src={req('http://college-madness.herokuapp.com/processed.png')}></img>
-            </div>
         </div>
         );
     }
