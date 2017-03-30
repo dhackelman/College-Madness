@@ -6,8 +6,7 @@ import FaGraduationCap from 'react-icons/lib/fa/graduation-cap';
 
 class Header extends React.Component {
 
-  // <h1><Link to="/teacher"><FaGraduationCap size={50}/>
-  //     My Homeroom</Link></h1>
+
   componentDidMount() {
     console.log(this.props.curUser);
   }
