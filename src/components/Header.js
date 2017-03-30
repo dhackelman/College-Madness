@@ -17,7 +17,7 @@ class Header extends React.Component {
         const logout = this.props.updateBtn ? <Logout/> : <div className="empty__container"></div>;
         return (
             <div className="header__container">
-                <img className="header__logo" src={require('../styles/images/CM-logo.png')} alt={"KIPP Logo"}/>
+                <img className="header__logo" src={require('../styles/images/College-madness-logo-dark.png')} alt={"KIPP Logo"}/>
                 <div className="header__homerooom">
                     <h1><Link to="/teacher"><FaGraduationCap size={40}/></Link>
                         <Link to="/homeroom">Classroom UNC</Link></h1>

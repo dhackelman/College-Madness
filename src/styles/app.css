@@ -219,7 +219,6 @@ textarea {
     font-size: 20px;
     height: 280px; }
 
-input:focus,
 textarea:focus {
   background: white;
   border-radius: 5px;
@@ -466,12 +465,15 @@ h1 {
   border: 5px solid #16345c;
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-flow: column nowrap;
-  bottom: 0;
-  left: 0;
+  bottom: 25px;
+  left: calc(50% - 150px);
   width: 300px;
-  height: 250px;
-  padding: 15px; }
+  height: 250px; }
+  .login__teach-container input {
+    width: 65%; }
 
 .confirm__button, .confirm__link {
   background: #235695;
