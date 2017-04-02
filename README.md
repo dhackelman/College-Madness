@@ -1,11 +1,11 @@
-# College : Maddness
+# College Madness
   March 2017
 ##Demo Day Project - TIY: Cohort 9
 
 ___
 Project Members: [Drew Hackelman](https://github.com/dhackelman), [Shane McCoy](https://github.com/scmccoy) and [Brentice Bush](https://github.com/brentice).
 
-[http://college-madness.herokuapp.com/](http://college-madness.herokuapp.com/)
+Link: [http://college-madness.herokuapp.com/](http://college-madness.herokuapp.com/)
 ___
 
 An educational web application that presents a gamified approach to the college research process. 
