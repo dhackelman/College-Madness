@@ -5,7 +5,14 @@
 ___
 Project Members: [Drew Hackelman](https://github.com/dhackelman), [Shane McCoy](https://github.com/scmccoy) and [Brentice Bush](https://github.com/brentice).
 
+### To View this project: 
+  -Head to link below
+  -Sign-in with google
+  -Join as student
+  -Select any classroom
 Link: [http://college-madness.herokuapp.com/](http://college-madness.herokuapp.com/)
+
+
 ___
 
 An educational web application that presents a gamified approach to the college research process. 
