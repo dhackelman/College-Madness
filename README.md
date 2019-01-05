@@ -10,6 +10,7 @@ Project Members: [Drew Hackelman](https://github.com/dhackelman), [Shane McCoy](
   - Sign-in with google
   - Join as student
   - Select any classroom
+  
 Link: [http://college-madness.herokuapp.com/](http://college-madness.herokuapp.com/)
 
 
